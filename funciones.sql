@@ -30,9 +30,10 @@ END $$
 
 DROP VIEW IF EXISTS VistaPartido $$
 CREATE VIEW VistaPartido AS
-   SELECT  L.nombre as Local, V.nombre as Visitante,
-           P.`golesLocales`, P.`golesVisitantes`
-   FROM    Pais L
-   JOIN    `Partido` P ON  L.`idPais` = P.`idLocal`
-   JOIN    Pais V ON  V.`idPais` = P.`idVisitante` $$
-
+   SELECT   fecha,
+            L.nombre as Local, V.nombre as Visitante,
+            P.`golesLocales`, P.`golesVisitantes`
+   FROM     Pais L
+   JOIN     `Partido` P ON  L.`idPais` = P.`idLocal`
+   JOIN     Pais V ON  V.`idPais` = P.`idVisitante`
+   ORDER BY fecha ASC $$

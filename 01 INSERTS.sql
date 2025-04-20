@@ -1064,7 +1064,7 @@ START TRANSACTION ;
 						(idJugador(1,24)	,  @idArgentinaArabiaGrupo,idJugador(1, 5),   59  	,   NULL    	,   NULL	,   NULL),
 						(idJugador(1,25)	,  @idArgentinaArabiaGrupo,idJugador(1,13),   59  	,   NULL    	,   NULL	,   NULL),
 						(idJugador(4,21)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-	
+
 					-- Jugadores de Arabia Saudita.
 						(idJugador(4,5) 	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
 						(idJugador(4,17)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
@@ -1152,7 +1152,7 @@ START TRANSACTION ;
 						(idJugador(1, 9)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 22), NULL	,   NULL    	,   82  	,   NULL),
 						(idJugador(1, 22)   ,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 9) , 82  	,   NULL    	,   NULL	,   NULL),
 						(idJugador(1, 10)   ,  @idPaisesBajosArgentinaCuartos ,   NULL     	, NULL	,   NULL    	,   NULL	,   NULL),
-		
+
 						-- Partido Argentina - Croacia - Semis
 						(idJugador(1, 23)   ,  @idArgentinaCroaciaSemi ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
 						(idJugador(1, 3)	,  @idArgentinaCroaciaSemi ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
@@ -1207,7 +1207,7 @@ START TRANSACTION ;
 						(idJugador(2, 20)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 11), 77  	,   NULL    	,   NULL	,   NULL),
 						(idJugador(2, 22)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 21), 13  	,   NULL    	,   NULL	,   NULL),
 						(idJugador(2, 26)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 9) , 89  	,   NULL    	,   NULL	,   NULL),
-						
+
 						-- Partido Francia - Dinamarca - Grupo D
 						
 						(idJugador(2, 1)	,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
@@ -1225,9 +1225,9 @@ START TRANSACTION ;
 						(idJugador(2, 20)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 11), 75  	,   NULL    	,   NULL	,   NULL),
 						(idJugador(2, 13)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 7) , 90  	,   2       	,   NULL	,   NULL),
 						(idJugador(2, 24)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 4) , 75  	,   NULL    	,   NULL	,   NULL),
-		
+
 										-- Partido Tunez - Francia - Grupo D
-						
+
 						(idJugador(2, 16)   ,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
 						(idJugador(2, 3)	,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
 						(idJugador(2, 4)	,  @idTunezFranciaGrupo ,idJugador(2, 17)   , NULL	,   NULL    	,   63	,   NULL),
@@ -1244,7 +1244,7 @@ START TRANSACTION ;
 						(idJugador(2, 11)   ,  @idTunezFranciaGrupo ,idJugador(2, 6)	, 79  	,   NULL    	,   NULL  ,   NULL),
 						(idJugador(2, 14)   ,  @idTunezFranciaGrupo ,idJugador(2, 15)   , 63  	,   NULL    	,   NULL  ,   NULL),
 						(idJugador(2, 17)   ,  @idTunezFranciaGrupo ,idJugador(2, 4)	, 63  	,   NULL    	,   NULL  ,   NULL),
-		
+
 						-- Partido Francia - Polonia - 8vos
 						(idJugador(2,1),	@idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL,   NULL),
 						(idJugador(2,5),	@idFranciaPoloniaOctavos, idJugador(2, 3),	Null ,  NULL,   90, 	2),
@@ -1367,7 +1367,4 @@ START TRANSACTION ;
 								(@idCroaciaBrasilCuartos, idJugador(7, 4),	8, FALSE)
 	;
 
-	COMMIT;
-
-
-
+COMMIT;
