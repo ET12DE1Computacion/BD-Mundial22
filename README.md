@@ -4,7 +4,7 @@
 </p>
 
 # BD-Mundial22 ⭐⭐⭐
- Material para Base de Datos 
+ Material para _Base de Datos_ y _Administración y Gestión de Base de Datos_ para la especialidad [Computación](https://et12.edu.ar/especialidades/computacion) de la [ET12](https://et12.edu.ar)
 
 ## DER
 
@@ -105,9 +105,9 @@ git clone https://github.com/ET12DE1Computacion/BD-PokemonRPG
 
 1. Abrir la terminal en el directorio donde están los scripts (recomendamos tener MySQL agregado en tus **Variables de entorno**).
 
-1. Ejecutar el comando: `mysql -u usuario -p` donde *usuario* es el nombre de usuario con el que entras al sistema. Se te va a preguntar por la contraseña de tu usuario.
+1. Ejecutar el comando: `mysql -u usuario -p` donde *usuario* es el nombre de usuario con el que entras al sistema. Se te va a preguntar por la contraseña de tu usuario, ingresala y presionar <kbd>Enter</kbd>.
 
-1. Ya dentro del cliente de `MySQL` tipeamos `source install.sql` y nos debería quedar algo como: `mysql> source install.sql` ; le damos <kbd> Enter </kbd>.
+1. Ya dentro del cliente de `MySQL` tipeamos `source install.sql` y nos debería quedar algo como: `mysql> source install.sql` ; le damos <kbd>Enter</kbd>.
 
 1. Esperamos que termine de correr el comando y salimos de la _shell_ de MySQL con el comando `exit`.
 
@@ -121,3 +121,4 @@ git clone https://github.com/ET12DE1Computacion/BD-PokemonRPG
 Ayudaron en este script:
 - Alumnos de 4°7°, 4° 8°, 5°7° y 5°8° Ciclo 2023.
 - Alumnos de 5°7° y 5°8° Ciclo 2024.
+- [Ángel Nahuel López](https://github.com/angelnl610) de 5°7° Ciclo 2025.
