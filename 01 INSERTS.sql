@@ -407,6 +407,7 @@ START TRANSACTION ;
 				('Torres', 'Pau', '1997-01-16', 4, 14, 2),
 				('Laporte', 'Aymeric', '1994-05-27', 24, 14, 2),
 				('Alba', 'Jordi', '1989-03-21', 18, 14, 2),
+				('Alejandro', 'Balde', '2003-10-18-', 14, 14, 2),
 				('Busquets', 'Sergio', '1988-07-16', 5, 14, 3),
 				('Rodrigo', 'Hernández', '1996-06-22', 16, 14, 3),
 				('Pablo Martín', 'Gavira', '2004-08-05', 9, 14, 3),
@@ -732,12 +733,13 @@ START TRANSACTION ;
 				('Raphael', 'Guerreiro', '1993-12-21', 5, 26, 2),
 				('Antonio', 'Silva', '2003-10-29', 24, 26, 2),
 				('Joao', 'Mario', '2002-06-19', 17, 26, 3),
-				('Otavio', 'da Silva Monteiro', '1995-02-08', 35, 26, 3),
+				('Joao', 'Palhinha', '1995-07-09', 6, 26, 3),
+				('Otavio', 'da Silva Monteiro', '1995-02-08', 25, 26, 3),
 				('William', 'Carvalho', '1992-04-06', 14, 26, 3),
 				('Ruben', 'Neves', '1997-03-13', 18, 26, 3),
-				('Vítor Machado', 'Ferreira', '2000-02-13', 11, 26, 3),
+				('Vítor Machado', 'Ferreira', '2000-02-13', 16, 26, 3),
 				('Bruno', 'Fernandes', '1994-09-08', 8, 26, 3),
-				('Joao', 'Felix', '1999-11-10', 25, 26, 4),
+				('Joao', 'Felix', '1999-11-10', 11, 26, 4),
 				('Cristiano', 'Ronaldo', '1985-02-05', 7, 26, 4),
 				('Bernardo', 'Silva', '1994-08-09', 10, 26, 4),
 				('Andre', 'Silva', '1995-11-06', 9, 26, 4),
@@ -1245,6 +1247,78 @@ START TRANSACTION ;
 						(idJugador(2, 14)   ,  @idTunezFranciaGrupo ,idJugador(2, 15)   , 63  	,   NULL    	,   NULL  ,   NULL),
 						(idJugador(2, 17)   ,  @idTunezFranciaGrupo ,idJugador(2, 4)	, 63  	,   NULL    	,   NULL  ,   NULL),
 
+						-- Partido España - Costa Rica - Grupo E.
+                      				(idJugador(14,23) ,    @idEspañaCostaRicaGrupo, null            ,   null  ,   null  ,   null  ,   NULL),
+                      				(idJugador(14,2)  ,    @idEspañaCostaRicaGrupo, null            ,   null  ,   null  ,   null  ,   NULL),
+                      				(idJugador(14,16) ,    @idEspañaCostaRicaGrupo, null            ,   null  ,   null  ,   null  ,   NULL),
+                      				(idJugador(14,24) ,    @idEspañaCostaRicaGrupo, null            ,   null  ,   null  ,   null  ,   NULL),
+                      				(idJugador(14,18) ,    @idEspañaCostaRicaGrupo, idJugador(5,14) ,   null  ,   NULL  ,   64    ,   NULL),
+                      				(idJugador(14,9)  ,    @idEspañaCostaRicaGrupo, null            ,   null  ,   null  ,   NULL  ,   null),
+                      				(idJugador(14,5)  ,    @idEspañaCostaRicaGrupo, idJugador(5,8)  ,   null  ,   NULL  ,   64    ,   NULL),
+                      				(idJugador(14,26) ,    @idEspañaCostaRicaGrupo, idJugador(5,19) ,   null  ,   NULL  ,   57    ,   NULL),
+                      				(idJugador(14,11) ,    @idEspañaCostaRicaGrupo, idJugador(5,7)  ,   null  ,   NULL  ,   57    ,   NULL),
+                      				(idJugador(14,10) ,    @idEspañaCostaRicaGrupo, idJugador(5,12) ,   null  ,   NULL  ,   69    ,   NULL),
+                      				(idJugador(14,21) ,    @idEspañaCostaRicaGrupo, null            ,  	NULL  ,   null  ,   NULL  ,   NULL),
+                      				(idJugador(14,14) ,    @idEspañaCostaRicaGrupo, idJugador(5,18) ,   64    ,   NULL  ,   NULL  ,   NULL),
+                      				(idJugador(14,8)  ,    @idEspañaCostaRicaGrupo, idJugador(5,5)  ,   64    ,   NULL  ,   NULL  ,   NULL),
+                      				(idJugador(14,19) ,    @idEspañaCostaRicaGrupo, idJugador(5,26) ,   57    ,   NULL  ,   NULL  ,   NULL),
+                      				(idJugador(14,7)  ,    @idEspañaCostaRicaGrupo, idJugador(5,11) ,   57    ,   NULL  ,   NULL  ,   NULL),
+                      				(idJugador(14,12) ,    @idEspañaCostaRicaGrupo, idJugador(5,10) ,   69    ,   NULL  ,   NULL  ,   NULL),
+                      	
+                      				-- Partido España - Alemania - Grupo E.
+                      				(idJugador(14,23)    ,  @idEspañaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,20)    ,  @idEspañaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,16)    ,  @idEspañaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,24)    ,  @idEspañaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,18)    ,  @idEspañaAlemaniaGrupo, idJugador(5,14) ,   NULL    ,   NULL        ,   82      ,   NULL),
+                      				(idJugador(14,5)     ,  @idEspañaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,9)     ,  @idEspañaAlemaniaGrupo, idJugador(5,12) ,   NULL    ,   NULL        ,   66      ,   NULL),
+                      				(idJugador(14,26)    ,  @idEspañaAlemaniaGrupo, null            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,11)    ,  @idEspañaAlemaniaGrupo, idJugador(5,7)  ,   NULL    ,   NULL        ,   54      ,   NULL),
+                      				(idJugador(14,10)    ,  @idEspañaAlemaniaGrupo, idJugador(5,8)  ,   NULL    ,   NULL        ,   66      ,   NULL),
+                      				(idJugador(14,21)    ,  @idEspañaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,7)     ,  @idEspañaAlemaniaGrupo, idJugador(5,11)  ,   54      ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,12)    ,  @idEspañaAlemaniaGrupo, idJugador(5,9)  ,   66      ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,8)     ,  @idEspañaAlemaniaGrupo, idJugador(5,10) ,   66      ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,14)    ,  @idEspañaAlemaniaGrupo, idJugador(5,18) ,   82      ,   NULL        ,   NULL    ,   NULL),
+                      	
+                      				-- Partido España - Japon - Grupo E.
+                      				(idJugador(14,23)    ,  @idJaponEspañaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,2)     ,  @idJaponEspañaGrupo, idJugador(5,20)    ,   NULL    ,   NULL        ,   46      ,   NULL),
+                      				(idJugador(14,16)    ,  @idJaponEspañaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,4)     ,  @idJaponEspañaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,14)    ,  @idJaponEspañaGrupo, idJugador(5,18)    ,   NULL    ,   NULL        ,   68      ,   NULL),
+                      				(idJugador(14,9)     ,  @idJaponEspañaGrupo, idJugador(5,25)    ,   NULL    ,   NULL        ,   68      ,   NULL),
+                      				(idJugador(14,5)     ,  @idJaponEspañaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                     				(idJugador(14,26)    ,  @idJaponEspañaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,12)    ,  @idJaponEspañaGrupo, idJugador(5,11)    ,   NULL    ,   NULL        ,   57      ,   NULL),
+                      				(idJugador(14,7)     ,  @idJaponEspañaGrupo, idJugador(5,10)    ,   NULL    ,   NULL        ,   57      ,   NULL),
+                      				(idJugador(14,21)    ,  @idJaponEspañaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,20)    ,  @idJaponEspañaGrupo, idJugador(5,2)     ,   46      ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,18)    ,  @idJaponEspañaGrupo, idJugador(5,14)    ,   68      ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,25)    ,  @idJaponEspañaGrupo, idJugador(5,9)     ,   68      ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,11)    ,  @idJaponEspañaGrupo, idJugador(5,12)    ,   57      ,   NULL        ,   NULL    ,   NULL),
+                      				(idJugador(14,10)    ,  @idJaponEspañaGrupo, idJugador(5,7)     ,   57      ,   NULL        ,   NULL    ,   NULL),
+                      	
+                      				-- Partido España - Marruecos - Octavos.
+                      				(idJugador(14,23)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
+                      				(idJugador(14,6)     ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
+		                      		(idJugador(14,16)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
+                			      	(idJugador(14,24)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
+                      				(idJugador(14,18)    ,  @idMarruecosEspaniaOctavos, idJugador(5,14)  ,    NULL    ,   NULL     ,   98      ,   NULL),
+                      				(idJugador(14,9)     ,  @idMarruecosEspaniaOctavos, idJugador(5,19)  ,    NULL    ,   NULL     ,   63      ,   NULL),
+                      				(idJugador(14,5)     ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
+                      				(idJugador(14,26)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
+                      				(idJugador(14,11)    ,  @idMarruecosEspaniaOctavos, idJugador(5,12)  ,    NULL    ,   NULL     ,   75      ,   NULL),
+			                      	(idJugador(14,10)    ,  @idMarruecosEspaniaOctavos, idJugador(5,7)   ,    NULL    ,   NULL     ,   63      ,   NULL),
+			                      	(idJugador(14,21)    ,  @idMarruecosEspaniaOctavos, idJugador(5,25)  ,    NULL    ,   NULL     ,   98      ,   NULL),
+			                      	(idJugador(14,14)    ,  @idMarruecosEspaniaOctavos, idJugador(5,18)  ,    100     ,   NULL     ,   NULL    ,   NULL),
+			                      	(idJugador(14,19)    ,  @idMarruecosEspaniaOctavos, idJugador(5,9)   ,    63      ,   NULL     ,   NULL    ,   NULL),
+                      				(idJugador(14,12)    ,  @idMarruecosEspaniaOctavos, idJugador(5,11)  ,    75      ,   NULL     ,   118     ,   NULL),
+                      				(idJugador(14,22)    ,  @idMarruecosEspaniaOctavos, idJugador(5,12)  ,    118     ,   NULL     ,   NULL    ,   NULL),
+                      				(idJugador(14,7)     ,  @idMarruecosEspaniaOctavos, idJugador(5,10)  ,    63      ,   NULL     ,   NULL    ,   NULL),
+			                      	(idJugador(14,25)    ,  @idMarruecosEspaniaOctavos, idJugador(5,21)  ,    98      ,   NULL     ,   NULL    ,   NULL),
+		
 						-- Partido Francia - Polonia - 8vos
 						(idJugador(2,1),	@idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL,   NULL),
 						(idJugador(2,5),	@idFranciaPoloniaOctavos, idJugador(2, 3),	Null ,  NULL,   90, 	2),
@@ -1262,8 +1336,9 @@ START TRANSACTION ;
 						(idJugador(2,20),   @idFranciaPoloniaOctavos, idJugador(2, 11),   76, 	NULL,   NULL ,  NULL),
 						(idJugador(2,26),   @idFranciaPoloniaOctavos, idJugador(2, 9),	76, 	NULL,   NULL ,  NULL);
 
-	INSERT INTO Gol (idJugador, idPartido, minuto, adicionado, enContra)   	 
+	INSERT INTO gol (idJugador, idPartido, minuto, adicionado, enContra)   	 
 		VALUES  
+			-- Fase de Grupo ---------------------------------------------------------
 				-- Argentina 1 - Arabia Saudita 2
 				(idJugador(1, 10),  @idArgentinaArabiaGrupo,  10, NULL, FALSE),
 				(idJugador(4, 11),  @idArgentinaArabiaGrupo,  48, NULL, FALSE),
@@ -1272,41 +1347,69 @@ START TRANSACTION ;
 				-- Argentina 2 vs Mexico 0
 				(idJugador(1, 10),  @idArgentinaMexicoGrupo,  64, NULL, FALSE),
 				(idJugador(1, 24),  @idArgentinaMexicoGrupo,  87, NULL, FALSE),
+				
 				-- Polonia 0 vs Argentina 2
 				(idJugador(1, 20),  @idPoloniaArgentinaGrupo,  46, NULL, FALSE),
 				(idJugador(1, 9),   @idPoloniaArgentinaGrupo,  67, NULL, FALSE),
+				
+				-- España 7 vs Costa Rica 0
+				(idJugador(14, 21), @idEspañaCostaRicaGrupo, 11, null, false),
+				(idJugador(14, 10), @idEspañaCostaRicaGrupo, 21, null, false),
+				(idJugador(14, 11), @idEspañaCostaRicaGrupo, 31, null, false),
+				(idJugador(14, 11), @idEspañaCostaRicaGrupo, 54, null, false),
+				(idJugador(14, 9),  @idEspañaCostaRicaGrupo, 74, null, false),
+				(idJugador(14, 19), @idEspañaCostaRicaGrupo, 90, null, false),
+				(idJugador(14, 7),  @idEspañaCostaRicaGrupo, 90, 2,    false),
+				
+				-- España 1 vs Alemania
+				(idJugador(14, 7),  @idEspañaAlemaniaGrupo, 62, null, false),
+				(idJugador(3, 9),   @idEspañaAlemaniaGrupo, 83, null, false),
+				
+				-- Japon 2 vs España 1
+				(idJugador(14, 7),  @idJaponEspañaGrupo, 11, null, false),
+				(idJugador(20, 8),  @idJaponEspañaGrupo, 48, null, false),
+				(idJugador(20, 17), @idJaponEspañaGrupo, 51, null, false),
+				
+				-- Tunez 1 vs Francia 0
+				(idJugador(31,10),  @idTunezFranciaGrupo,  58, NULL, FALSE),
+				
+				
+			-- Octavos de final---------------------------------------------------------
 				-- Argentina 2 vs Australia 1
 				(idJugador(1, 10),  @idArgentinaAustraliaOctavos,  35, NULL, FALSE),
 				(idJugador(1, 9),   @idArgentinaAustraliaOctavos,  57, NULL, FALSE),
 				(idJugador(1, 24),  @idArgentinaAustraliaOctavos,  77, NULL, TRUE),
+				
+				-- Francia 3 vs Polonia 1
+				(idJugador(2, 9),   @idFranciaPoloniaOctavos, 44, NULL,   FALSE),
+				(idJugador(2, 10),  @idFranciaPoloniaOctavos, 74, NULL,   FALSE),
+				(idJugador(2, 10),  @idFranciaPoloniaOctavos, 90, 1,  	FALSE),
+				(idJugador(25, 9),  @idFranciaPoloniaOctavos, 90, 9,  	FALSE),
+				
 
+			-- Cuartos de final----------------------------------------------------------
 				-- Paises bajos 2 vs Argentina 2
 				(idJugador(1, 26),  @idPaisesBajosArgentinaCuartos,  35, NULL, FALSE),
 				(idJugador(1, 10),  @idPaisesBajosArgentinaCuartos,  73, NULL, FALSE),
 				(idJugador(24, 19),  @idPaisesBajosArgentinaCuartos,  83, NULL, FALSE),
 				(idJugador(24, 19),  @idPaisesBajosArgentinaCuartos,  90, 11, FALSE),
 				
-
+				
+			-- Semifinales----------------------------------------------------------------
 				-- Argentina 3 vs Croacia 0
 				(idJugador(1, 10),  @idArgentinaCroaciaSemi,  34, NULL, FALSE),
 				(idJugador(1, 9),   @idArgentinaCroaciaSemi,  39, NULL, FALSE),
 				(idJugador(1, 9),   @idArgentinaCroaciaSemi,  69, NULL, FALSE),
 
+				
+			-- Final-----------------------------------------------------------------------
 				-- Argentina 3 vs Francia 3
 				(idJugador(1, 10),  @idArgentinaFranciaFinal,  23, NULL, FALSE),
 				(idJugador(1, 11),  @idArgentinaFranciaFinal,  36, NULL, FALSE),
 				(idJugador(1, 10),  @idArgentinaFranciaFinal, 108, NULL, FALSE),
 				(idJugador(2, 10),  @idArgentinaFranciaFinal, 80,  NULL, FALSE),
 				(idjugador(2, 10),  @idArgentinaFranciaFinal, 81,  NULL, FALSE),
-				(idjugador(2, 10),  @idArgentinaFranciaFinal, 118, NULL, FALSE),
-				-- Tunez 1 vs Francia 0
-				(idJugador(31,10),  @idTunezFranciaGrupo,  58, NULL, FALSE),
-
-				-- Francia 3 vs Polonia 1
-				(idJugador(2, 9),   @idFranciaPoloniaOctavos, 44, NULL,   FALSE),
-				(idjugador(2, 10),  @idFranciaPoloniaOctavos, 74, NULL,   FALSE),
-				(idjugador(2, 10),  @idFranciaPoloniaOctavos, 90, 1,  	FALSE),
-				(idjugador(25, 9),  @idFranciaPoloniaOctavos, 90, 9,  	FALSE);
+				(idjugador(2, 10),  @idArgentinaFranciaFinal, 118, NULL, FALSE);
 
 
 	INSERT INTO DefinicionPenal (idPartido, idJugador, turno, acierto)
