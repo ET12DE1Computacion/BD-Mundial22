@@ -396,7 +396,7 @@ START TRANSACTION ;
 				('Enner', 'Valencia', '1989-11-04', 13, 13, 4),
 				('Djorkaeff', 'Reasco', '1999-01-18', 24, 13, 4),
 				('Kevin', 'Rodriguez', '2000-03-04', 26, 13, 4),
-				-- España
+				-- Espana
 				('Robert', 'Sanchez', '1997-11-18', 1, 14, 1),
 				('David', 'Raya', '1995-09-15', 13, 14, 1),
 				('Unai', 'Simon', '1997-06-11', 23, 14, 1),
@@ -440,7 +440,7 @@ START TRANSACTION ;
 				('Lucas', 'De la Torre', '1998-05-23', 14, 15, 3),
 				('Aaron', 'Long', '1992-10-12', 15, 15, 3),
 				('Jordan', 'Morris', '1994-10-26', 16, 15, 4),
-				('Cristian', 'Roldan', '1955-06-03', 17, 15, 3),
+				('Cristian', 'Roldan', '1995-06-03', 17, 15, 3),
 				('Shaquell', 'Moore', '1996-11-02', 18, 15, 2),
 				('Haji', 'Wright', '1998-03-27', 19, 15, 4),
 				('Cameron', 'Carter-vickers', '1997-12-21', 20, 15, 2),
@@ -954,7 +954,6 @@ START TRANSACTION ;
 	CALL altaPartido(@idIranEEUUGrupo,	1,	19,	15,	6,	'2022-11-29 00:00',	0,	1,	90);
 
 
-
 	-- Grupo C
 
 	CALL altaPartido(@idArgentinaArabiaGrupo,	1,	1,	4,	1,	'2022-11-22 07:00',	1,	2,	90);
@@ -1023,7 +1022,7 @@ START TRANSACTION ;
 	CALL altaPartido(@idBrasilCoreaOctavos,	2,	7,	21,	7,	'2022-12-05 16:00',  4,  	1,	90);
 	CALL altaPartido(@idInglaterraSenegalOctavos,	2,	18,	28,	4,	'2022-12-04 12:00',	3,	0,	90);
 	CALL altaPartido(@idFranciaPoloniaOctavos,	2,	2,	25,	6,	'2022-12-04 16:00',	3,	1,	90);
-	CALL altaPartido(@idMarruecosEspaniaOctavos,	2,	22,	14,	5,	'2022-12-06 12:00',	0,	0,	120);
+	CALL altaPartido(@idMarruecosEspanaOctavos,	2,	22,	14,	5,	'2022-12-06 12:00',	0,	0,	120);
 	CALL altaPartido(@idPortugalSuizaOctavos,	2,	26,	30,	1,	'2022-12-06 16:00',	6,	1,	90);               	 
 
 	-- Cuartos de final
@@ -1050,204 +1049,614 @@ START TRANSACTION ;
 	CALL altaPartido(@idCroaciaMarruecosTercero,	6,	11,	22,	3,	'2022-12-17 12:00',	2,	1,	90);
 
 	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
-		VALUES      	(idJugador(1, 23)   ,  @idArgentinaArabiaGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 3)	,  @idArgentinaArabiaGrupo ,idJugador(1, 8),   NULL   ,   NULL    	,   71  	,   NULL),
-						(idJugador(1, 13)   ,  @idArgentinaArabiaGrupo ,idJugador(1, 25),  NULL   ,   NULL    	,   59  	,   NULL),
-						(idJugador(1, 19)   ,  @idArgentinaArabiaGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 26)   ,  @idArgentinaArabiaGrupo ,   NULL   	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 5)	,  @idArgentinaArabiaGrupo,idJugador(1, 24),  NULL	,   NULL    	,   59  	,   NULL),
-						(idJugador(1, 7)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 11)   ,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 17)   ,  @idArgentinaArabiaGrupo,idJugador(1, 9),   NULL	,   NULL    	,   59  	,   NULL),
-						(idJugador(1, 10)   ,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 22)   ,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 8)	,  @idArgentinaArabiaGrupo,idJugador(1, 3),   71  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 9)	,  @idArgentinaArabiaGrupo,idJugador(1,17),   59  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1,24)	,  @idArgentinaArabiaGrupo,idJugador(1, 5),   59  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1,25)	,  @idArgentinaArabiaGrupo,idJugador(1,13),   59  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,21)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
+		VALUES      	
+               
+                        ( idJugador(27, 1) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27, 2) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,15) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,16) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27, 3) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,14) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,10) , @idQatarEcuadorGrupo, idJugador(27, 4)       , NULL, NULL, 71  , NULL),
+                        ( idJugador(27,12) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27, 6) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,19) , @idQatarEcuadorGrupo, idJugador(27, 9)       , NULL, NULL, 72  , NULL),
+                        ( idJugador(27,11) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
 
-					-- Jugadores de Arabia Saudita.
-						(idJugador(4,5) 	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,17)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,13)	,  @idArgentinaArabiaGrupo,idJugador(4,6) ,   NULL	,   NULL    	,   90  	,   9   ),
-						(idJugador(4,12)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,8) 	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,23)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,7) 	,  @idArgentinaArabiaGrupo,idJugador(4,18),   NULL	,   NULL    	,   45  	,   4   ),
-						(idJugador(4,9) 	,  @idArgentinaArabiaGrupo,idJugador(4,25),   NULL	,   NULL    	,   89  	,   NULL),
-						(idJugador(4,10)	,  @idArgentinaArabiaGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,11)	,  @idArgentinaArabiaGrupo,idJugador(4,2) ,   NULL	,   NULL    	,   78  	,   NULL),
-						(idJugador(4,6) 	,  @idArgentinaArabiaGrupo,idJugador(4,13),   90  	,   9       	,   NULL	,   NULL),
-						(idJugador(4,18)	,  @idArgentinaArabiaGrupo,idJugador(4,4) ,   45  	,   4       	,   88  	,   NULL),
-						(idJugador(4,25)	,  @idArgentinaArabiaGrupo,idJugador(4,9) ,   89  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,2) 	,  @idArgentinaArabiaGrupo,idJugador(4,11),   78  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(4,4) 	,  @idArgentinaArabiaGrupo,idJugador(4,18),   88  	,   NULL    	,   NULL	,   NULL),
-						-- Partido Argentina - Mexico - Grupo C
-						(idJugador(1, 23)   ,  @idArgentinaMexicoGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 4)	,  @idArgentinaMexicoGrupo ,idJugador(1, 26), NULL	,   NULL    	,   63  	,   NULL),
-						(idJugador(1, 26)   ,  @idArgentinaMexicoGrupo ,idJugador(1, 4) , 63  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 8)	,  @idArgentinaMexicoGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 19)   ,  @idArgentinaMexicoGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 25)   ,  @idArgentinaMexicoGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 7)	,  @idArgentinaMexicoGrupo ,   NULL   	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 11)   ,  @idArgentinaMexicoGrupo ,idJugador(1, 13), NULL	,   NULL    	,   69  	,   NULL),
-						(idJugador(1, 13)   ,  @idArgentinaMexicoGrupo ,idJugador(1, 11), 69  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 18)   ,  @idArgentinaMexicoGrupo ,idJugador(1, 24), NULL	,   NULL    	,   57  	,   NULL),
-						(idJugador(1, 24)   ,  @idArgentinaMexicoGrupo ,idJugador(1, 18), 57  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 20)   ,  @idArgentinaMexicoGrupo ,idJugador(1, 14), NULL	,   NULL    	,   69  	,   NULL),
-						(idJugador(1, 14)   ,  @idArgentinaMexicoGrupo ,idJugador(1, 20), 69  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 10)   ,  @idArgentinaMexicoGrupo	,   NULL	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 22)   ,  @idArgentinaMexicoGrupo, idJugador(1, 9) , NULL	,   NULL    	,   63  	,   NULL),
-						(idJugador(1, 9)	,  @idArgentinaMexicoGrupo, idJugador(1, 22), 63  	,   NULL    	,   NULL	,   NULL),
-				-- Partido Polonia - Argentina - Grupo C
-						(idJugador(1, 23)   ,  @idPoloniaArgentinaGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 8)	,  @idPoloniaArgentinaGrupo ,idJugador(1, 3) , NULL	,   NULL    	,   59  	,   NULL),
-						(idJugador(1, 3)	,  @idPoloniaArgentinaGrupo ,idJugador(1, 8) , 59  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 13)   ,  @idPoloniaArgentinaGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 19)   ,  @idPoloniaArgentinaGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 26)   ,  @idPoloniaArgentinaGrupo ,  NULL    	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 7)	,  @idPoloniaArgentinaGrupo ,   NULL   	,   NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 20)   ,  @idPoloniaArgentinaGrupo ,idJugador(1, 16), NULL	,   NULL    	,   83  	,   NULL),
-						(idJugador(1, 16)   ,  @idPoloniaArgentinaGrupo ,idJugador(1, 20), 83  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 24)   ,  @idPoloniaArgentinaGrupo ,idJugador(1, 6) , NULL	,   NULL    	,   79  	,   NULL),
-						(idJugador(1, 6)	,  @idPoloniaArgentinaGrupo ,idJugador(1, 24), 79  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 9)	,  @idPoloniaArgentinaGrupo, idJugador(1, 22), NULL	,   NULL    	,   79  	,   NULL),
-						(idJugador(1, 22)   ,  @idPoloniaArgentinaGrupo, idJugador(1, 9) , 79  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 10)   ,  @idPoloniaArgentinaGrupo	,   NULL  	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 11)   ,  @idPoloniaArgentinaGrupo ,idJugador(1, 5) , NULL	,   NULL    	,   59  	,   NULL),
-						(idJugador(1, 5)	,  @idPoloniaArgentinaGrupo ,idJugador(1, 11), 59  	,   NULL    	,   NULL	,   NULL),
-				-- Partido Argentina - Australia - Octavos
-						(idJugador(1, 23)   ,  @idArgentinaAustraliaOctavos ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 8)	,  @idArgentinaAustraliaOctavos ,idJugador(1, 3) , NULL	,   NULL    	,   71  	,   NULL),
-						(idJugador(1, 3)	,  @idArgentinaAustraliaOctavos ,idJugador(1, 8) , 71  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 19)   ,  @idArgentinaAustraliaOctavos ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 13)   ,  @idArgentinaAustraliaOctavos ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 26)   ,  @idArgentinaAustraliaOctavos ,idJugador(1, 14), NULL	,   NULL    	,   80  	,   NULL),
-						(idJugador(1, 14)   ,  @idArgentinaAustraliaOctavos ,idJugador(1, 26), 80  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 7)	,  @idArgentinaAustraliaOctavos ,   NULL     	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 20)   ,  @idArgentinaAustraliaOctavos ,idJugador(1, 4) , NULL	,   NULL    	,   80  	,   NULL),
-						(idJugador(1, 4)	,  @idArgentinaAustraliaOctavos ,idJugador(1, 20), 80  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 24)   ,  @idArgentinaAustraliaOctavos ,idJugador(1, 6) , NULL	,   NULL    	,   79  	,   NULL),
-						(idJugador(1, 6)	,  @idArgentinaAustraliaOctavos ,idJugador(1, 24), 79  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 9)	,  @idArgentinaAustraliaOctavos ,idJugador(1, 22), NULL	,   NULL    	,   71  	,   NULL),
-						(idJugador(1, 22)   ,  @idArgentinaAustraliaOctavos ,idJugador(1, 9) , 71  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 10)   ,  @idArgentinaAustraliaOctavos ,   NULL     	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 17)   ,  @idArgentinaAustraliaOctavos ,idJugador(1, 25), NULL	,   NULL    	,   50  	,   NULL),
-						(idJugador(1, 25)   ,  @idArgentinaAustraliaOctavos ,idJugador(1, 17), 50  	,   NULL    	,   NULL	,   NULL),
+                        ( idJugador(27, 4) , @idQatarEcuadorGrupo, idJugador(27,10)       ,  71 , NULL, NULL, NULL),
+                        ( idJugador(27, 9) , @idQatarEcuadorGrupo, idJugador(27,19)       ,  72 , NULL, NULL, NULL),
 
-				-- Partido Argentina - Paises Bajos - Cuartos
-						(idJugador(1, 23)   ,  @idPaisesBajosArgentinaCuartos ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 13)   ,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 6) , NULL	,   NULL    	,   78  	,   NULL),
-						(idJugador(1, 6)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 13), 78  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 19)   ,  @idPaisesBajosArgentinaCuartos ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 25)   ,  @idPaisesBajosArgentinaCuartos ,idJugador(1,11) , NULL	,   NULL    	,   112 	,   NULL),
-						(idJugador(1, 11)   ,  @idPaisesBajosArgentinaCuartos ,idJugador(1,25) , 112 	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 7)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1,5)  , NULL	,   NULL    	,   67  	,   NULL),
-						(idJugador(1, 5)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1,7)  , 67  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 8)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 3) , NULL	,   NULL    	,   78  	,   NULL),
-						(idJugador(1, 3)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 8) , 78  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 20)   ,  @idPaisesBajosArgentinaCuartos ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 24)   ,  @idPaisesBajosArgentinaCuartos ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 26)   ,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 4) , NULL	,   NULL    	,   106 	,   NULL),
-						(idJugador(1, 4)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 26), 106 	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 9)	,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 22), NULL	,   NULL    	,   82  	,   NULL),
-						(idJugador(1, 22)   ,  @idPaisesBajosArgentinaCuartos ,idJugador(1, 9) , 82  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 10)   ,  @idPaisesBajosArgentinaCuartos ,   NULL     	, NULL	,   NULL    	,   NULL	,   NULL),
 
-						-- Partido Argentina - Croacia - Semis
-						(idJugador(1, 23)   ,  @idArgentinaCroaciaSemi ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 3)	,  @idArgentinaCroaciaSemi ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 13)   ,  @idArgentinaCroaciaSemi ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 19)   ,  @idArgentinaCroaciaSemi ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 26)   ,  @idArgentinaCroaciaSemi ,idJugador(1, 2) , NULL	,   NULL    	,   86  	,   NULL),
-						(idJugador(1, 2)	,  @idArgentinaCroaciaSemi ,idJugador(1, 26), 86  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 5)	,  @idArgentinaCroaciaSemi ,idJugador(1, 25), NULL	,   NULL    	,   62  	,   NULL),
-						(idJugador(1, 25)   ,  @idArgentinaCroaciaSemi ,idJugador(1,5)  , 62  	,   NULL    	,   112 	,   NULL),
-						(idJugador(1, 7)	,  @idArgentinaCroaciaSemi ,idJugador(1,14) , NULL	,   NULL    	,   74  	,   NULL),
-						(idJugador(1, 14)   ,  @idArgentinaCroaciaSemi ,idJugador(1,7)  , 74  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 20)   ,  @idArgentinaCroaciaSemi ,idJugador(1, 15), NULL	,   NULL    	,   86  	,   NULL),
-						(idJugador(1, 15)   ,  @idArgentinaCroaciaSemi ,idJugador(1, 20), 86  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 24)   ,  @idArgentinaCroaciaSemi ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 9)	,  @idArgentinaCroaciaSemi ,idJugador(1, 21), NULL	,   NULL    	,   74  	,   NULL),
-						(idJugador(1, 21)   ,  @idArgentinaCroaciaSemi ,idJugador(1, 9) , 74  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 10)   ,  @idArgentinaCroaciaSemi ,   NULL     	, NULL	,   NULL    	,   NULL	,   NULL),
+                         
+                        ( idJugador(13, 1) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,17) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13, 2) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13, 3) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13, 7) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,19) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,20) , @idQatarEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,23) , @idQatarEcuadorGrupo, idJugador(13,21)       , NULL, NULL, 90  , NULL),
+                        ( idJugador(13,10) , @idQatarEcuadorGrupo, idJugador(13,16)       , NULL, NULL, 68  , NULL),
+                        ( idJugador(13,13) , @idQatarEcuadorGrupo, idJugador(13, 5)       , NULL, NULL, 77  , NULL),
+                        ( idJugador(13,11) , @idQatarEcuadorGrupo, idJugador(13,26)       , NULL, NULL, 90  , NULL),
 
-						-- Partido Argentina - Francia - Final
-						(idJugador(1, 23)   ,  @idArgentinaFranciaFinal ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 3)	,  @idArgentinaFranciaFinal ,idJugador(1, 21), NULL	,   NULL    	,   120 	,   1   ),
-						(idJugador(1, 21)   ,  @idArgentinaFranciaFinal ,idJugador(1, 3) , 120 	,   1       	,   NULL	,   NULL),
-						(idJugador(1, 13)   ,  @idArgentinaFranciaFinal ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 19)   ,  @idArgentinaFranciaFinal ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 26)   ,  @idArgentinaFranciaFinal ,idJugador(1, 4) , NULL	,   NULL    	,   91  	,   NULL),
-						(idJugador(1, 4)	,  @idArgentinaFranciaFinal ,idJugador(1, 26), 91  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 7)	,  @idArgentinaFranciaFinal ,idJugador(1, 5) , NULL	,   NULL    	,   102 	,   NULL),
-						(idJugador(1, 5)	,  @idArgentinaFranciaFinal ,idJugador(1,7)  , 102 	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 20)   ,  @idArgentinaFranciaFinal ,idJugador(1, 6) , NULL	,   NULL    	,   116 	,   NULL),
-						(idJugador(1, 6)	,  @idArgentinaFranciaFinal ,idJugador(1, 20), 116 	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 24)   ,  @idArgentinaFranciaFinal ,  NULL      	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 9)	,  @idArgentinaFranciaFinal ,idJugador(1, 22), NULL	,   NULL    	,   102 	,   NULL),
-						(idJugador(1, 22)   ,  @idArgentinaFranciaFinal ,idJugador(1, 9) , 102 	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 10)   ,  @idArgentinaFranciaFinal ,   NULL     	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(1, 11)   ,  @idArgentinaFranciaFinal ,idJugador(1, 8) , NULL	,   NULL    	,   64  	,   NULL),
-						(idJugador(1, 8)	,  @idArgentinaFranciaFinal ,idJugador(1, 11), 64  	,   NULL    	,   NULL	,   NULL),
+                        ( idJugador(13,16) , @idQatarEcuadorGrupo, idJugador(13,10)       ,  68 , NULL, NULL, NULL),
+                        ( idJugador(13, 5) , @idQatarEcuadorGrupo, idJugador(13,13)       ,  77 , NULL, NULL, NULL),
+                        ( idJugador(13,21) , @idQatarEcuadorGrupo, idJugador(13,23)       ,  90 , NULL, NULL, NULL),
+                        ( idJugador(13,26) , @idQatarEcuadorGrupo, idJugador(13,11)       ,  90 , NULL, NULL, NULL);
 
-						-- Partido Francia - Australia - Grupo D
-						(idJugador(2, 1)	,  @idFranciaAustraliaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 2)	,  @idFranciaAustraliaGrupo ,idJugador(2, 5) , NULL	,   NULL    	,   89  	,   NULL),
-						(idJugador(2, 18)   ,  @idFranciaAustraliaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 21)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 22), NULL	,   NULL    	,   13  	,   NULL),
-						(idJugador(2, 24)   ,  @idFranciaAustraliaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 7)	,  @idFranciaAustraliaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 8)	,  @idFranciaAustraliaGrupo ,idJugador(2, 13), NULL	,   NULL    	,   77  	,   NULL),
-						(idJugador(2, 14)   ,  @idFranciaAustraliaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 9)	,  @idFranciaAustraliaGrupo ,idJugador(2, 26), NULL	,   NULL    	,   89  	,   NULL),
-						(idJugador(2, 10)   ,  @idFranciaAustraliaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 11)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 20), NULL	,   NULL    	,   77  	,   NULL),
-						(idJugador(2, 5)	,  @idFranciaAustraliaGrupo ,idJugador(2, 2) , 89  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 13)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 8) , 77  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 20)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 11), 77  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 22)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 21), 13  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 26)   ,  @idFranciaAustraliaGrupo ,idJugador(2, 9) , 89  	,   NULL    	,   NULL	,   NULL),
 
-						-- Partido Francia - Dinamarca - Grupo D
-						
-						(idJugador(2, 1)	,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 4)	,  @idFranciaDinamarcaGrupo ,idJugador(2, 24), NULL	,   NULL    	,   75  	,   NULL),
-						(idJugador(2, 5)	,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 18)   ,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 22)   ,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 7)	,  @idFranciaDinamarcaGrupo ,idJugador(2, 13), NULL	,   NULL    	,   90  	,   2   ),
-						(idJugador(2, 8)	,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 10)   ,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 11)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 20), NULL	,   NULL    	,   75  	,   NULL),
-						(idJugador(2, 14)   ,  @idFranciaDinamarcaGrupo , NULL       	, NULL	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 9)	,  @idFranciaDinamarcaGrupo ,idJugador(2, 26), NULL	,   NULL    	,   63  	,   NULL),
-						(idJugador(2, 26)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 9) , 63  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 20)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 11), 75  	,   NULL    	,   NULL	,   NULL),
-						(idJugador(2, 13)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 7) , 90  	,   2       	,   NULL	,   NULL),
-						(idJugador(2, 24)   ,  @idFranciaDinamarcaGrupo ,idJugador(2, 4) , 75  	,   NULL    	,   NULL	,   NULL),
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(28,16) , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,21) , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,3)  , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,4)  , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,22) , @idSenegalPaisesBajosGrupo, idJugador(28,14)       , NULL, NULL, 62  , NULL),
+                        ( idJugador(28,8)  , @idSenegalPaisesBajosGrupo, idJugador(28,26)       , NULL, NULL, 73  , NULL),
+                        ( idJugador(28,6)  , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,15) , @idSenegalPaisesBajosGrupo, idJugador(28,7)        , NULL, NULL, 74  , NULL),
+                        ( idJugador(28,5)  , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,18) , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,9)  , @idSenegalPaisesBajosGrupo, idJugador(28,20)       , NULL, NULL, 69  , NULL),
 
-										-- Partido Tunez - Francia - Grupo D
+                        ( idJugador(28,14) , @idSenegalPaisesBajosGrupo, idJugador(28,22)       ,  62 , NULL, NULL, NULL),
+                        ( idJugador(28,26) , @idSenegalPaisesBajosGrupo, idJugador(28,8)        ,  73 , NULL, NULL, NULL),
+                        ( idJugador(28,20) , @idSenegalPaisesBajosGrupo, idJugador(28,9)        ,  69 , NULL, NULL, NULL),
+                        ( idJugador(28,7)  , @idSenegalPaisesBajosGrupo, idJugador(28,15)       ,  74 , NULL, NULL, NULL),
 
-						(idJugador(2, 16)   ,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 3)	,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 4)	,  @idTunezFranciaGrupo ,idJugador(2, 17)   , NULL	,   NULL    	,   63	,   NULL),
-						(idJugador(2, 24)   ,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 25)   ,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 8)	,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 13)   ,  @idTunezFranciaGrupo ,idJugador(2, 7)	, NULL	,   NULL    	,   73	,   NULL),
-						(idJugador(2, 15)   ,  @idTunezFranciaGrupo ,idJugador(2, 14)   , NULL	,   NULL    	,   63	,   NULL),
-						(idJugador(2, 6)	,  @idTunezFranciaGrupo ,idJugador(2, 11)   , NULL	,   NULL    	,   79	,   NULL),
-						(idJugador(2, 12)   ,  @idTunezFranciaGrupo , NULL          	, NULL	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 20)   ,  @idTunezFranciaGrupo ,idJugador(2, 10)   , NULL	,   NULL    	,   63	,   NULL),
-						(idJugador(2, 7)	,  @idTunezFranciaGrupo ,idJugador(2, 13)   , 73  	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 10)   ,  @idTunezFranciaGrupo ,idJugador(2, 20)   , 63  	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 11)   ,  @idTunezFranciaGrupo ,idJugador(2, 6)	, 79  	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 14)   ,  @idTunezFranciaGrupo ,idJugador(2, 15)   , 63  	,   NULL    	,   NULL  ,   NULL),
-						(idJugador(2, 17)   ,  @idTunezFranciaGrupo ,idJugador(2, 4)	, 63  	,   NULL    	,   NULL  ,   NULL),
+                         
+                        ( idJugador(24,23) , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,3)  , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,4)  , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,5)  , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,22) , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,11) , @idSenegalPaisesBajosGrupo, idJugador(24,14)       , NULL, NULL, 79  , NULL),
+                        ( idJugador(24,21) , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,17) , @idSenegalPaisesBajosGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,8)  , @idSenegalPaisesBajosGrupo, idJugador(24,15)       , NULL, NULL, 90  , 4  ),
+                        ( idJugador(24,18) , @idSenegalPaisesBajosGrupo, idJugador(24,10)       , NULL, NULL, 62  , NULL),
+                        ( idJugador(24,7)  , @idSenegalPaisesBajosGrupo, idJugador(24,20)       , NULL, NULL, 79  , NULL),
 
-						-- Partido España - Costa Rica - Grupo E.
+                        ( idJugador(24,10) , @idSenegalPaisesBajosGrupo, idJugador(24,18)       ,  62 , NULL, NULL, NULL),
+                        ( idJugador(24,14) , @idSenegalPaisesBajosGrupo, idJugador(24,11)       ,  79 , NULL, NULL, NULL),
+                        ( idJugador(24,20) , @idSenegalPaisesBajosGrupo, idJugador(24,7)        ,  79 , NULL, NULL, NULL),
+                        ( idJugador(24,15) , @idSenegalPaisesBajosGrupo, idJugador(24,8)        ,  90 ,  4  , NULL, NULL);
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+                     
+                         
+                        ( idJugador(27,22) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,17) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,2)  , @idQatarSenegalGrupo, idJugador(27,4)        , NULL, NULL, 83  , NULL),
+                        ( idJugador(27,16) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,3)  , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,14) , @idQatarSenegalGrupo, idJugador(27,5)        , NULL, NULL, 83  , NULL),
+                        ( idJugador(27,12) , @idQatarSenegalGrupo, idJugador(27,6)        , NULL, NULL, 69  , NULL),
+                        ( idJugador(27,10) , @idQatarSenegalGrupo, idJugador(27,9)        , NULL, NULL, 74  , NULL),
+                        ( idJugador(27,23) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,19) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,11) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(27,4)  , @idQatarSenegalGrupo, idJugador(27,2)        ,  83 , NULL, NULL, NULL),
+                        ( idJugador(27,5)  , @idQatarSenegalGrupo, idJugador(27,14)       ,  83 , NULL, NULL, NULL),
+                        ( idJugador(27,6)  , @idQatarSenegalGrupo, idJugador(27,12)       ,  69 , NULL, NULL, NULL),
+                        ( idJugador(27,9)  , @idQatarSenegalGrupo, idJugador(27,10)       ,  74 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(28,16) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,21) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,3)  , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,22) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,14) , @idQatarSenegalGrupo, idJugador(28,4)        , NULL, NULL, 77  , NULL),
+                        ( idJugador(28,11) , @idQatarSenegalGrupo, idJugador(28,13)       , NULL, NULL, 64  , NULL),
+                        ( idJugador(28,26) , @idQatarSenegalGrupo, idJugador(28,17)       , NULL, NULL, 78  , NULL),
+                        ( idJugador(28,13) , @idQatarSenegalGrupo, idJugador(28,18)       , NULL, NULL, 74  , NULL),
+                        ( idJugador(28,5)  , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,15) , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,9)  , @idQatarSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(28,4)  , @idQatarSenegalGrupo, idJugador(28,14)       ,  77 , NULL, NULL, NULL),
+                        ( idJugador(28,17) , @idQatarSenegalGrupo, idJugador(28,26)       ,  78 , NULL, NULL, NULL),
+                        ( idJugador(28,18) , @idQatarSenegalGrupo, idJugador(28,19)       ,  74 , NULL, NULL, NULL);
+
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(24,23) , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,2)  , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,4)  , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,5)  , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,22) , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,20) , @idPaisesBajosEcuadorGrupo, idJugador(24,15)       , NULL, NULL, 79  , NULL),
+                        ( idJugador(24,21) , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,17) , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,14) , @idPaisesBajosEcuadorGrupo, idJugador(24,11)       , NULL, NULL, 69  , NULL),
+                        ( idJugador(24,8)  , @idPaisesBajosEcuadorGrupo, idJugador(24,19)       , NULL, NULL, 79  , NULL),
+                        ( idJugador(24,7)  , @idPaisesBajosEcuadorGrupo, idJugador(24,10)       , NULL, NULL, 45  , NULL),
+
+                        ( idJugador(24,15) , @idPaisesBajosEcuadorGrupo, idJugador(24,20)       ,  79 , NULL, NULL, NULL),
+                        ( idJugador(24,11) , @idPaisesBajosEcuadorGrupo, idJugador(24,14)       ,  69 , NULL, NULL, NULL),
+                        ( idJugador(24,19) , @idPaisesBajosEcuadorGrupo, idJugador(24,8)        ,  79 , NULL, NULL, NULL),
+                        ( idJugador(24,10) , @idPaisesBajosEcuadorGrupo, idJugador(24,7)        ,  45 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(13,1)  , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,25) , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,2)  , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,3)  , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,17) , @idPaisesBajosEcuadorGrupo, idJugador(13,5)        , NULL, NULL, 45  , NULL),
+                        ( idJugador(13,20) , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,23) , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,7)  , @idPaisesBajosEcuadorGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,19) , @idPaisesBajosEcuadorGrupo, idJugador(13,10)       , NULL, NULL, 90  , NULL),
+                        ( idJugador(13,13) , @idPaisesBajosEcuadorGrupo, idJugador(13,26)       , NULL, NULL, 90  , NULL),
+                        ( idJugador(13,11) , @idPaisesBajosEcuadorGrupo, idJugador(13,16)       , NULL, NULL, 74  , NULL),
+
+                        ( idJugador(13,5)  , @idPaisesBajosEcuadorGrupo, idJugador(13,17)       ,  45 , NULL, NULL, NULL),
+                        ( idJugador(13,16) , @idPaisesBajosEcuadorGrupo, idJugador(13,11)       ,  74 , NULL, NULL, NULL),
+                        ( idJugador(13,26) , @idPaisesBajosEcuadorGrupo, idJugador(13,13)       ,  90 , NULL, NULL, NULL),
+                        ( idJugador(13,10) , @idPaisesBajosEcuadorGrupo, idJugador(13,19)       ,  90 , NULL, NULL, NULL);
+
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(24,23) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,2)  , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,4)  , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,5)  , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,22) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,15) , @idPaisesBajosQatarGrupo, idJugador(24,20)       , NULL, NULL, 83  , NULL),
+                        ( idJugador(24,21) , @idPaisesBajosQatarGrupo, idJugador(24,24)       , NULL, NULL, 86  , NULL),
+                        ( idJugador(24,17) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(24,14) , @idPaisesBajosQatarGrupo, idJugador(24,11)       , NULL, NULL, 66  , NULL),
+                        ( idJugador(24,8)  , @idPaisesBajosQatarGrupo, idJugador(24,19)       , NULL, NULL, 82  , NULL),
+                        ( idJugador(24,10) , @idPaisesBajosQatarGrupo, idJugador(24,18)       , NULL, NULL, 66  , NULL),
+
+                        ( idJugador(24,24) , @idPaisesBajosQatarGrupo, idJugador(24,21)       ,  86 , NULL, NULL, NULL),
+                        ( idJugador(24,11) , @idPaisesBajosQatarGrupo, idJugador(24,14)       ,  66 , NULL, NULL, NULL),
+                        ( idJugador(24,19) , @idPaisesBajosQatarGrupo, idJugador(24,8)        ,  82 , NULL, NULL, NULL),
+                        ( idJugador(24,18) , @idPaisesBajosQatarGrupo, idJugador(24,10)       ,  66 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(27,22) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,17) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,2)  , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,16) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,3)  , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,14) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,10) , @idPaisesBajosQatarGrupo, idJugador(27,8)        , NULL, NULL, 64  , NULL),
+                        ( idJugador(27,23) , @idPaisesBajosQatarGrupo, idJugador(27,12)       , NULL, NULL, 64  , NULL),
+                        ( idJugador(27,6)  , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,19) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(27,11) , @idPaisesBajosQatarGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(27,8)  , @idPaisesBajosQatarGrupo, idJugador(27,10)       ,  64 , NULL, NULL, NULL),
+                        ( idJugador(27,12) , @idPaisesBajosQatarGrupo, idJugador(27,23)       ,  64 , NULL, NULL, NULL),
+                        ( idJugador(27,9)  , @idPaisesBajosQatarGrupo, idJugador(27,10)       ,  64 , NULL, NULL, NULL),
+                        ( idJugador(27,7)  , @idPaisesBajosQatarGrupo, idJugador(27,6)        ,  85 , NULL, NULL, NULL);
+
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(13,1)  , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,17) , @idEcuadorSenegalGrupo, idJugador(13,25)       , NULL, NULL, 85  , NULL),
+                        ( idJugador(13,2)  , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,3)  , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,7)  , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,21) , @idEcuadorSenegalGrupo, idJugador(13,5)        , NULL, NULL, 45  , NULL),
+                        ( idJugador(13,8)  , @idEcuadorSenegalGrupo, idJugador(13,16)       , NULL, NULL, 45  , NULL),
+                        ( idJugador(13,23) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,19) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(13,13) , @idEcuadorSenegalGrupo, idJugador(13,26)       , NULL, NULL, 90  , NULL),
+                        ( idJugador(13,11) , @idEcuadorSenegalGrupo, idJugador(13,24)       , NULL, NULL, 64  , NULL),
+
+                        ( idJugador(13,25) , @idEcuadorSenegalGrupo, idJugador(13,17)       ,  85 , NULL, NULL, NULL),
+                        ( idJugador(13,5)  , @idEcuadorSenegalGrupo, idJugador(13,21)       ,  45 , NULL, NULL, NULL),
+                        ( idJugador(13,16) , @idEcuadorSenegalGrupo, idJugador(13,8)        ,  45 , NULL, NULL, NULL),
+                        ( idJugador(13,26) , @idEcuadorSenegalGrupo, idJugador(13,13)       ,  90 , NULL, NULL, NULL),
+                        ( idJugador(13,24) , @idEcuadorSenegalGrupo, idJugador(13,11)       ,  64 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(28,16) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,21) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,3)  , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,22) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,14) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,11) , @idEcuadorSenegalGrupo, idJugador(28,6)        , NULL, NULL, 74  , NULL),
+                        ( idJugador(28,26) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,13) , @idEcuadorSenegalGrupo, idJugador(28,20)       , NULL, NULL, 75  , NULL),
+                        ( idJugador(28,5)  , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,18) , @idEcuadorSenegalGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(28,9)  , @idEcuadorSenegalGrupo, idJugador(28,4)        , NULL, NULL, 90  , 5  ),
+
+                        ( idJugador(28,6)  , @idEcuadorSenegalGrupo, idJugador(28,11)       ,  74 , NULL, NULL, NULL),
+                        ( idJugador(28,20) , @idEcuadorSenegalGrupo, idJugador(28,13)       ,  75 , NULL, NULL, NULL),
+                        ( idJugador(28,4)  , @idEcuadorSenegalGrupo, idJugador(28,9)        ,  90 ,  5  , NULL, NULL);
+
+
+                 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(18, 1) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,12) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 5) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 6) , @idInglaterraIranGrupo, idJugador(18,15)       , NULL, NULL, 70  , NULL),
+                        ( idJugador(18, 3) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,22) , @idInglaterraIranGrupo, idJugador(18,20)       , NULL, NULL, 71  , NULL),
+                        ( idJugador(18, 4) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,17) , @idInglaterraIranGrupo, idJugador(18,11)       , NULL, NULL, 71  , NULL),
+                        ( idJugador(18,19) , @idInglaterraIranGrupo, idJugador(18,20)       , NULL, NULL, 71  , NULL),
+                        ( idJugador(18,10) , @idInglaterraIranGrupo, idJugador(18, 7)        , NULL, NULL, 71  , NULL),
+                        ( idJugador(18, 9) , @idInglaterraIranGrupo, idJugador(18,24)       , NULL, NULL, 76  , NULL),
+
+                        ( idJugador(18,15) , @idInglaterraIranGrupo, idJugador(18, 6)        ,  70 , NULL, NULL, NULL),
+                        ( idJugador(18,20) , @idInglaterraIranGrupo, idJugador(18,22)       ,  71 , NULL, NULL, NULL),
+                        ( idJugador(18,11) , @idInglaterraIranGrupo, idJugador(18,17)       ,  71 , NULL, NULL, NULL),
+                        ( idJugador(18, 7) , @idInglaterraIranGrupo, idJugador(18,10)       ,  71 , NULL, NULL, NULL),
+                        ( idJugador(18,24) , @idInglaterraIranGrupo, idJugador(18, 9)        ,  76 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(19, 1) , @idInglaterraIranGrupo, idJugador(19,24)       , NULL, NULL, 19  , NULL),
+                        ( idJugador(19, 2) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19, 8) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,19) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,15) , @idInglaterraIranGrupo, idJugador(19,13)       , NULL, NULL, 46  , NULL),
+                        ( idJugador(19, 5) , @idInglaterraIranGrupo, idJugador(19,16)       , NULL, NULL, 63  , NULL),
+                        ( idJugador(19, 7) , @idInglaterraIranGrupo, idJugador(19,17)       , NULL, NULL, 46  , NULL),
+                        ( idJugador(19,21) , @idInglaterraIranGrupo, idJugador(19,20)       , NULL, NULL, 77  , NULL),
+                        ( idJugador(19,18) , @idInglaterraIranGrupo, idJugador(19, 6)        , NULL, NULL, 46  , NULL),
+                        ( idJugador(19, 3) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19, 9) , @idInglaterraIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(19,24) , @idInglaterraIranGrupo, idJugador(19, 1)        ,  19 , NULL, NULL, NULL),
+                        ( idJugador(19,13) , @idInglaterraIranGrupo, idJugador(19,15)       ,  46 , NULL, NULL, NULL),
+                        ( idJugador(19,16) , @idInglaterraIranGrupo, idJugador(19, 5)        ,  63 , NULL, NULL, NULL),
+                        ( idJugador(19,17) , @idInglaterraIranGrupo, idJugador(19, 7)        ,  46 , NULL, NULL, NULL),
+                        ( idJugador(19,20) , @idInglaterraIranGrupo, idJugador(19,21)       ,  77 , NULL, NULL, NULL);
+
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(15, 1) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 2) , @idEEUUGalesGrupo, idJugador(15,22)       , NULL, NULL, 74  , NULL),
+                        ( idJugador(15, 3) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15,13) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 5) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 8) , @idEEUUGalesGrupo, idJugador(15,11)       , NULL, NULL, 66  , NULL),
+                        ( idJugador(15, 4) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 6) , @idEEUUGalesGrupo, idJugador(15,23)       , NULL, NULL, 75  , NULL),
+                        ( idJugador(15,21) , @idEEUUGalesGrupo, idJugador(15,16)       , NULL, NULL, 88  , NULL),
+                        ( idJugador(15,24) , @idEEUUGalesGrupo, idJugador(15,19)       , NULL, NULL, 74  , NULL),
+                        ( idJugador(15,10) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(15,11) , @idEEUUGalesGrupo, idJugador(15, 8)        ,  66 , NULL, NULL, NULL),
+                        ( idJugador(15,23) , @idEEUUGalesGrupo, idJugador(15, 6)        ,  75 , NULL, NULL, NULL),
+                        ( idJugador(15,22) , @idEEUUGalesGrupo, idJugador(15, 2)        ,  74 , NULL, NULL, NULL),
+                        ( idJugador(15,19) , @idEEUUGalesGrupo, idJugador(15,24)       ,  74 , NULL, NULL, NULL),
+                        ( idJugador(15,16) , @idEEUUGalesGrupo, idJugador(15,21)       ,  88 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(16, 1) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 5) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 6) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 4) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,14) , @idEEUUGalesGrupo, idJugador(16, 9)        , NULL, NULL, 45  , NULL),
+                        ( idJugador(16,10) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,15) , @idEEUUGalesGrupo, idJugador(16,16)       , NULL, NULL, 95  , NULL),
+                        ( idJugador(16, 8) , @idEEUUGalesGrupo, idJugador(16,22)       , NULL, NULL, 93  , NULL),
+                        ( idJugador(16, 3) , @idEEUUGalesGrupo, idJugador(16, 9)        , NULL, NULL, 79  , NULL),
+                        ( idJugador(16,11) , @idEEUUGalesGrupo, idJugador(16,12)       , NULL, NULL, 87  , NULL),
+                        ( idJugador(16,20) , @idEEUUGalesGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(16, 9) , @idEEUUGalesGrupo, idJugador(16,14)       ,  45 , NULL, NULL, NULL),
+                        ( idJugador(16,12) , @idEEUUGalesGrupo, idJugador(16,11)       ,  87 , NULL, NULL, NULL),
+                        ( idJugador(16,22) , @idEEUUGalesGrupo, idJugador(16, 8)        ,  93 , NULL, NULL, NULL),
+                        ( idJugador(16,16) , @idEEUUGalesGrupo, idJugador(16,15)       ,  95 , NULL, NULL, NULL);
+
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(18, 1) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,12) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 5) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 6) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 3) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,22) , @idInglaterraEEUUGrupo, idJugador(18, 8)        , NULL, NULL, 69  , NULL),
+                        ( idJugador(18, 4) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,17) , @idInglaterraEEUUGrupo, idJugador(18,11)       , NULL, NULL, 78  , NULL),
+                        ( idJugador(18,19) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,10) , @idInglaterraEEUUGrupo, idJugador(18, 7)        , NULL, NULL, 68  , NULL),
+                        ( idJugador(18, 9) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(18, 7) , @idInglaterraEEUUGrupo, idJugador(18,10)       ,  68 , NULL, NULL, NULL),
+                        ( idJugador(18, 8) , @idInglaterraEEUUGrupo, idJugador(18,22)       ,  69 , NULL, NULL, NULL),
+                        ( idJugador(18,11) , @idInglaterraEEUUGrupo, idJugador(18,17)       ,  78 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(15, 1) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 2) , @idInglaterraEEUUGrupo, idJugador(15,18)       , NULL, NULL, 78  , NULL),
+                        ( idJugador(15,20) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15,13) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 5) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 6) , @idInglaterraEEUUGrupo, idJugador(15,11)       , NULL, NULL, 77  , NULL),
+                        ( idJugador(15, 4) , @idInglaterraEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 8) , @idInglaterraEEUUGrupo, idJugador(15,23)       , NULL, NULL, 65  , NULL),
+                        ( idJugador(15,21) , @idInglaterraEEUUGrupo, idJugador(15,24)       , NULL, NULL, 83  , NULL),
+                        ( idJugador(15,24) , @idInglaterraEEUUGrupo, idJugador(15,19)       , NULL, NULL, 83  , NULL),
+                        ( idJugador(15,10) , @idInglaterraEEUUGrupo, idJugador(15,11)       , NULL, NULL, 45  , NULL),
+
+                        ( idJugador(15,11) , @idInglaterraEEUUGrupo, idJugador(15,10)       ,  45 , NULL, NULL, NULL),
+                        ( idJugador(15,23) , @idInglaterraEEUUGrupo, idJugador(15, 8)        ,  65 , NULL, NULL, NULL),
+                        ( idJugador(15,19) , @idInglaterraEEUUGrupo, idJugador(15,24)       ,  83 , NULL, NULL, NULL);
+
+    	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                 
+                         
+                        ( idJugador(16, 1) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 5) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 6) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 4) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,14) , @idGalesIranGrupo, idJugador(16, 9)        , NULL, NULL, 57  , NULL),
+                        ( idJugador(16,10) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,15) , @idGalesIranGrupo, idJugador(16, 7)        , NULL, NULL, 77  , NULL),
+                        ( idJugador(16, 8) , @idGalesIranGrupo, idJugador(16,20)       , NULL, NULL, 58  , NULL),
+                        ( idJugador(16, 3) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,11) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,13) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(16, 9) , @idGalesIranGrupo, idJugador(16,14)       ,  57 , NULL, NULL, NULL),
+                        ( idJugador(16, 7) , @idGalesIranGrupo, idJugador(16,15)       ,  77 , NULL, NULL, NULL),
+                        ( idJugador(16,20) , @idGalesIranGrupo, idJugador(16, 8)        ,  58 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(19,24) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,23) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,19) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19, 8) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19, 5) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,17) , @idGalesIranGrupo, idJugador(19, 7)        , NULL, NULL, 77  , NULL),
+                        ( idJugador(19, 6) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,21) , @idGalesIranGrupo, idJugador(19,15)       , NULL, NULL, 78  , NULL),
+                        ( idJugador(19, 3) , @idGalesIranGrupo, idJugador(19,16)       , NULL, NULL, 77  , NULL),
+                        ( idJugador(19, 9) , @idGalesIranGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,20) , @idGalesIranGrupo, idJugador(19,10)       , NULL, NULL, 68  , NULL),
+
+                        ( idJugador(19, 7) , @idGalesIranGrupo, idJugador(19,17)       ,  77 , NULL, NULL, NULL),
+                        ( idJugador(19,15) , @idGalesIranGrupo, idJugador(19,21)       ,  78 , NULL, NULL, NULL),
+                        ( idJugador(19,16) , @idGalesIranGrupo, idJugador(19, 3)        ,  77 , NULL, NULL, NULL),
+                        ( idJugador(19,10) , @idGalesIranGrupo, idJugador(19,20)       ,  68 , NULL, NULL, NULL);
+
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(16,12) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 3) , @idGalesInglaterraGrupo, idJugador(16,14)       , NULL, NULL, 36  , NULL),
+                        ( idJugador(16, 5) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 6) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16, 4) , @idGalesInglaterraGrupo, idJugador(16,16)       , NULL, NULL, 59  , NULL),
+                        ( idJugador(16, 7) , @idGalesInglaterraGrupo, idJugador(16,25)       , NULL, NULL, 81  , NULL),
+                        ( idJugador(16,15) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,11) , @idGalesInglaterraGrupo, idJugador(16, 9)        , NULL, NULL, 45  , NULL),
+                        ( idJugador(16,10) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(16,20) , @idGalesInglaterraGrupo, idJugador(16, 8)        , NULL, NULL, 77  , NULL),
+                        ( idJugador(16,13) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                        ( idJugador(16,14) , @idGalesInglaterraGrupo, idJugador(16, 3)        ,  36 , NULL, NULL, NULL),
+                        ( idJugador(16,16) , @idGalesInglaterraGrupo, idJugador(16, 4)        ,  59 , NULL, NULL, NULL),
+                        ( idJugador(16,25) , @idGalesInglaterraGrupo, idJugador(16, 7)        ,  81 , NULL, NULL, NULL),
+                        ( idJugador(16, 9) , @idGalesInglaterraGrupo, idJugador(16,11)       ,  45 , NULL, NULL, NULL),
+                        ( idJugador(16, 8) , @idGalesInglaterraGrupo, idJugador(16,20)       ,  77 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(18, 1) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 2) , @idGalesInglaterraGrupo, idJugador(18,18)       , NULL, NULL, 57  , NULL),
+                        ( idJugador(18, 5) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 6) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 3) , @idGalesInglaterraGrupo, idJugador(18,12)       , NULL, NULL, 65  , NULL),
+                        ( idJugador(18, 8) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 4) , @idGalesInglaterraGrupo, idJugador(18,14)       , NULL, NULL, 58  , NULL),
+                        ( idJugador(18,22) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18,20) , @idGalesInglaterraGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(18, 9) , @idGalesInglaterraGrupo, idJugador(18,24)       , NULL, NULL, 57  , NULL),
+                        ( idJugador(18,11) , @idGalesInglaterraGrupo, idJugador(18, 7)        , NULL, NULL, 76  , NULL),
+
+                        ( idJugador(18,18) , @idGalesInglaterraGrupo, idJugador(18, 2)        ,  57 , NULL, NULL, NULL),
+                        ( idJugador(18,12) , @idGalesInglaterraGrupo, idJugador(18, 3)        ,  65 , NULL, NULL, NULL),
+                        ( idJugador(18,14) , @idGalesInglaterraGrupo, idJugador(18, 4)        ,  58 , NULL, NULL, NULL),
+                        ( idJugador(18,24) , @idGalesInglaterraGrupo, idJugador(18, 9)        ,  57 , NULL, NULL, NULL),
+                        ( idJugador(18, 7) , @idGalesInglaterraGrupo, idJugador(18,11)       ,  76 , NULL, NULL, NULL);
+
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        ( idJugador(19, 1) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,23) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,19) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19, 8) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19, 5) , @idIranEEUUGrupo, idJugador(19,14)       , NULL, NULL, 48  , NULL),
+                        ( idJugador(19,17) , @idIranEEUUGrupo, idJugador(19,10)       , NULL, NULL, 77  , NULL),
+                        ( idJugador(19, 6) , @idIranEEUUGrupo, idJugador(19,16)       , NULL, NULL, 71  , NULL),
+                        ( idJugador(19,21) , @idIranEEUUGrupo, idJugador(19,25)       , NULL, NULL, 72  , NULL),
+                        ( idJugador(19, 3) , @idIranEEUUGrupo, idJugador(19,24)       , NULL, NULL, 72  , NULL),
+                        ( idJugador(19, 9) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(19,20) , @idIranEEUUGrupo, idJugador(19,14)       , NULL, NULL, 45  , NULL),
+
+                        ( idJugador(19,14) , @idIranEEUUGrupo, idJugador(19,20)       ,  45 , NULL, NULL, NULL),
+                        ( idJugador(19,10) , @idIranEEUUGrupo, idJugador(19,17)       ,  77 , NULL, NULL, NULL),
+                        ( idJugador(19,16) , @idIranEEUUGrupo, idJugador(19, 6)        ,  71 , NULL, NULL, NULL),
+                        ( idJugador(19,25) , @idIranEEUUGrupo, idJugador(19,21)       ,  72 , NULL, NULL, NULL),
+                        ( idJugador(19,24) , @idIranEEUUGrupo, idJugador(19, 3)        ,  72 , NULL, NULL, NULL),
+
+                         
+                        ( idJugador(15, 1) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 2) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15,20) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15,13) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 5) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 6) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 4) , @idIranEEUUGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        ( idJugador(15, 8) , @idIranEEUUGrupo, idJugador(15,23)       , NULL, NULL, 65  , NULL),
+                        ( idJugador(15,21) , @idIranEEUUGrupo, idJugador(15, 3)        , NULL, NULL, 82  , NULL),
+                        ( idJugador(15,24) , @idIranEEUUGrupo, idJugador(15,19)       , NULL, NULL, 77  , NULL),
+                        ( idJugador(15,10) , @idIranEEUUGrupo, idJugador(15,11)       , NULL, NULL, 45  , NULL),
+
+                        ( idJugador(15,23) , @idIranEEUUGrupo, idJugador(15, 8)        ,  65 , NULL, NULL, NULL),
+                        ( idJugador(15, 3) , @idIranEEUUGrupo, idJugador(15,21)       ,  82 , NULL, NULL, NULL),
+                        ( idJugador(15,19) , @idIranEEUUGrupo, idJugador(15,24)       ,  77 , NULL, NULL, NULL),
+                        ( idJugador(15,11) , @idIranEEUUGrupo, idJugador(15,10)       ,  45 , NULL, NULL, NULL);
+
+
+                 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+                     
+                         
+                        (idJugador(1, 23),  @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1, 3),   @idArgentinaArabiaGrupo, idJugador(1, 8)     , NULL, NULL, 71  , NULL),
+                        (idJugador(1,13),   @idArgentinaArabiaGrupo, idJugador(1,25)     , NULL, NULL, 59  , NULL),
+                        (idJugador(1,19),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,26),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1, 5),   @idArgentinaArabiaGrupo, idJugador(1,24)     , NULL, NULL, 59  , NULL),
+                        (idJugador(1, 7),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,11),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,17),   @idArgentinaArabiaGrupo, idJugador(1, 9)     , NULL, NULL, 59  , NULL),
+                        (idJugador(1,10),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,22),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+                        (idJugador(1, 8),   @idArgentinaArabiaGrupo, idJugador(1, 3)     , 71  , NULL, NULL, NULL),
+                        (idJugador(1, 9),   @idArgentinaArabiaGrupo, idJugador(1,17)     , 59  , NULL, NULL, NULL),
+                        (idJugador(1,24),   @idArgentinaArabiaGrupo, idJugador(1, 5)     , 59  , NULL, NULL, NULL),
+                        (idJugador(1,25),   @idArgentinaArabiaGrupo, idJugador(1,13)     , 59  , NULL, NULL, NULL),
+
+                         
+                        (idJugador(4, 5),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(4,17),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(4,13),   @idArgentinaArabiaGrupo, idJugador(4, 6)     , NULL, NULL, 90  , 9   ),
+                        (idJugador(4,12),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(4, 8),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(4,23),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(4, 7),   @idArgentinaArabiaGrupo, idJugador(4,18)     , NULL, NULL, 45  , 4   ),
+                        (idJugador(4, 9),   @idArgentinaArabiaGrupo, idJugador(4,25)     , NULL, NULL, 89  , NULL),
+                        (idJugador(4,10),   @idArgentinaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(4,11),   @idArgentinaArabiaGrupo, idJugador(4, 2)     , NULL, NULL, 78  , NULL),
+
+                        (idJugador(4, 6),   @idArgentinaArabiaGrupo, idJugador(4,13)     , 90  , 9   , NULL, NULL),
+                        (idJugador(4,18),   @idArgentinaArabiaGrupo, idJugador(4, 4)     , 45  , 4   , 88  , NULL),
+                        (idJugador(4,25),   @idArgentinaArabiaGrupo, idJugador(4, 9)     , 89  , NULL, NULL, NULL),
+                        (idJugador(4, 2),   @idArgentinaArabiaGrupo, idJugador(4,11)     , 78  , NULL, NULL, NULL),
+                        (idJugador(4, 4),   @idArgentinaArabiaGrupo, idJugador(4,18)     , 88  , NULL, NULL, NULL);
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        (idJugador(14, 1),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 3),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 4),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 5),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 7),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 9),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14,11),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14,15),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14,17),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14,18),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(14,19),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+
+                         
+                        (idJugador(13, 1),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13, 2),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13, 3),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13, 5),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13, 6),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13, 7),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13,10),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13,12),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13,13),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13,15),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL),
+                        (idJugador(13,16),  @idMexicoPoloniaGrupo, NULL                   , NULL, NULL, NULL, NULL);
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	                     
+                         
+                        (idJugador(1, 23),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1, 3),   @idArgentinaMexicoGrupo, idJugador(1, 8)     , NULL, NULL, 71  , NULL),
+                        (idJugador(1,13),   @idArgentinaMexicoGrupo, idJugador(1,25)     , NULL, NULL, 59  , NULL),
+                        (idJugador(1,19),   @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,26),   @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1, 5),   @idArgentinaMexicoGrupo, idJugador(1,24)     , NULL, NULL, 59  , NULL),
+                        (idJugador(1, 7),   @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,11),   @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,17),   @idArgentinaMexicoGrupo, idJugador(1, 9)     , NULL, NULL, 59  , NULL),
+                        (idJugador(1,10),   @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(1,22),   @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+                        (idJugador(1, 8),   @idArgentinaMexicoGrupo, idJugador(1, 3)     , 71  , NULL, NULL, NULL),
+                        (idJugador(1, 9),   @idArgentinaMexicoGrupo, idJugador(1,17)     , 59  , NULL, NULL, NULL),
+                        (idJugador(1,24),   @idArgentinaMexicoGrupo, idJugador(1, 5)     , 59  , NULL, NULL, NULL),
+                        (idJugador(1,25),   @idArgentinaMexicoGrupo, idJugador(1,13)     , 59  , NULL, NULL, NULL),
+
+                         
+                        (idJugador(14, 1),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 3),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 4),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 5),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 7),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14, 9),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14,11),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14,15),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14,17),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14,18),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL),
+                        (idJugador(14,19),  @idArgentinaMexicoGrupo, NULL                 , NULL, NULL, NULL, NULL);
+					
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	     
+    					(idJugador(25,  1),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25,  2),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25, 14),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25, 15),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25, 18),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25,  6),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25, 10),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25, 24),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(25, 20),  @idPoloniaArabiaGrupo, idJugador(25,13)     , NULL, NULL, 63  , NULL),
+    					(idJugador(25,  7),  @idPoloniaArabiaGrupo, idJugador(25,23)     , NULL, NULL, 71  , NULL),
+    					(idJugador(25,  9),  @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    					(idJugador(25, 13),  @idPoloniaArabiaGrupo, idJugador(25,20)     , 63  , NULL, NULL, NULL),
+    					(idJugador(25, 23),  @idPoloniaArabiaGrupo, idJugador(25, 7)     , 71  , NULL, NULL, NULL),
+
+     
+    					(idJugador(4, 21),   @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(4, 12),   @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(4,  4),   @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(4,  5),   @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(4,  6),   @idPoloniaArabiaGrupo, idJugador(4, 2)      , NULL, NULL, 65  , NULL),
+    					(idJugador(4,  8),   @idPoloniaArabiaGrupo, idJugador(4,20)      , NULL, NULL, 85  , NULL),
+    					(idJugador(4,  9),   @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(4, 16),   @idPoloniaArabiaGrupo, idJugador(4,18)      , NULL, NULL, 46  , NULL),
+    					(idJugador(4, 23),   @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(4, 10),   @idPoloniaArabiaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    					(idJugador(4, 11),   @idPoloniaArabiaGrupo, idJugador(4,24)      , NULL, NULL, 86  , NULL),
+
+
+    					(idJugador(4, 18),   @idPoloniaArabiaGrupo, idJugador(4,16)      , 46  , NULL, 90  , 5   ),
+    					(idJugador(4,  2),   @idPoloniaArabiaGrupo, idJugador(4, 6)      , 65  , NULL, NULL, NULL),
+    					(idJugador(4, 20),   @idPoloniaArabiaGrupo, idJugador(4, 8)      , 85  , NULL, NULL, NULL),
+    					(idJugador(4, 24),   @idPoloniaArabiaGrupo, idJugador(4,11)      , 86  , NULL, NULL, NULL),
+    					(idJugador(4, 19),   @idPoloniaArabiaGrupo, idJugador(4,18)      , 90  , 5   , NULL, NULL);
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES 
 						(idJugador(14,23) ,    @idEspanaCostaRicaGrupo, null            ,   null  ,   null  ,   null  ,   NULL),
 						(idJugador(14,2)  ,    @idEspanaCostaRicaGrupo, null            ,   null  ,   null  ,   null  ,   NULL),
 						(idJugador(14,16) ,    @idEspanaCostaRicaGrupo, null            ,   null  ,   null  ,   null  ,   NULL),
@@ -1263,9 +1672,11 @@ START TRANSACTION ;
 						(idJugador(14,8)  ,    @idEspanaCostaRicaGrupo, idJugador(5,5)  ,   64    ,   NULL  ,   NULL  ,   NULL),
 						(idJugador(14,19) ,    @idEspanaCostaRicaGrupo, idJugador(5,26) ,   57    ,   NULL  ,   NULL  ,   NULL),
 						(idJugador(14,7)  ,    @idEspanaCostaRicaGrupo, idJugador(5,11) ,   57    ,   NULL  ,   NULL  ,   NULL),
-						(idJugador(14,12) ,    @idEspanaCostaRicaGrupo, idJugador(5,10) ,   69    ,   NULL  ,   NULL  ,   NULL),
-			
-						-- Partido España - Alemania - Grupo E.
+						(idJugador(14,12) ,    @idEspanaCostaRicaGrupo, idJugador(5,10) ,   69    ,   NULL  ,   NULL  ,   NULL);
+						
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES 			
+
 						(idJugador(14,23)    ,  @idEspanaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
 						(idJugador(14,20)    ,  @idEspanaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
 						(idJugador(14,16)    ,  @idEspanaAlemaniaGrupo, NULL            ,   NULL    ,   NULL        ,   NULL    ,   NULL),
@@ -1280,9 +1691,10 @@ START TRANSACTION ;
 						(idJugador(14,7)     ,  @idEspanaAlemaniaGrupo, idJugador(5,11)  ,   54      ,   NULL        ,   NULL    ,   NULL),
 						(idJugador(14,12)    ,  @idEspanaAlemaniaGrupo, idJugador(5,9)  ,   66      ,   NULL        ,   NULL    ,   NULL),
 						(idJugador(14,8)     ,  @idEspanaAlemaniaGrupo, idJugador(5,10) ,   66      ,   NULL        ,   NULL    ,   NULL),
-						(idJugador(14,14)    ,  @idEspanaAlemaniaGrupo, idJugador(5,18) ,   82      ,   NULL        ,   NULL    ,   NULL),
+						(idJugador(14,14)    ,  @idEspanaAlemaniaGrupo, idJugador(5,18) ,   82      ,   NULL        ,   NULL    ,   NULL);
 			
-						-- Partido España - Japon - Grupo E.
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES 
 						(idJugador(14,23)    ,  @idJaponEspanaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
 						(idJugador(14,2)     ,  @idJaponEspanaGrupo, idJugador(5,20)    ,   NULL    ,   NULL        ,   46      ,   NULL),
 						(idJugador(14,16)    ,  @idJaponEspanaGrupo, NULL               ,   NULL    ,   NULL        ,   NULL    ,   NULL),
@@ -1298,61 +1710,1936 @@ START TRANSACTION ;
 						(idJugador(14,18)    ,  @idJaponEspanaGrupo, idJugador(5,14)    ,   68      ,   NULL        ,   NULL    ,   NULL),
 						(idJugador(14,25)    ,  @idJaponEspanaGrupo, idJugador(5,9)     ,   68      ,   NULL        ,   NULL    ,   NULL),
 						(idJugador(14,11)    ,  @idJaponEspanaGrupo, idJugador(5,12)    ,   57      ,   NULL        ,   NULL    ,   NULL),
-						(idJugador(14,10)    ,  @idJaponEspanaGrupo, idJugador(5,7)     ,   57      ,   NULL        ,   NULL    ,   NULL),
+						(idJugador(14,10)    ,  @idJaponEspanaGrupo, idJugador(5,7)     ,   57      ,   NULL        ,   NULL    ,   NULL);
 			
-						-- Partido España - Marruecos - Octavos.
-						(idJugador(14,23)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,6)     ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,16)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,24)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,18)    ,  @idMarruecosEspaniaOctavos, idJugador(5,14)  ,    NULL    ,   NULL     ,   98      ,   NULL),
-						(idJugador(14,9)     ,  @idMarruecosEspaniaOctavos, idJugador(5,19)  ,    NULL    ,   NULL     ,   63      ,   NULL),
-						(idJugador(14,5)     ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,26)    ,  @idMarruecosEspaniaOctavos, NULL             ,    NULL    ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,11)    ,  @idMarruecosEspaniaOctavos, idJugador(5,12)  ,    NULL    ,   NULL     ,   75      ,   NULL),
-						(idJugador(14,10)    ,  @idMarruecosEspaniaOctavos, idJugador(5,7)   ,    NULL    ,   NULL     ,   63      ,   NULL),
-						(idJugador(14,21)    ,  @idMarruecosEspaniaOctavos, idJugador(5,25)  ,    NULL    ,   NULL     ,   98      ,   NULL),
-						(idJugador(14,14)    ,  @idMarruecosEspaniaOctavos, idJugador(5,18)  ,    100     ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,19)    ,  @idMarruecosEspaniaOctavos, idJugador(5,9)   ,    63      ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,12)    ,  @idMarruecosEspaniaOctavos, idJugador(5,11)  ,    75      ,   NULL     ,   118     ,   NULL),
-						(idJugador(14,22)    ,  @idMarruecosEspaniaOctavos, idJugador(5,12)  ,    118     ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,7)     ,  @idMarruecosEspaniaOctavos, idJugador(5,10)  ,    63      ,   NULL     ,   NULL    ,   NULL),
-						(idJugador(14,25)    ,  @idMarruecosEspaniaOctavos, idJugador(5,21)  ,    98      ,   NULL     ,   NULL    ,   NULL),
-		
-						-- Partido Francia - Polonia - 8vos
-						(idJugador(2,1),	@idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL,   NULL),
-						(idJugador(2,5),	@idFranciaPoloniaOctavos, idJugador(2, 3),	Null ,  NULL,   90, 	2),
-						(idJugador(2,4),	@idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL ,  NULL),
-						(idJugador(2,18),   @idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL ,  NULL),
-						(idJugador(2,22),   @idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL ,  NULL),
-						(idJugador(2,8),	@idFranciaPoloniaOctavos, idJugador(2, 13),   NULL ,  NULL,   66, 	NULL),
-						(idJugador(2,14),   @idFranciaPoloniaOctavos, NULL ,          	NULL ,  NULL,   NULL,   NULL),
-						(idJugador(2,11),   @idFranciaPoloniaOctavos, idJugador(2, 20),   NULL ,  NULL,   76, 	NULL),
-						(idJugador(2,7),	@idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL ,  NULL),
-						(idJugador(2,10),   @idFranciaPoloniaOctavos, NULL,           	NULL ,  NULL,   NULL ,  NULL),
-						(idJugador(2,9),	@idFranciaPoloniaOctavos, idJugador(2, 26),   NULL ,  NULL,   76, 	NULL),
-						(idJugador(2,3),	@idFranciaPoloniaOctavos, idJugador(2, 5),	90, 	2,  	NULL ,  NULL),
-						(idJugador(2,13),   @idFranciaPoloniaOctavos, idJugador(2, 8),	66, 	NULL,   NULL ,  NULL),
-						(idJugador(2,20),   @idFranciaPoloniaOctavos, idJugador(2, 11),   76, 	NULL,   NULL ,  NULL),
-						(idJugador(2,26),   @idFranciaPoloniaOctavos, idJugador(2, 9),	76, 	NULL,   NULL ,  NULL);
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(25,  1),  @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(25,  2),  @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(25, 15),  @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(25, 14),  @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(25, 18),  @idPoloniaArgentinaGrupo, idJugador(25,  3)     , NULL, NULL, 72  , NULL),
+    (idJugador(25, 20),  @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(25,  6),  @idPoloniaArgentinaGrupo, idJugador(25,  8)     , NULL, NULL, 62  , NULL),
+    (idJugador(25, 10),  @idPoloniaArgentinaGrupo, idJugador(25, 23)     , NULL, NULL, 83  , NULL),
+    (idJugador(25, 24),  @idPoloniaArgentinaGrupo, idJugador(25, 13)     , NULL, NULL, 46  , NULL),
+    (idJugador(25,  9),  @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(25, 16),  @idPoloniaArgentinaGrupo, idJugador(25, 26)     , NULL, NULL, 46  , NULL),
 
+    (idJugador(25, 13),  @idPoloniaArgentinaGrupo, idJugador(25, 24)     , 46  , NULL, NULL, NULL),
+    (idJugador(25, 26),  @idPoloniaArgentinaGrupo, idJugador(25, 16)     , 46  , NULL, NULL, NULL),
+    (idJugador(25,  8),  @idPoloniaArgentinaGrupo, idJugador(25,  6)     , 62  , NULL, NULL, NULL),
+    (idJugador(25,  3),  @idPoloniaArgentinaGrupo, idJugador(25, 18)     , 72  , NULL, NULL, NULL),
+    (idJugador(25, 23),  @idPoloniaArgentinaGrupo, idJugador(25, 10)     , 83  , NULL, NULL, NULL),
+
+     
+    (idJugador(1, 23),   @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(1, 26),   @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(1, 13),   @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(1, 19),   @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(1,  8),   @idPoloniaArgentinaGrupo, idJugador(1,  3)      , NULL, NULL, 59  , NULL),
+    (idJugador(1,  7),   @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(1, 24),   @idPoloniaArgentinaGrupo, idJugador(1,  6)      , NULL, NULL, 79  , NULL),
+    (idJugador(1, 20),   @idPoloniaArgentinaGrupo, idJugador(1, 16)      , NULL, NULL, 84  , NULL),
+    (idJugador(1, 11),   @idPoloniaArgentinaGrupo, idJugador(1,  5)      , NULL, NULL, 59  , NULL),
+    (idJugador(1, 10),   @idPoloniaArgentinaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(1,  9),   @idPoloniaArgentinaGrupo, idJugador(1, 22)      , NULL, NULL, 79  , NULL),
+
+    (idJugador(1,  3),   @idPoloniaArgentinaGrupo, idJugador(1,  8)      , 59  , NULL, NULL, NULL),
+    (idJugador(1,  5),   @idPoloniaArgentinaGrupo, idJugador(1, 11)      , 59  , NULL, NULL, NULL),
+    (idJugador(1,  6),   @idPoloniaArgentinaGrupo, idJugador(1, 24)      , 79  , NULL, NULL, NULL),
+    (idJugador(1, 22),   @idPoloniaArgentinaGrupo, idJugador(1,  9)      , 79  , NULL, NULL, NULL),
+    (idJugador(1, 16),   @idPoloniaArgentinaGrupo, idJugador(1, 20)      , 84  , NULL, NULL, NULL);
+
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+  
+ (idJugador(4,21),  @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(4, 5),  @idArabiaMexicoGrupo, idJugador(4,26)    , NULL, NULL, 37  , NULL),
+ (idJugador(4,17),  @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(4, 4),  @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(4, 2),  @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(4,10),  @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(4,12),  @idArabiaMexicoGrupo, idJugador(4, 3)     , NULL, NULL, 46  , NULL),
+ (idJugador(4,15),  @idArabiaMexicoGrupo, idJugador(4, 3)     , NULL, NULL, 46  , NULL),
+ (idJugador(4, 9),  @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(4,23),  @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(4,11),  @idArabiaMexicoGrupo, idJugador(4,20)    , NULL, NULL, 62  , NULL),
+
+ (idJugador(4,26),  @idArabiaMexicoGrupo, idJugador(4, 5)     , 37  , NULL, NULL, NULL),
+ (idJugador(4, 3),  @idArabiaMexicoGrupo, idJugador(4,15)     , 46  , NULL, NULL, NULL),
+ (idJugador(4,20),  @idArabiaMexicoGrupo, idJugador(4,11)     , 62  , NULL, NULL, NULL),
+ (idJugador(4,19),  @idArabiaMexicoGrupo, idJugador(4, 2)     , 88  , NULL, NULL, NULL),
+
+  
+ (idJugador(23,13), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23,19), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23, 3), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23,15), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23,23), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23,24), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23, 4), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23,17), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23,10), @idArabiaMexicoGrupo, idJugador(23,21)   , NULL, NULL, 45  , NULL),
+ (idJugador(23,22), @idArabiaMexicoGrupo, NULL               , NULL, NULL, NULL, NULL),
+ (idJugador(23,20), @idArabiaMexicoGrupo, idJugador(23, 9)    , NULL, NULL, 77  , NULL),
+
+ (idJugador(23,21), @idArabiaMexicoGrupo, idJugador(23,10)   , 45  , NULL, NULL, NULL),
+ (idJugador(23, 9), @idArabiaMexicoGrupo, idJugador(23,20)   , 77  , NULL, NULL, NULL),
+ (idJugador(23, 8), @idArabiaMexicoGrupo, idJugador(23,17)   , 77  , NULL, NULL, NULL),
+ (idJugador(23,26), @idArabiaMexicoGrupo, idJugador(23,19)   , 86  , NULL, NULL, NULL),
+ (idJugador(23,11), @idArabiaMexicoGrupo, idJugador(23, 4)    , 86  , NULL, NULL, NULL);
+
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(2,  1),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(2,  2),  @idFranciaAustraliaGrupo, idJugador(2,  5)      , NULL, NULL, 89  , NULL),
+    (idJugador(2, 24),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(2, 18),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(2, 21),  @idFranciaAustraliaGrupo, idJugador(2, 22)      , NULL, NULL, 13  , NULL),
+    (idJugador(2,  8),  @idFranciaAustraliaGrupo, idJugador(2, 13)      , NULL, NULL, 77  , NULL),
+    (idJugador(2, 14),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(2, 11),  @idFranciaAustraliaGrupo, idJugador(2, 20)      , NULL, NULL, 77  , NULL),
+    (idJugador(2,  7),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(2, 10),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(2,  9),  @idFranciaAustraliaGrupo, idJugador(2, 26)      , NULL, NULL, 89  , NULL),
+
+    (idJugador(2, 22),  @idFranciaAustraliaGrupo, idJugador(2, 21)      , 13  , NULL, NULL, NULL),
+    (idJugador(2, 13),  @idFranciaAustraliaGrupo, idJugador(2,  8)      , 77  , NULL, NULL, NULL),
+    (idJugador(2, 20),  @idFranciaAustraliaGrupo, idJugador(2, 11)      , 77  , NULL, NULL, NULL),
+    (idJugador(2,  5),  @idFranciaAustraliaGrupo, idJugador(2,  2)      , 89  , NULL, NULL, NULL),
+    (idJugador(2, 26),  @idFranciaAustraliaGrupo, idJugador(2,  9)      , 89  , NULL, NULL, NULL),
+
+     
+    (idJugador(5,  1),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(5,  3),  @idFranciaAustraliaGrupo, idJugador(5,  2)      , NULL, NULL, 85  , NULL),
+    (idJugador(5, 19),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(5,  4),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(5, 16),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(5, 13),  @idFranciaAustraliaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(5,  7),  @idFranciaAustraliaGrupo, idJugador(5, 21)      , NULL, NULL, 74  , NULL),
+    (idJugador(5, 22),  @idFranciaAustraliaGrupo, idJugador(5, 26)      , NULL, NULL, 85  , NULL),
+    (idJugador(5, 14),  @idFranciaAustraliaGrupo, idJugador(5, 11)      , NULL, NULL, 73  , NULL),
+    (idJugador(5, 23),  @idFranciaAustraliaGrupo, idJugador(5, 21)      , NULL, NULL, 74  , NULL),
+    (idJugador(5, 15),  @idFranciaAustraliaGrupo, idJugador(5, 25)      , NULL, NULL, 56  , NULL),
+
+    (idJugador(5, 25),  @idFranciaAustraliaGrupo, idJugador(5, 15)      , 56  , NULL, NULL, NULL),
+    (idJugador(5, 11),  @idFranciaAustraliaGrupo, idJugador(5, 14)      , 73  , NULL, NULL, NULL),
+    (idJugador(5, 21),  @idFranciaAustraliaGrupo, idJugador(5, 23)      , 74  , NULL, NULL, NULL),
+    (idJugador(5,  2),  @idFranciaAustraliaGrupo, idJugador(5,  3)      , 85  , NULL, NULL, NULL),
+    (idJugador(5, 26),  @idFranciaAustraliaGrupo, idJugador(5, 22)      , 85  , NULL, NULL, NULL);
+
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+  
+ (idJugador(12,  1),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  2),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  4),  @idDinamarcaTunezGrupo, idJugador(12,  7)    , NULL, NULL, 65  , NULL),
+ (idJugador(12,  5),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  6),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  8),  @idDinamarcaTunezGrupo, idJugador(12, 14)    , NULL, NULL, 45  , 1   ),
+ (idJugador(12, 10),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 11),  @idDinamarcaTunezGrupo, idJugador(12, 25)    , NULL, NULL, 65  , NULL),
+ (idJugador(12, 12),  @idDinamarcaTunezGrupo, idJugador(12, 21)    , NULL, NULL, 65  , NULL),
+ (idJugador(12, 13),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 23),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+ (idJugador(12, 14),  @idDinamarcaTunezGrupo, idJugador(12,  8)    , 45  , 1   , NULL, NULL),
+ (idJugador(12,  7),  @idDinamarcaTunezGrupo, idJugador(12,  4)    , 65  , NULL, NULL, NULL),
+ (idJugador(12, 25),  @idDinamarcaTunezGrupo, idJugador(12, 11)    , 65  , NULL, NULL, NULL),
+ (idJugador(12, 21),  @idDinamarcaTunezGrupo, idJugador(12, 12)    , 65  , NULL, NULL, NULL),
+
+  
+ (idJugador(31, 16),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(31,  3),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(31,  4),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(31,  6),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(31, 20),  @idDinamarcaTunezGrupo, idJugador(31, 21)    , NULL, NULL, 88  , NULL),
+ (idJugador(31, 17),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(31, 14),  @idDinamarcaTunezGrupo, idJugador(31, 13)    , NULL, NULL, 88  , NULL),
+ (idJugador(31, 24),  @idDinamarcaTunezGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(31, 25),  @idDinamarcaTunezGrupo, idJugador(31, 23)    , NULL, NULL, 67  , NULL),
+ (idJugador(31,  7),  @idDinamarcaTunezGrupo, idJugador(31,  8)     , NULL, NULL, 80  , NULL),
+ (idJugador(31,  9),  @idDinamarcaTunezGrupo, idJugador(31, 11)    , NULL, NULL, 80  , NULL),
+
+ (idJugador(31, 23),  @idDinamarcaTunezGrupo, idJugador(31, 25)    , 67  , NULL, NULL, NULL),
+ (idJugador(31,  8),  @idDinamarcaTunezGrupo, idJugador(31,  7)     , 80  , NULL, NULL, NULL),
+ (idJugador(31, 11),  @idDinamarcaTunezGrupo, idJugador(31,  9)     , 80  , NULL, NULL, NULL),
+ (idJugador(31, 21),  @idDinamarcaTunezGrupo, idJugador(31, 20)    , 88  , NULL, NULL, NULL),
+ (idJugador(31, 13),  @idDinamarcaTunezGrupo, idJugador(31, 14)    , 88  , NULL, NULL, NULL);
+
+
+ 
+
+/*	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+  
+ (idJugador(2,  1),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(2,  5),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(2,  4),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 75  , NULL),
+ (idJugador(2, 18),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(2, 22),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(2,  8),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(2, 14),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(2, 11),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 75  , NULL),
+ (idJugador(2,  7),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 90  , 3   ),
+ (idJugador(2, 10),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(2,  9),  @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 63  , NULL),
+
+ (idJugador(2, 26),  @idFranciaDinamarcaGrupo, idJugador(2,  9)     , 63  , NULL, NULL, NULL),
+ (idJugador(2, 20),  @idFranciaDinamarcaGrupo, idJugador(2, 11)     , 75  , NULL, NULL, NULL),
+ (idJugador(2, 24),  @idFranciaDinamarcaGrupo, idJugador(2,  4)     , 75  , NULL, NULL, NULL),
+ (idJugador(2, 13),  @idFranciaDinamarcaGrupo, idJugador(2,  7)     , 90  , 3   , NULL, NULL),
+
+  
+ (idJugador(12,  1), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  2), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  6), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  3), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 13), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 92  , 2   ),
+ (idJugador(12, 23), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 10), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,  5), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 25), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 85  , NULL),
+ (idJugador(12, 14), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 73  , NULL),
+ (idJugador(12, 21), @idFranciaDinamarcaGrupo, NULL                 , NULL, NULL, 45  , NULL),
+
+ (idJugador(12,  9), @idFranciaDinamarcaGrupo, idJugador(12, 21)     , 45  , NULL, NULL, NULL),
+ (idJugador(12, 12), @idFranciaDinamarcaGrupo, idJugador(12, 14)     , 73  , NULL, NULL, NULL),
+ (idJugador(12, 15), @idFranciaDinamarcaGrupo, idJugador(12, 25)     , 85  , NULL, NULL, NULL),
+ (idJugador(12, 26), @idFranciaDinamarcaGrupo, idJugador(12, 13)     , 90  , 2   , NULL, NULL);
+
+ */
+
+ 	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+   
+  (idJugador(31,16),  @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(31, 3),  @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(31, 4),  @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(31, 6),  @idTunezAustraliaGrupo,  idJugador(31,21)   , NULL, NULL, 73  , NULL),
+  (idJugador(31,24),  @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(31,20),  @idTunezAustraliaGrupo,  idJugador(31,13)   , NULL, NULL, 45  , NULL),
+  (idJugador(31,17),  @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(31,14),  @idTunezAustraliaGrupo,  idJugador(31,10)   , NULL, NULL, 67  , NULL),
+  (idJugador(31,23),  @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(31, 7),  @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(31, 9),  @idTunezAustraliaGrupo,  idJugador(31,11)   , NULL, NULL, 73  , NULL),
+
+  (idJugador(31,13),  @idTunezAustraliaGrupo,  idJugador(31,20)   , 45  , NULL, NULL, NULL),
+  (idJugador(31,10),  @idTunezAustraliaGrupo,  idJugador(31,14)   , 67  , NULL, NULL, NULL),
+  (idJugador(31,11),  @idTunezAustraliaGrupo,  idJugador(31, 9)   , 73  , NULL, NULL, NULL),
+  (idJugador(31,21),  @idTunezAustraliaGrupo,  idJugador(31, 6)   , 73  , NULL, NULL, NULL),
+
+   
+  (idJugador(5, 1),   @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(5, 5),   @idTunezAustraliaGrupo,  idJugador(5, 2)    , NULL, NULL, 74  , NULL),
+  (idJugador(5,19),   @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(5, 4),   @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(5,16),   @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(5,13),   @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(5,22),   @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(5,14),   @idTunezAustraliaGrupo,  idJugador(5,10)    , NULL, NULL, 64  , NULL),
+  (idJugador(5, 7),   @idTunezAustraliaGrupo,  NULL               , NULL, NULL, NULL, NULL),
+  (idJugador(5,15),   @idTunezAustraliaGrupo,  idJugador(5, 9)    , NULL, NULL, 64  , NULL),
+  (idJugador(5,23),   @idTunezAustraliaGrupo,  idJugador(5,11)    , NULL, NULL, 85  , NULL),
+
+  (idJugador(5, 9),   @idTunezAustraliaGrupo,  idJugador(5,15)    , 64  , NULL, NULL, NULL),
+  (idJugador(5,10),   @idTunezAustraliaGrupo,  idJugador(5,14)    , 64  , NULL, NULL, NULL),
+  (idJugador(5, 2),   @idTunezAustraliaGrupo,  idJugador(5, 5)    , 74  , NULL, NULL, NULL),
+  (idJugador(5,11),   @idTunezAustraliaGrupo,  idJugador(5,23)    , 85  , NULL, NULL, NULL);
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(31,16),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31, 4),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31, 5),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31, 3),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31,21),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31,17),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31,14),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31,12),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31,25),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31,15),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(31,10),  @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    (idJugador(31, 9),  @idTunezFranciaGrupo, idJugador(31,10)     , 59  , NULL, NULL, NULL),
+    (idJugador(31,18),  @idTunezFranciaGrupo, idJugador(31,15)     , 74  , NULL, NULL, NULL),
+    (idJugador(31,24),  @idTunezFranciaGrupo, idJugador(31,25)     , 83  , NULL, NULL, NULL),
+
+     
+    (idJugador(2,16),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2, 3),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2, 4),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2,24),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2,25),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2,13),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2, 8),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2,15),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2,20),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2,12),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(2, 6),   @idTunezFranciaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    (idJugador(2,17),   @idTunezFranciaGrupo, idJugador(2, 4)      , 63  , NULL, NULL, NULL),
+    (idJugador(2,14),   @idTunezFranciaGrupo, idJugador(2,15)      , 63  , NULL, NULL, NULL),
+    (idJugador(2,10),   @idTunezFranciaGrupo, idJugador(2,20)      , 63  , NULL, NULL, NULL),
+    (idJugador(2, 7),   @idTunezFranciaGrupo, idJugador(2,13)      , 73  , NULL, NULL, NULL),
+    (idJugador(2,11),   @idTunezFranciaGrupo, idJugador(2, 6)      , 79  , NULL, NULL, NULL);
+
+ 
+
+INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+  
+ (idJugador(5,  1),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(5, 16),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(5,  4),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(5, 19),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(5,  2),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(5, 23),  @idAustraliaDinamarcaGrupo, idJugador(5,26)      , NULL, NULL, 46  , NULL),
+ (idJugador(5, 22),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(5, 13),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(5,  7),  @idAustraliaDinamarcaGrupo, idJugador(5,10)      , NULL, NULL, 89  , NULL),
+ (idJugador(5, 15),  @idAustraliaDinamarcaGrupo, idJugador(5, 9)      , NULL, NULL, 82  , NULL),
+ (idJugador(5, 14),  @idAustraliaDinamarcaGrupo, idJugador(5, 8)      , NULL, NULL, 74  , NULL),
+
+ (idJugador(5, 26),  @idAustraliaDinamarcaGrupo, idJugador(5,23)      , 46  , NULL, NULL, NULL),
+ (idJugador(5,  8),  @idAustraliaDinamarcaGrupo, idJugador(5,14)      , 74  , NULL, NULL, NULL),
+ (idJugador(5,  9),  @idAustraliaDinamarcaGrupo, idJugador(5,15)      , 82  , NULL, NULL, NULL),
+ (idJugador(5, 10),  @idAustraliaDinamarcaGrupo, idJugador(5, 7)       , 89  , NULL, NULL, NULL),
+
+  
+ (idJugador(12, 1),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 2),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 5),  @idAustraliaDinamarcaGrupo, idJugador(12,21)     , NULL, NULL, 70  , NULL),
+ (idJugador(12, 6),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12, 7),  @idAustraliaDinamarcaGrupo, idJugador(12,14)     , NULL, NULL, 59  , NULL),
+ (idJugador(12, 9),  @idAustraliaDinamarcaGrupo, idJugador(12,12)     , NULL, NULL, 59  , NULL),
+ (idJugador(12,10),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,11),  @idAustraliaDinamarcaGrupo, idJugador(12,24)     , NULL, NULL, 69  , NULL),
+ (idJugador(12,13),  @idAustraliaDinamarcaGrupo, idJugador(12,26)     , NULL, NULL, 46  , NULL),
+ (idJugador(12,23),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+ (idJugador(12,25),  @idAustraliaDinamarcaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+ (idJugador(12,26),  @idAustraliaDinamarcaGrupo, idJugador(12,13)     , 46  , NULL, NULL, NULL),
+ (idJugador(12,12),  @idAustraliaDinamarcaGrupo, idJugador(12, 9)      , 59  , NULL, NULL, NULL),
+ (idJugador(12,14),  @idAustraliaDinamarcaGrupo, idJugador(12, 7)      , 59  , NULL, NULL, NULL),
+ (idJugador(12,24),  @idAustraliaDinamarcaGrupo, idJugador(12,11)      , 69  , NULL, NULL, NULL),
+ (idJugador(12,21),  @idAustraliaDinamarcaGrupo, idJugador(12, 5)      , 70  , NULL, NULL, NULL);
+
+
+ 
+/*	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(31,16),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31, 4),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31, 5),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31, 3),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31,21),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31,17),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31,14),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31,12),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31,25),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31,15),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(31,10),   @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+
+    (idJugador(31, 9),   @idTunezFranciaGrupo, idJugador(31,10)              , 59  , NULL, NULL, NULL),
+    (idJugador(31,18),   @idTunezFranciaGrupo, idJugador(31,15)              , 74  , NULL, NULL, NULL),
+    (idJugador(31,24),   @idTunezFranciaGrupo, idJugador(31,25)              , 83  , NULL, NULL, NULL),
+
+     
+    (idJugador(2,16),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2, 3),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2, 4),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2,24),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2,25),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2,13),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2, 8),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2,15),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2,20),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2,12),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+    (idJugador(2, 6),    @idTunezFranciaGrupo, NULL                          , NULL, NULL, NULL, NULL),
+
+    (idJugador(2,17),    @idTunezFranciaGrupo, idJugador(2, 4)               , 63  , NULL, NULL, NULL),
+    (idJugador(2,14),    @idTunezFranciaGrupo, idJugador(2,15)               , 63  , NULL, NULL, NULL),
+    (idJugador(2,10),    @idTunezFranciaGrupo, idJugador(2,20)               , 63  , NULL, NULL, NULL),
+    (idJugador(2, 7),    @idTunezFranciaGrupo, idJugador(2,13)               , 73  , NULL, NULL, NULL),
+    (idJugador(2,11),    @idTunezFranciaGrupo, idJugador(2, 6)                , 79  , NULL, NULL, NULL);
+
+*/ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(4, 1),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,23),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,15),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 2),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 3),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 6),   @idAlemaniaJaponGrupo, idJugador(4, 8)      , NULL, NULL, 67  , NULL),
+    (idJugador(4,10),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,21),   @idAlemaniaJaponGrupo, idJugador(4,18)     , NULL, NULL, 79  , NULL),
+    (idJugador(4,13),   @idAlemaniaJaponGrupo, idJugador(4,11)     , NULL, NULL, 79  , NULL),
+    (idJugador(4,14),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 7),   @idAlemaniaJaponGrupo, idJugador(4,26)     , NULL, NULL, 90  , NULL),
+
+    (idJugador(4, 8),   @idAlemaniaJaponGrupo, idJugador(4, 6)      , 67  , NULL, NULL, NULL),
+    (idJugador(4,18),   @idAlemaniaJaponGrupo, idJugador(4,21)      , 79  , NULL, NULL, NULL),
+    (idJugador(4,11),   @idAlemaniaJaponGrupo, idJugador(4,13)      , 79  , NULL, NULL, NULL),
+    (idJugador(4,26),   @idAlemaniaJaponGrupo, idJugador(4, 7)      , 90  , NULL, NULL, NULL),
+
+     
+    (idJugador(9,12),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(9,19),   @idAlemaniaJaponGrupo, idJugador(9,10)      , NULL, NULL, 46  , NULL),
+    (idJugador(9, 4),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(9,22),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(9, 5),   @idAlemaniaJaponGrupo, idJugador(9, 9)       , NULL, NULL, 57  , NULL),
+    (idJugador(9, 6),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(9,17),   @idAlemaniaJaponGrupo, idJugador(9, 8)       , NULL, NULL, 71  , NULL),
+    (idJugador(9,14),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(9,15),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(9,11),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(9,25),   @idAlemaniaJaponGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    (idJugador(9,10),   @idAlemaniaJaponGrupo, idJugador(9,19)      , 46  , NULL, NULL, NULL),
+    (idJugador(9, 9),   @idAlemaniaJaponGrupo, idJugador(9, 5)       , 57  , NULL, NULL, NULL),
+    (idJugador(9, 8),   @idAlemaniaJaponGrupo, idJugador(9,17)      , 71  , NULL, NULL, NULL),
+    (idJugador(9,16),   @idAlemaniaJaponGrupo, idJugador(9,14)      , 75  , NULL, NULL, NULL);
+
+
+/*
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(15,  1),  @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,  2),  @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,  3),  @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,  5),  @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,  6),  @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,  8),  @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,10),   @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,11),   @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,14),   @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,20),   @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(15,23),   @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    (idJugador(15, 9),   @idEspanaAlemaniaGrupo, idJugador(15,23)     , 54  , NULL, NULL, NULL),   
+    (idJugador(15,12),   @idEspanaAlemaniaGrupo, idJugador(15,10)     , 66  , NULL, NULL, NULL),   
+    (idJugador(15,13),   @idEspanaAlemaniaGrupo, idJugador(15, 8)      , 66  , NULL, NULL, NULL),   
+    (idJugador(15,25),   @idEspanaAlemaniaGrupo, idJugador(15, 2)      , 82  , NULL, NULL, NULL),   
+
+     
+    (idJugador(4, 1),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,15),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 2),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,14),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 3),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 6),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4, 8),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,10),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,21),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,18),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(4,13),    @idEspanaAlemaniaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    (idJugador(4, 9),    @idEspanaAlemaniaGrupo, idJugador(4, 1)      , 70  , NULL, NULL, NULL),   
+    (idJugador(4,16),    @idEspanaAlemaniaGrupo, idJugador(4, 2)      , 70  , NULL, NULL, NULL),   
+    (idJugador(4,19),    @idEspanaAlemaniaGrupo, idJugador(4, 6)      , 70  , NULL, NULL, NULL),   
+    (idJugador(4,23),    @idEspanaAlemaniaGrupo, idJugador(4,10)      , 85  , NULL, NULL, NULL),   
+    (idJugador(4, 0),    @idEspanaAlemaniaGrupo, idJugador(4,14)      , 87  , NULL, NULL, NULL);   
+*/
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+
+ 
+     
+    (idJugador(9, 12),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,  2),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,  4),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 22),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,  5),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,  6),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 13),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,  8),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 21),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 15),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 24),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(9, 10),  @idJaponCostaRicaGrupo, idJugador(9,19)    , 46  , NULL, NULL, NULL),
+    (idJugador(9,  9),  @idJaponCostaRicaGrupo, idJugador(9, 5)     , 57  , NULL, NULL, NULL),
+    (idJugador(9, 17),  @idJaponCostaRicaGrupo, idJugador(9, 8)     , 67  , NULL, NULL, NULL),
+    (idJugador(9, 26),  @idJaponCostaRicaGrupo, idJugador(9,24)     , 82  , NULL, NULL, NULL),
+
+     
+    (idJugador(1,  1),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 19),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 15),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  6),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  4),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  8),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 17),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  5),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 12),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  7),  @idJaponCostaRicaGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(1, 14),  @idJaponCostaRicaGrupo, idJugador(1, 5)     , 65  , NULL, NULL, NULL),
+    (idJugador(1, 9),   @idJaponCostaRicaGrupo, idJugador(1, 7)     , 65  , NULL, NULL, NULL),
+    (idJugador(1,13),  @idJaponCostaRicaGrupo, idJugador(1,12)     , 89  , NULL, NULL, NULL),
+    (idJugador(1,16),  @idJaponCostaRicaGrupo, idJugador(1,15)     , 90  , 5   , NULL, NULL);
+
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(9,12),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 3),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 4),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,22),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,13),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,17),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,11),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9, 5),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,15),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,25),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(9,14),  @idJaponEspanaGrupo, idJugador(9,26)    , NULL, NULL, 69  , NULL),
+    (idJugador(9, 7),  @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(9,26),  @idJaponEspanaGrupo, idJugador(9,14)    , 69  , NULL, NULL, NULL),
+
+     
+    (idJugador(15, 1), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15, 2), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15, 3), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15, 5), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15, 6), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15, 8), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15,10), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15,11), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15,20), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15,21), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(15,12), @idJaponEspanaGrupo, idJugador(15, 9)    , NULL, NULL, 46  , NULL),
+    (idJugador(15,14), @idJaponEspanaGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(15, 9), @idJaponEspanaGrupo, idJugador(15,12)    , 46  , NULL, NULL, NULL);
+
+ 
+/*	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(1, 19),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 15),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  6),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  4),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  8),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 17),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  5),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 12),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1,  7),  @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(1, 14),  @idCostaRicaAlemaniaGrupo, idJugador(1, 5)     , NULL, NULL, 58  , NULL),
+    (idJugador(1,  9),  @idCostaRicaAlemaniaGrupo, idJugador(1, 7)     , NULL, NULL, 70  , NULL),
+
+    (idJugador(1,  7),  @idCostaRicaAlemaniaGrupo, idJugador(1, 9)     , 70  , NULL, NULL, NULL),
+
+     
+    (idJugador(4, 1),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4,15),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4, 2),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4,14),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4, 6),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4, 8),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4,21),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4,19),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4,13),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4,10),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(4, 3),   @idCostaRicaAlemaniaGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(4, 7),   @idCostaRicaAlemaniaGrupo, idJugador(4, 1)     , NULL, NULL, 73  , NULL),
+    (idJugador(4, 9),   @idCostaRicaAlemaniaGrupo, idJugador(4, 2)     , NULL, NULL, 85  , NULL),
+    (idJugador(4,11),   @idCostaRicaAlemaniaGrupo, idJugador(4,14)     , NULL, NULL, 89  , NULL),
+    (idJugador(4,16),   @idCostaRicaAlemaniaGrupo, idJugador(4,15)     , 90  , 3   , NULL, NULL);
+*/
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(6,  1),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(6,23),   @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(6,15),   @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(6, 2),   @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(6, 3),   @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(6, 6),   @idBelgicaCanadaGrupo, idJugador(6, 8)     , NULL, NULL, 62  , NULL),
+    (idJugador(6,10),   @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(6,21),   @idBelgicaCanadaGrupo, idJugador(6,18)     , NULL, NULL, 78  , NULL),
+    (idJugador(6,13),   @idBelgicaCanadaGrupo, idJugador(6,11)     , NULL, NULL, 78  , NULL),
+    (idJugador(6,14),   @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(6, 7),   @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+
+    (idJugador(6, 8),   @idBelgicaCanadaGrupo, idJugador(6, 6)     , 62  , NULL, NULL, NULL),
+    (idJugador(6,18),   @idBelgicaCanadaGrupo, idJugador(6,21)     , 78  , NULL, NULL, NULL),
+    (idJugador(6,11),   @idBelgicaCanadaGrupo, idJugador(6,13)     , 78  , NULL, NULL, NULL),
+
+     
+    (idJugador(20,18),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(20, 2),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(20, 5),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(20, 4),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(20,22),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(20,13),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(20,11),  @idBelgicaCanadaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(20,19),  @idBelgicaCanadaGrupo, idJugador(20,14)    , NULL, NULL, 58  , NULL),
+    (idJugador(20, 7),  @idBelgicaCanadaGrupo, idJugador(20,15)    , NULL, NULL, 58  , NULL),
+    (idJugador(20,10),  @idBelgicaCanadaGrupo, idJugador(20,23)    , NULL, NULL, 74  , NULL),
+    (idJugador(20,20),  @idBelgicaCanadaGrupo, idJugador(20,21)    , NULL, NULL, 81  , NULL),
+
+    (idJugador(20,14),  @idBelgicaCanadaGrupo, idJugador(20,19)    , 58  , NULL, NULL, NULL),
+    (idJugador(20,15),  @idBelgicaCanadaGrupo, idJugador(20, 7)     , 58  , NULL, NULL, NULL),
+    (idJugador(20,23),  @idBelgicaCanadaGrupo, idJugador(20,10)    , 74  , NULL, NULL, NULL),
+    (idJugador(20,21),  @idBelgicaCanadaGrupo, idJugador(20,20)    , 81  , NULL, NULL, NULL);
+
+ 
+/*	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(22, 1),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22, 2),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22,18),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22, 4),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22,23),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22, 8),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22,11),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22, 7),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22,19),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22,17),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(22, 6),  @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+
+    (idJugador(22,15),  @idMarruecosCroaciaGrupo, idJugador(22,17)         , 60  , NULL, NULL, NULL),   
+    (idJugador(22,10),  @idMarruecosCroaciaGrupo, idJugador(22, 8)          , 81  , NULL, NULL, NULL),   
+    (idJugador(22,11),  @idMarruecosCroaciaGrupo, idJugador(22, 4)          , 81  , NULL, NULL, NULL),   
+
+     
+    (idJugador(3, 1),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3,22),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3, 6),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3,20),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3,19),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3,11),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3, 8),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3,13),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3,10),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3, 9),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+    (idJugador(3, 4),   @idMarruecosCroaciaGrupo, NULL                     , NULL, NULL, NULL, NULL),
+
+    (idJugador(3,15),   @idMarruecosCroaciaGrupo, idJugador(3,10)          , 46  , NULL, NULL, NULL),   
+    (idJugador(3,25),   @idMarruecosCroaciaGrupo, idJugador(3, 8)           , 71  , NULL, NULL, NULL),   
+    (idJugador(3,14),   @idMarruecosCroaciaGrupo, idJugador(3, 6)           , 79  , NULL, NULL, NULL),   
+    (idJugador(3,18),   @idMarruecosCroaciaGrupo, idJugador(3, 9)           , 90  , NULL, NULL, NULL);   
+*/
+
+/*	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+
+ 
+     
+    (idJugador(6,  1),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6,15),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6, 2),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6,14),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6, 3),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6, 6),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6, 8),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6,21),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6,13),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6, 7),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(6,10),   @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(6,11),   @idBelgicaMarruecosGrupo, idJugador(6,13)    , 75  , NULL, NULL, NULL),   
+    (idJugador(6,17),   @idBelgicaMarruecosGrupo, idJugador(6,21)    , 75  , NULL, NULL, NULL),   
+    (idJugador(6,14),   @idBelgicaMarruecosGrupo, idJugador(6,15)    , 81  , NULL, NULL, NULL),   
+
+     
+    (idJugador(22, 1),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22, 2),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22,18),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22, 4),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22,23),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22, 8),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22,11),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22, 6),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22,17),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22,19),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(22, 7),  @idBelgicaMarruecosGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(22,15),  @idBelgicaMarruecosGrupo, idJugador(22,17)   , 68  , NULL, NULL, NULL),   
+    (idJugador(22,25),  @idBelgicaMarruecosGrupo, idJugador(22, 2)    , 68  , NULL, NULL, NULL),   
+    (idJugador(22,14),  @idBelgicaMarruecosGrupo, idJugador(22, 7)    , 73  , NULL, NULL, NULL),   
+    (idJugador(22, 9),  @idBelgicaMarruecosGrupo, idJugador(22,17)    , 73  , NULL, NULL, NULL);
+*/
+
+/*	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+
+ 
+     
+    (idJugador(3,  1),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3,22),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3, 6),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3,20),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3,19),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3,11),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3, 8),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3,13),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3,10),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3, 9),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(3, 4),  @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    (idJugador(3, 13), @idCroaciaCanadaGrupo, idJugador(3,10)      , 60  , NULL, NULL, NULL),   
+    (idJugador(3, 11), @idCroaciaCanadaGrupo, idJugador(3,22)      , 72  , NULL, NULL, NULL),   
+    (idJugador(3, 26), @idCroaciaCanadaGrupo, idJugador(3, 6)       , 86  , NULL, NULL, NULL),   
+    (idJugador(3, 15), @idCroaciaCanadaGrupo, idJugador(3, 9)       , 86  , NULL, NULL, NULL),   
+    (idJugador(3, 18), @idCroaciaCanadaGrupo, idJugador(3, 3)       , 86  , NULL, NULL, NULL),   
+
+     
+    (idJugador(20,18), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20, 2), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20, 5), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20, 4), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20,22), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20,13), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20,11), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20,19), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20,20), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20,17), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+    (idJugador(20, 7), @idCroaciaCanadaGrupo, NULL                 , NULL, NULL, NULL, NULL),
+
+    (idJugador(20, 7),  @idCroaciaCanadaGrupo, idJugador(20,20)    , 46  , NULL, NULL, NULL),   
+    (idJugador(20, 15), @idCroaciaCanadaGrupo, idJugador(20,17)    , 46  , NULL, NULL, NULL),   
+    (idJugador(20,10),  @idCroaciaCanadaGrupo, idJugador(20,11)    , 62  , NULL, NULL, NULL),   
+    (idJugador(20,23),  @idCroaciaCanadaGrupo, idJugador(20,20)    , 72  , NULL, NULL, NULL),   
+    (idJugador(20, 3),  @idCroaciaCanadaGrupo, idJugador(20,13)    , 72  , NULL, NULL, NULL);
+*/
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(3,  1), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 2), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 3), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 4), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 5), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 6), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 7), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 8), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 9), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3,10), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3,11), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+
+    (idJugador(3,14), @idCroaciaBelgicaGrupo, idJugador(3,11), 46, NULL, NULL, NULL),   
+    (idJugador(3,15), @idCroaciaBelgicaGrupo, idJugador(3, 9), 46, NULL, NULL, NULL),   
+    (idJugador(3,17), @idCroaciaBelgicaGrupo, idJugador(3, 6), 46, NULL, NULL, NULL),   
+    (idJugador(3,18), @idCroaciaBelgicaGrupo, idJugador(3, 7), 46, NULL, NULL, NULL),   
+
+     
+    (idJugador(6, 1), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 2), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 3), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 4), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 5), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 6), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 7), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 8), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6, 9), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6,10), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(6,11), @idCroaciaBelgicaGrupo, NULL, NULL, NULL, NULL, NULL),
+
+    (idJugador(6,12), @idCroaciaBelgicaGrupo, idJugador(6,11), 46, NULL, NULL, NULL),   
+    (idJugador(6,13), @idCroaciaBelgicaGrupo, idJugador(6, 9), 46, NULL, NULL, NULL),   
+    (idJugador(6,14), @idCroaciaBelgicaGrupo, idJugador(6, 7), 46, NULL, NULL, NULL),   
+    (idJugador(6,15), @idCroaciaBelgicaGrupo, idJugador(6, 6), 46, NULL, NULL, NULL);
+
+/* 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(20,18), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20, 2), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20, 5), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20, 4), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20,22), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20,13), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20,11), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20,19), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20,20), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20,17), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(20, 7), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+
+    (idJugador(20,13), @idCanadaMarruecosGrupo, idJugador(20, 7), 60, NULL, NULL, NULL),   
+    (idJugador(20, 3), @idCanadaMarruecosGrupo, idJugador(20,11), 66, NULL, NULL, NULL),   
+    (idJugador(20,15), @idCanadaMarruecosGrupo, idJugador(20, 4), 60, NULL, NULL, NULL),   
+    (idJugador(20,10), @idCanadaMarruecosGrupo, idJugador(20, 2), 76, NULL, NULL, NULL),   
+    (idJugador(20, 6), @idCanadaMarruecosGrupo, idJugador(20, 7), 76, NULL, NULL, NULL),   
+
+     
+    (idJugador(3,18), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 2), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 5), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 3), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 6), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 8), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3,11), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 7), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3,19), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3,17), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+    (idJugador(3, 9), @idCanadaMarruecosGrupo, NULL, NULL, NULL, NULL, NULL),
+
+    (idJugador(3,14), @idCanadaMarruecosGrupo, idJugador(3, 9), 60, NULL, NULL, NULL),   
+    (idJugador(3,15), @idCanadaMarruecosGrupo, idJugador(3, 8), 60, NULL, NULL, NULL),   
+    (idJugador(3,26), @idCanadaMarruecosGrupo, idJugador(3, 3), 90, NULL, NULL, NULL),   
+    (idJugador(3,18), @idCanadaMarruecosGrupo, idJugador(3, 7), 90, NULL, NULL, NULL);   
+*/
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+
+ ( idJugador(7,  1)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(7,  2)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(7,  3)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(7,  4)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(7,  6)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(7,  5)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(7,  7)  , @idBrasilSerbiaGrupo,idJugador(7,  8)       , NULL, NULL, 75  , NULL),
+ ( idJugador(7, 10)  , @idBrasilSerbiaGrupo,idJugador(7, 19)       , NULL, NULL, 80  , NULL),
+ ( idJugador(7, 11)  , @idBrasilSerbiaGrupo,idJugador(7, 26)       , NULL, NULL, 87  , NULL),
+ ( idJugador(7, 20)  , @idBrasilSerbiaGrupo,idJugador(7, 21)       , NULL, NULL, 75  , NULL),
+ ( idJugador(7,  9)  , @idBrasilSerbiaGrupo,idJugador(7, 18)       , NULL, NULL, 79  , NULL),
+
+ ( idJugador(7,  8)  , @idBrasilSerbiaGrupo,idJugador(7,  7)       , 75  , NULL, NULL, NULL),
+ ( idJugador(7, 21)  , @idBrasilSerbiaGrupo,idJugador(7, 20)       , 75  , NULL, NULL, NULL),
+ ( idJugador(7, 18)  , @idBrasilSerbiaGrupo,idJugador(7,  9)       , 79  , NULL, NULL, NULL),
+ ( idJugador(7, 19)  , @idBrasilSerbiaGrupo,idJugador(7, 10)       , 80  , NULL, NULL, NULL),
+ ( idJugador(7, 26)  , @idBrasilSerbiaGrupo,idJugador(7, 11)       , 87  , NULL, NULL, NULL),
+
+  
+ ( idJugador(29,23)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(29, 2)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(29, 4)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(29, 5)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(29, 8)  , @idBrasilSerbiaGrupo,idJugador(29,24)       , NULL, NULL, 57  , NULL),
+ ( idJugador(29,16)  , @idBrasilSerbiaGrupo,idJugador(29,22)       , NULL, NULL, 66  , NULL),
+ ( idJugador(29,14)  , @idBrasilSerbiaGrupo,idJugador(29, 7)       , NULL, NULL, 57  , NULL),
+ ( idJugador(29,25)  , @idBrasilSerbiaGrupo,idJugador(29,18)       , NULL, NULL, 66  , NULL),
+ ( idJugador(29,20)  , @idBrasilSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(29,10)  , @idBrasilSerbiaGrupo,idJugador(29, 6)       , NULL, NULL, 83  , NULL),
+ ( idJugador(29, 9)  , @idBrasilSerbiaGrupo,idJugador(29, 6)       , NULL, NULL, 83  , NULL),
+
+ ( idJugador(29,24)  , @idBrasilSerbiaGrupo,idJugador(29, 8)       , 57  , NULL, NULL, NULL),
+ ( idJugador(29, 7)  , @idBrasilSerbiaGrupo,idJugador(29,14)       , 57  , NULL, NULL, NULL),
+ ( idJugador(29,22)  , @idBrasilSerbiaGrupo,idJugador(29,16)       , 66  , NULL, NULL, NULL),
+ ( idJugador(29,18)  , @idBrasilSerbiaGrupo,idJugador(29,25)       , 66  , NULL, NULL, NULL),
+ ( idJugador(29, 6)  , @idBrasilSerbiaGrupo,idJugador(29, 9)       , 83  , NULL, NULL, NULL);
+
+/*
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+
+
+ ( idJugador(23,  1) , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(23,  3) , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(23,  5) , @idSuizaCamerunGrupo,idJugador(23,22)       , NULL, NULL, 90  , 5),
+ ( idJugador(23,  4) , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(23,13)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(23, 8)  , @idSuizaCamerunGrupo,idJugador(23,14)       , NULL, NULL, 73  , NULL),
+ ( idJugador(23,10)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(23,15)  , @idSuizaCamerunGrupo,idJugador(23,20)       , NULL, NULL, 73  , NULL),
+ ( idJugador(23,23)  , @idSuizaCamerunGrupo,idJugador(23,17)       , NULL, NULL, 81  , NULL),
+ ( idJugador(23, 7)  , @idSuizaCamerunGrupo,idJugador(23,19)       , NULL, NULL, 71  , NULL),
+ ( idJugador(23,17)  , @idSuizaCamerunGrupo,idJugador(23,11)       , NULL, NULL, 45  , NULL),
+
+ ( idJugador(23,11)  , @idSuizaCamerunGrupo,idJugador(23,17)       , 45  , NULL, NULL, NULL),
+ ( idJugador(23,19)  , @idSuizaCamerunGrupo,idJugador(23, 7)       , 71  , NULL, NULL, NULL),
+ ( idJugador(23,14)  , @idSuizaCamerunGrupo,idJugador(23, 8)       , 73  , NULL, NULL, NULL),
+ ( idJugador(23,20)  , @idSuizaCamerunGrupo,idJugador(23,15)       , 73  , NULL, NULL, NULL),
+ ( idJugador(23,22)  , @idSuizaCamerunGrupo,idJugador(23, 5)       , 90  , 5   , NULL, NULL),
+
+  
+ ( idJugador(10,23)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(10,19)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(10,21)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(10, 3)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(10,25)  , @idSuizaCamerunGrupo,idJugador(10,22)       , NULL, NULL, 81  , NULL),
+ ( idJugador(10, 8)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(10, 18) , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+ ( idJugador(10, 20) , @idSuizaCamerunGrupo,idJugador(10,17)       , NULL, NULL, 74  , NULL),
+ ( idJugador(10, 19) , @idSuizaCamerunGrupo,idJugador(10, 11)      , NULL, NULL, 74  , NULL),
+ ( idJugador(10, 10) , @idSuizaCamerunGrupo,idJugador(10,12)       , NULL, NULL, 74  , NULL),
+ ( idJugador(10,13)  , @idSuizaCamerunGrupo, NULL                  , NULL, NULL, NULL, NULL),
+
+ ( idJugador(10,17)  , @idSuizaCamerunGrupo,idJugador(10,20)       , 74  , NULL, NULL, NULL),
+ ( idJugador(10,11)  , @idSuizaCamerunGrupo,idJugador(10, 19)      , 74  , NULL, NULL, NULL),
+ ( idJugador(10,12)  , @idSuizaCamerunGrupo,idJugador(10, 10)      , 74  , NULL, NULL, NULL),
+ ( idJugador(10,22)  , @idSuizaCamerunGrupo,idJugador(10,25)       , 81  , NULL, NULL, NULL);
+*/
+
+/* 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+  
+     
+    (idJugador(7,  1), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  2), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  5), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  4), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  6), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  7), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7, 17), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7, 20), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  9), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,10),  @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,11),  @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(7,  8), @idBrasilSuizaGrupo, idJugador(7,  7)    , 46  , NULL, NULL, NULL),   
+    (idJugador(7,  6), @idBrasilSuizaGrupo, idJugador(7,17)    , 58  , NULL, NULL, NULL),   
+    (idJugador(7, 19), @idBrasilSuizaGrupo, idJugador(7,10)    , 73  , NULL, NULL, NULL),   
+    (idJugador(7, 20), @idBrasilSuizaGrupo, idJugador(7,11)    , 73  , NULL, NULL, NULL),   
+    (idJugador(7,26),  @idBrasilSuizaGrupo, idJugador(7, 2)     , 86  , NULL, NULL, NULL),   
+
+     
+    (idJugador(32, 1), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32,13), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32, 4), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32, 5), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32, 3), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32, 8), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32,10), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32, 7), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32,15), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32,17), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(32,25), @idBrasilSuizaGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(32,11), @idBrasilSuizaGrupo, idJugador(32,13)   , 76  , NULL, NULL, NULL),   
+    (idJugador(32,20), @idBrasilSuizaGrupo, idJugador(32, 8)    , 76  , NULL, NULL, NULL),   
+    (idJugador(32,14), @idBrasilSuizaGrupo, idJugador(32,15)   , 75  , NULL, NULL, NULL),   
+    (idJugador(32,22), @idBrasilSuizaGrupo, idJugador(32, 3)    , 76  , NULL, NULL, NULL);  
+*/
+/* 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+  
+     
+    (idJugador(10, 23), @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(10, 19), @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(10, 6),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(10, 3),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(10, 25), @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(10, 8),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(10, 2),  @idCamerunSerbiaGrupo, idJugador(10,18)      , NULL, NULL, 66  , NULL),
+    (idJugador(10, 18), @idCamerunSerbiaGrupo, idJugador(10, 7)      , NULL, NULL, 67  , NULL),
+    (idJugador(10, 11), @idCamerunSerbiaGrupo, idJugador(10, 20)     , NULL, NULL, 81  , NULL),
+    (idJugador(10, 20), @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(10, 12), @idCamerunSerbiaGrupo, idJugador(10, 3)      , NULL, NULL, 55  , NULL),
+
+    (idJugador(10, 7),  @idCamerunSerbiaGrupo, idJugador(10, 2)      , 66  , NULL, NULL, NULL),
+    (idJugador(10,18),  @idCamerunSerbiaGrupo, idJugador(10, 11)     , 81  , NULL, NULL, NULL),
+    (idJugador(10, 3),  @idCamerunSerbiaGrupo, idJugador(10,12)      , 55  , NULL, NULL, NULL),
+
+     
+    (idJugador(29, 23), @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(29, 4),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(29, 5),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(29, 2),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(29,14),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(29,10),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+    (idJugador(29,20),  @idCamerunSerbiaGrupo, idJugador(29,15)      , NULL, NULL, 78  , NULL),
+    (idJugador(29,15),  @idCamerunSerbiaGrupo, idJugador(29, 6)      , NULL, NULL, 79  , NULL),
+    (idJugador(29,16),  @idCamerunSerbiaGrupo, idJugador(29, 2)      , NULL, NULL, 56  , NULL),
+    (idJugador(29, 9),  @idCamerunSerbiaGrupo, idJugador(29,22)      , NULL, NULL, 92  , NULL),
+    (idJugador(29, 6),  @idCamerunSerbiaGrupo, NULL                  , NULL, NULL, NULL, NULL),
+
+    (idJugador(29,15),  @idCamerunSerbiaGrupo, idJugador(29,20)      , 78  , NULL, NULL, NULL),
+    (idJugador(29, 6),  @idCamerunSerbiaGrupo, idJugador(29,16)      , 56  , NULL, NULL, NULL),
+    (idJugador(29,22),  @idCamerunSerbiaGrupo, idJugador(29, 9)      , 92  , NULL, NULL, NULL);
+*/
+/* 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(10,23), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(10,19), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(10, 3), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(10, 6), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(10, 2), @idCamerunBrasilGrupo, idJugador(10,18)   , NULL, NULL, 66 , NULL),
+    (idJugador(10,18), @idCamerunBrasilGrupo, idJugador(10, 7)   , NULL, NULL, 67 , NULL),
+    (idJugador(10,11), @idCamerunBrasilGrupo, idJugador(10,20)   , NULL, NULL, 81 , NULL),
+    (idJugador(10,20), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(10,12), @idCamerunBrasilGrupo, idJugador(10, 3)   , NULL, NULL, 55 , NULL),
+    (idJugador(10,17), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(10, 8), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(10, 7), @idCamerunBrasilGrupo, idJugador(10, 2)    , 66 , NULL, NULL, NULL),
+    (idJugador(10,11), @idCamerunBrasilGrupo, idJugador(10,18)    , 81 , NULL, NULL, NULL),
+    (idJugador(10, 3), @idCamerunBrasilGrupo, idJugador(10,12)    , 55 , NULL, NULL, NULL),
+
+     
+    (idJugador(7,  1), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  4), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  5), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  6), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7, 17), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,  9), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7,20), @idCamerunBrasilGrupo, idJugador(7, 10)    , NULL, NULL, 79 , NULL),
+    (idJugador(7,11), @idCamerunBrasilGrupo, idJugador(7, 8)     , NULL, NULL, 67 , NULL),
+    (idJugador(7, 2), @idCamerunBrasilGrupo, idJugador(7,26)     , NULL, NULL, 67 , NULL),
+    (idJugador(7,10), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+    (idJugador(7, 8), @idCamerunBrasilGrupo, NULL               , NULL, NULL, NULL, NULL),
+
+    (idJugador(7,10), @idCamerunBrasilGrupo, idJugador(7,20)     , 79 , NULL, NULL, NULL),
+    (idJugador(7, 8), @idCamerunBrasilGrupo, idJugador(7,11)     , 67 , NULL, NULL, NULL),
+    (idJugador(7,26), @idCamerunBrasilGrupo, idJugador(7, 2)     , 67 , NULL, NULL, NULL);
+*/
+/* 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+     
+    (idJugador(11,23), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(11, 2), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(11, 4), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(11, 5), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(11,17), @idSerbiaSuizaGrupo, idJugador(11,20)    , NULL, NULL, 78 , NULL),
+    (idJugador(11,20), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(11,16), @idSerbiaSuizaGrupo, idJugador(11,14)    , NULL, NULL, 45 , NULL),
+    (idJugador(11, 8), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(11,10), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(11, 9), @idSerbiaSuizaGrupo, idJugador(11,14)    , NULL, NULL, 78 , NULL),
+    (idJugador(11, 7), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+
+    (idJugador(11,14), @idSerbiaSuizaGrupo, idJugador(11,16)    , 45 , NULL, NULL, NULL),
+    (idJugador(11,14), @idSerbiaSuizaGrupo, idJugador(11, 9)    , 78 , NULL, NULL, NULL),
+    (idJugador(11,20), @idSerbiaSuizaGrupo, idJugador(11,17)    , 78 , NULL, NULL, NULL),
+
+     
+    (idJugador(12, 1), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(12, 5), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(12,22), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(12, 4), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(12,13), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(12, 8), @idSerbiaSuizaGrupo, idJugador(12,15)    , NULL, NULL, 69 , NULL),
+    (idJugador(12,10), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(12,23), @idSerbiaSuizaGrupo, idJugador(12, 9)    , NULL, NULL, 57 , NULL),
+    (idJugador(12, 9), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+    (idJugador(12,17), @idSerbiaSuizaGrupo, idJugador(12, 7)    , NULL, NULL, 75 , NULL),
+    (idJugador(12, 7), @idSerbiaSuizaGrupo, NULL                , NULL, NULL, NULL, NULL),
+
+    (idJugador(12,15), @idSerbiaSuizaGrupo, idJugador(12, 8)    , 69 , NULL, NULL, NULL),
+    (idJugador(12, 9), @idSerbiaSuizaGrupo, idJugador(12,23)    , 57 , NULL, NULL, NULL),
+    (idJugador(12, 7), @idSerbiaSuizaGrupo, idJugador(12,17)    , 75 , NULL, NULL, NULL);
+*/
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+ 
+  
+ ( idJugador(26,22) , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,4)  , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,5)  , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,7)  , @idPortugalGhanaGrupo , idJugador(26,26)     , NULL, NULL, 88  , NULL),
+ ( idJugador(26,8)  , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,10) , @idPortugalGhanaGrupo , idJugador(26,6)      , NULL, NULL, 88  , NULL),
+ ( idJugador(26,11) , @idPortugalGhanaGrupo , idJugador(26,17)     , NULL, NULL, 88  , NULL),
+ ( idJugador(26,13) , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,18) , @idPortugalGhanaGrupo , idJugador(26,15)     , NULL, NULL, 77  , NULL),
+ ( idJugador(26,20) , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,25) , @idPortugalGhanaGrupo , idJugador(26,14)     , NULL, NULL, 56  , NULL),
+
+ ( idJugador(26,14) , @idPortugalGhanaGrupo , idJugador(26,25)     , 56  , NULL, NULL, NULL),
+ ( idJugador(26,15) , @idPortugalGhanaGrupo , idJugador(26,18)     , 77  , NULL, NULL, NULL),
+ ( idJugador(26,6)  , @idPortugalGhanaGrupo , idJugador(26,10)     , 88  , NULL, NULL, NULL),
+ ( idJugador(26,17) , @idPortugalGhanaGrupo , idJugador(26,11)     , 88  , NULL, NULL, NULL),
+ ( idJugador(26,26) , @idPortugalGhanaGrupo , idJugador(26,7)      , 88  , NULL, NULL, NULL),
+
+  
+ ( idJugador(17,1)  , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL   , NULL),
+ ( idJugador(17,26) , @idPortugalGhanaGrupo , idJugador(17,2)      , NULL, NULL, 66     , NULL),
+ ( idJugador(17,18) , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL   , NULL),
+ ( idJugador(17,23) , @idPortugalGhanaGrupo , idJugador(17,25)     , NULL, NULL, 90     , 2   ),
+ ( idJugador(17,5)  , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL   , NULL),
+ ( idJugador(17,17) , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL   , NULL),
+ ( idJugador(17,20) , @idPortugalGhanaGrupo , idJugador(17,11)     , NULL, NULL, 77     , NULL),
+ ( idJugador(17,21) , @idPortugalGhanaGrupo , idJugador(17,8)      , NULL, NULL, 90     , 2   ),
+ ( idJugador(17,10) , @idPortugalGhanaGrupo , idJugador(17,9)      , NULL, NULL, 77     , NULL),
+ ( idJugador(17,19) , @idPortugalGhanaGrupo , NULL                 , NULL, NULL, NULL   , NULL),
+
+ ( idJugador(17,2)  , @idPortugalGhanaGrupo , idJugador(17,26)     , 66  , NULL, NULL, NULL),
+ ( idJugador(17,11) , @idPortugalGhanaGrupo , idJugador(17,20)     , 77  , NULL, NULL, NULL),
+ ( idJugador(17,9)  , @idPortugalGhanaGrupo , idJugador(17,10)     , 77  , NULL, NULL, NULL),
+ ( idJugador(17,8)  , @idPortugalGhanaGrupo , idJugador(17,21)     , 90  , 2   , NULL, NULL),
+ ( idJugador(17,25) , @idPortugalGhanaGrupo , idJugador(17,23)     , 90  , 2   , NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(20,23) , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,2)  , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,3)  , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,16) , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,22) , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,6)  , @idUruguayCoreaGrupo , idJugador(20,25)     , NULL, NULL, 78  , NULL),
+ ( idJugador(20,15) , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,7)  , @idUruguayCoreaGrupo , idJugador(20,10)     , NULL, NULL, 88  , NULL),
+ ( idJugador(20,8)  , @idUruguayCoreaGrupo , idJugador(20,11)     , NULL, NULL, 88  , NULL),
+ ( idJugador(20,9)  , @idUruguayCoreaGrupo , idJugador(20,21)     , NULL, NULL, 64  , NULL),
+ ( idJugador(20,21) , @idUruguayCoreaGrupo , idJugador(20,9)      , 64  , NULL, NULL, NULL),
+
+ ( idJugador(20,25) , @idUruguayCoreaGrupo , idJugador(20,6)      , 78  , NULL, NULL, NULL),
+ ( idJugador(20,10) , @idUruguayCoreaGrupo , idJugador(20,7)      , 88  , NULL, NULL, NULL),
+ ( idJugador(20,11) , @idUruguayCoreaGrupo , idJugador(20,8)      , 88  , NULL, NULL, NULL),
+
+  
+ ( idJugador(13,1)  , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(13,3)  , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(13,4)  , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(13,19) , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(13,15) , @idUruguayCoreaGrupo , idJugador(13,23)     , NULL, NULL, 90  , NULL),
+ ( idJugador(13,5)  , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(13,6)  , @idUruguayCoreaGrupo , idJugador(13,18)     , NULL, NULL, 75  , NULL),
+ ( idJugador(13,10) , @idUruguayCoreaGrupo , idJugador(13,14)     , NULL, NULL, 90  , NULL),
+ ( idJugador(13,7)  , @idUruguayCoreaGrupo , idJugador(13,9)      , NULL, NULL, 74  , NULL),
+ ( idJugador(13,11) , @idUruguayCoreaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(13,9)  , @idUruguayCoreaGrupo , idJugador(13,7)      , 74  , NULL, NULL, NULL),
+
+ ( idJugador(13,18) , @idUruguayCoreaGrupo , idJugador(13,6)      , 75  , NULL, NULL, NULL),
+ ( idJugador(13,14) , @idUruguayCoreaGrupo , idJugador(13,10)     , 90  , NULL, NULL, NULL),
+ ( idJugador(13,23) , @idUruguayCoreaGrupo , idJugador(13,15)     , 90  , NULL, NULL, NULL);
+
+ 
+/*
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(15,22) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(15,20) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(15,4)  , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(15,19) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(15,5)  , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(15,14) , @idPortugalUruguayGrupo , idJugador(15,18)     , NULL, NULL, 82  , NULL),
+ ( idJugador(15,10) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(15,8)  , @idPortugalUruguayGrupo , idJugador(15,6)      , NULL, NULL, 82  , NULL),
+ ( idJugador(15,11) , @idPortugalUruguayGrupo , idJugador(15,2)      , NULL, NULL, 69  , NULL),
+ ( idJugador(15,7)  , @idPortugalUruguayGrupo , idJugador(15,17)     , NULL, NULL, 82  , NULL),
+ ( idJugador(15,26) , @idPortugalUruguayGrupo , idJugador(15,9)      , NULL, NULL, 69  , NULL),
+
+ ( idJugador(15,2)  , @idPortugalUruguayGrupo , idJugador(15,11)     , 69  , NULL, NULL, NULL),
+ ( idJugador(15,9)  , @idPortugalUruguayGrupo , idJugador(15,26)     , 69  , NULL, NULL, NULL),
+ ( idJugador(15,18) , @idPortugalUruguayGrupo , idJugador(15,14)     , 82  , NULL, NULL, NULL),
+ ( idJugador(15,6)  , @idPortugalUruguayGrupo , idJugador(15,8)      , 82  , NULL, NULL, NULL),
+ ( idJugador(15,17) , @idPortugalUruguayGrupo , idJugador(15,7)      , 82  , NULL, NULL, NULL),
+
+  
+ ( idJugador(20,23) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,2)  , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,19) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,16) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,17) , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,15) , @idPortugalUruguayGrupo , idJugador(20,6)      , NULL, NULL, 66  , NULL),
+ ( idJugador(20,7)  , @idPortugalUruguayGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(20,14) , @idPortugalUruguayGrupo , idJugador(20,25)     , NULL, NULL, 73  , NULL),
+ ( idJugador(20,11) , @idPortugalUruguayGrupo , idJugador(20,10)     , NULL, NULL, 45  , NULL),
+ ( idJugador(20,21) , @idPortugalUruguayGrupo , idJugador(20,9)      , NULL, NULL, 72  , NULL),
+ ( idJugador(20,9)  , @idPortugalUruguayGrupo , idJugador(20,21)     , 72  , NULL, NULL, NULL),
+
+  , @idPortugalUruguayGrupo , idJugador(20,11)     , 45  , NULL, NULL, NULL),
+ ( idJugador(20,6)  , @idPortugalUruguayGrupo , idJugador(20,15)     , 66  , NULL, NULL, NULL),
+ ( idJugador(20,25) , @idPortugalUruguayGrupo , idJugador(20,14)     , 73  , NULL, NULL, NULL);
+*/
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(18,1)  , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,15) , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,19) , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,4)  , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,3)  , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,5)  , @idCoreaGhanaGrupo , idJugador(18,14)     , NULL, NULL, 79  , NULL),
+ ( idJugador(18,6)  , @idCoreaGhanaGrupo , idJugador(18,8)      , NULL, NULL, 62  , NULL),
+ ( idJugador(18,10) , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,17) , @idCoreaGhanaGrupo , idJugador(18,7)      , NULL, NULL, 62  , NULL),
+ ( idJugador(18,16) , @idCoreaGhanaGrupo , idJugador(18,11)     , NULL, NULL, 79  , NULL),
+ ( idJugador(18,9)  , @idCoreaGhanaGrupo , idJugador(18,13)     , NULL, NULL, 87  , NULL),
+
+ ( idJugador(18,8)  , @idCoreaGhanaGrupo , idJugador(18,6)      , 62  , NULL, NULL, NULL),
+ ( idJugador(18,7)  , @idCoreaGhanaGrupo , idJugador(18,17)     , 62  , NULL, NULL, NULL),
+ ( idJugador(18,14) , @idCoreaGhanaGrupo , idJugador(18,5)      , 79  , NULL, NULL, NULL),
+ ( idJugador(18,11) , @idCoreaGhanaGrupo , idJugador(18,16)     , 79  , NULL, NULL, NULL),
+ ( idJugador(18,13) , @idCoreaGhanaGrupo , idJugador(18,9)      , 87  , NULL, NULL, NULL),
+
+  
+ ( idJugador(21,1)  , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(21,26) , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(21,4)  , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(21,18) , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(21,17) , @idCoreaGhanaGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(21,20) , @idCoreaGhanaGrupo , idJugador(21,2)      , NULL, NULL, 90  , 8),
+ ( idJugador(21,5)  , @idCoreaGhanaGrupo , idJugador(21,8)      , NULL, NULL, 67  , NULL),
+ ( idJugador(21,21) , @idCoreaGhanaGrupo , idJugador(21,22)     , NULL, NULL, 67  , NULL),
+ ( idJugador(21,9)  , @idCoreaGhanaGrupo , idJugador(21,11)     , NULL, NULL, 78  , NULL),
+ ( idJugador(21,19) , @idCoreaGhanaGrupo , idJugador(21,23)     , NULL, NULL, 90  , 8),
+ ( idJugador(21,10) , @idCoreaGhanaGrupo , idJugador(21,14)     , NULL, NULL, 78  , NULL),
+
+ ( idJugador(21,8)  , @idCoreaGhanaGrupo , idJugador(21,5)      , 67  , NULL, NULL, NULL),
+ ( idJugador(21,22) , @idCoreaGhanaGrupo , idJugador(21,21)     , 67  , NULL, NULL, NULL),
+ ( idJugador(21,11) , @idCoreaGhanaGrupo , idJugador(21,9)      , 78  , NULL, NULL, NULL),
+ ( idJugador(21,14) , @idCoreaGhanaGrupo , idJugador(21,10)     , 78  , NULL, NULL, NULL),
+ ( idJugador(21,2)  , @idCoreaGhanaGrupo , idJugador(21,20)     , 90  , 8   , NULL, NULL),
+ ( idJugador(21,23) , @idCoreaGhanaGrupo , idJugador(21,19)     , 90  , 8   , NULL, NULL);
+
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+ 
+  
+ ( idJugador(18,21) , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,15) , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,19) , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,4)  , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,3)  , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,5)  , @idCoreaPortugalGrupo , idJugador(18,14)     , NULL, NULL, 66  , NULL),
+ ( idJugador(18,6)  , @idCoreaPortugalGrupo , idJugador(18,13)     , NULL, NULL, 80  , NULL),
+ ( idJugador(18,10) , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,7)  , @idCoreaPortugalGrupo , idJugador(18,11)     , NULL, NULL, 81  , NULL),
+ ( idJugador(18,16) , @idCoreaPortugalGrupo , idJugador(18,20)     , NULL, NULL, 66  , NULL),
+ ( idJugador(18,9)  , @idCoreaPortugalGrupo , idJugador(18,22)     , NULL, NULL, 90  , 2),
+
+ ( idJugador(18,14) , @idCoreaPortugalGrupo , idJugador(18,5)      , 66  , NULL, NULL, NULL),
+ ( idJugador(18,20) , @idCoreaPortugalGrupo , idJugador(18,16)     , 66  , NULL, NULL, NULL),
+ ( idJugador(18,13) , @idCoreaPortugalGrupo , idJugador(18,6)      , 80  , NULL, NULL, NULL),
+ ( idJugador(18,11) , @idCoreaPortugalGrupo , idJugador(18,7)      , 81  , NULL, NULL, NULL),
+ ( idJugador(18,22) , @idCoreaPortugalGrupo , idJugador(18,9)      , 90  , 2   , NULL, NULL),
+
+  
+ ( idJugador(22,22) , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,2)  , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,19) , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,24) , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,20) , @idCoreaPortugalGrupo , idJugador(22,5)      , NULL, NULL, 46  , NULL),
+ ( idJugador(22,6)  , @idCoreaPortugalGrupo , idJugador(22,18)     , NULL, NULL, 65  , NULL),
+ ( idJugador(22,26) , @idCoreaPortugalGrupo , idJugador(22,10)     , NULL, NULL, 65  , NULL),
+ ( idJugador(22,25) , @idCoreaPortugalGrupo , idJugador(22,11)     , NULL, NULL, 46  , NULL),
+ ( idJugador(22,17) , @idCoreaPortugalGrupo , idJugador(22,21)     , NULL, NULL, 65  , NULL),
+ ( idJugador(22,11) , @idCoreaPortugalGrupo , idJugador(22,23)     , NULL, NULL, 65  , NULL),
+ ( idJugador(22,9)  , @idCoreaPortugalGrupo , NULL                 , NULL, NULL, NULL, NULL),
+
+ ( idJugador(22,5)  , @idCoreaPortugalGrupo , idJugador(22,20)     , 46  , NULL, NULL, NULL),
+ ( idJugador(22,23) , @idCoreaPortugalGrupo , idJugador(22,11)     , 65  , NULL, NULL, NULL),
+ ( idJugador(22,21) , @idCoreaPortugalGrupo , idJugador(22,17)     , 65  , NULL, NULL, NULL),
+ ( idJugador(22,10) , @idCoreaPortugalGrupo , idJugador(22,26)     , 65  , NULL, NULL, NULL),
+ ( idJugador(22,18) , @idCoreaPortugalGrupo , idJugador(22,6)      , 65  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(15,1)  , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(15,26) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(15,18) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(15,4)  , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(15,17) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(15,20) , @idGhanaUruguayGrupo , idJugador(15,22)   , NULL, NULL, 45  , NULL),
+ ( idJugador(15,5)  , @idGhanaUruguayGrupo , idJugador(15,11)   , NULL, NULL, 72  , NULL),
+ ( idJugador(15,21) , @idGhanaUruguayGrupo , idJugador(15,9)    , NULL, NULL, 45  , NULL),
+ ( idJugador(15,19) , @idGhanaUruguayGrupo , idJugador(15,14)   , NULL, NULL, 46  , NULL),
+ ( idJugador(15,10) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(15,9)  , @idGhanaUruguayGrupo , idJugador(15,21)   , 45  , NULL, NULL, NULL),
+
+ ( idJugador(15,22) , @idGhanaUruguayGrupo , idJugador(15,20)   , 45  , NULL, NULL, NULL),
+ ( idJugador(15,11) , @idGhanaUruguayGrupo , idJugador(15,5)    , 72  , NULL, NULL, NULL),
+ ( idJugador(15,14) , @idGhanaUruguayGrupo , idJugador(15,19)   , 46  , NULL, NULL, NULL),
+
+  
+ ( idJugador(20,23) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(20,13) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(20,2)  , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(20,19) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(20,16) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(20,15) , @idGhanaUruguayGrupo , idJugador(20,6)    , NULL, NULL, 34  , NULL),
+ ( idJugador(20,5)  , @idGhanaUruguayGrupo , idJugador(20,8)    , NULL, NULL, 67  , NULL),
+ ( idJugador(20,10) , @idGhanaUruguayGrupo , idJugador(20,14)   , NULL, NULL, 46  , NULL),
+ ( idJugador(20,11) , @idGhanaUruguayGrupo , idJugador(20,24)   , NULL, NULL, 90  , NULL),
+ ( idJugador(20,21) , @idGhanaUruguayGrupo , NULL               , NULL, NULL, NULL, NULL),
+ ( idJugador(20,9)  , @idGhanaUruguayGrupo , idJugador(20,7)    , NULL, NULL, 90  , NULL),
+
+ ( idJugador(20,6)  , @idGhanaUruguayGrupo , idJugador(20,15)   , 34  , NULL, NULL, NULL),
+ ( idJugador(20,8)  , @idGhanaUruguayGrupo , idJugador(20,5)    , 67  , NULL, NULL, NULL),
+ ( idJugador(20,14) , @idGhanaUruguayGrupo , idJugador(20,10)   , 46  , NULL, NULL, NULL),
+ ( idJugador(20,24) , @idGhanaUruguayGrupo , idJugador(20,11)   , 90  , NULL, NULL, NULL),
+ ( idJugador(20,7)  , @idGhanaUruguayGrupo , idJugador(20,9)    , 90  , NULL, NULL, NULL);
+
+
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+ 
+  
+ ( idJugador(3,23) , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,22) , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,4)  , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,5)  , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,17) , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,21) , @idPaisesBajosEEUUOctavos , idJugador(3,16)     , NULL, NULL, 46  , NULL),
+ ( idJugador(3,11) , @idPaisesBajosEEUUOctavos , idJugador(3,20)     , NULL, NULL, 75  , NULL),
+ ( idJugador(3,14) , @idPaisesBajosEEUUOctavos , idJugador(3,18)     , NULL, NULL, 46  , NULL),
+ ( idJugador(3,8)  , @idPaisesBajosEEUUOctavos , idJugador(3,24)     , NULL, NULL, 83  , NULL),
+ ( idJugador(3,7)  , @idPaisesBajosEEUUOctavos , idJugador(3,26)     , NULL, NULL, 90  , 3),
+ ( idJugador(3,10) , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+
+ ( idJugador(3,16) , @idPaisesBajosEEUUOctavos , idJugador(3,21)     , 46  , NULL, NULL, NULL),
+ ( idJugador(3,18) , @idPaisesBajosEEUUOctavos , idJugador(3,14)     , 46  , NULL, NULL, NULL),
+ ( idJugador(3,20) , @idPaisesBajosEEUUOctavos , idJugador(3,11)     , 75  , NULL, NULL, NULL),
+ ( idJugador(3,24) , @idPaisesBajosEEUUOctavos , idJugador(3,8)      , 83  , NULL, NULL, NULL),
+ ( idJugador(3,26) , @idPaisesBajosEEUUOctavos , idJugador(3,7)      , 90  , 3   , NULL, NULL),
+
+  
+ ( idJugador(26,1) , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(26,2) , @idPaisesBajosEEUUOctavos , idJugador(26,3)     , NULL, NULL, 45  , NULL),
+ ( idJugador(26,3) , @idPaisesBajosEEUUOctavos , idJugador(26,2)     , 45  , NULL, NULL, NULL),
+ ( idJugador(26,13), @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(26,5) , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(26,8) , @idPaisesBajosEEUUOctavos , idJugador(26,11)    , NULL, NULL, 67  , NULL),
+ ( idJugador(26,6) , @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(26,21), @idPaisesBajosEEUUOctavos , idJugador(26,23)    , NULL, NULL, 67  , NULL),
+ ( idJugador(26,10), @idPaisesBajosEEUUOctavos , idJugador(26,14)    , NULL, NULL, 45  , NULL),
+ ( idJugador(26,24), @idPaisesBajosEEUUOctavos , idJugador(26,19)    , NULL, NULL, 67  , NULL),
+ ( idJugador(26,20), @idPaisesBajosEEUUOctavos , NULL                , NULL, NULL, NULL, NULL),
+
+ ( idJugador(26,11), @idPaisesBajosEEUUOctavos , idJugador(26,8)     , 67  , NULL, NULL, NULL),
+ ( idJugador(26,23), @idPaisesBajosEEUUOctavos , idJugador(26,21)    , 67  , NULL, NULL, NULL),
+ ( idJugador(26,14), @idPaisesBajosEEUUOctavos , idJugador(26,10)    , 45  , NULL, NULL, NULL),
+ ( idJugador(26,19), @idPaisesBajosEEUUOctavos , idJugador(26,24)    , 67  , NULL, NULL, NULL);
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+ 
+  
+ ( idJugador(1,23) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(1,26) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(1,25) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(1,13) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(1,8)  , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(1,7)  , @idArgentinaAustraliaOctavos , idJugador(1,5)      , NULL, NULL, 50  , NULL),
+ ( idJugador(1,18) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(1,20) , @idArgentinaAustraliaOctavos , idJugador(1,19)     , NULL, NULL, 50  , NULL),
+ ( idJugador(1,10) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(1,11) , @idArgentinaAustraliaOctavos , idJugador(1,21)     , NULL, NULL, 72  , NULL),
+ ( idJugador(1,9)  , @idArgentinaAustraliaOctavos , idJugador(1,22)     , NULL, NULL, 72  , NULL),
+
+ ( idJugador(1,5)  , @idArgentinaAustraliaOctavos , idJugador(1,7)      , 50  , NULL, NULL, NULL),
+ ( idJugador(1,19) , @idArgentinaAustraliaOctavos , idJugador(1,20)     , 50  , NULL, NULL, NULL),
+ ( idJugador(1,21) , @idArgentinaAustraliaOctavos , idJugador(1,11)     , 72  , NULL, NULL, NULL),
+ ( idJugador(1,22) , @idArgentinaAustraliaOctavos , idJugador(1,9)      , 72  , NULL, NULL, NULL),
+
+  
+ ( idJugador(31,1) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(31,3) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(31,19), @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(31,4) , @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(31,16), @idArgentinaAustraliaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(31,13), @idArgentinaAustraliaOctavos , idJugador(31,14)    , NULL, NULL, 57  , NULL),
+ ( idJugador(31,22), @idArgentinaAustraliaOctavos , idJugador(31,2)     , NULL, NULL, 72  , NULL),
+ ( idJugador(31,7) , @idArgentinaAustraliaOctavos , idJugador(31,5)     , NULL, NULL, 72  , NULL),
+ ( idJugador(31,23), @idArgentinaAustraliaOctavos , idJugador(31,11)    , NULL, NULL, 50  , NULL),
+ ( idJugador(31,15), @idArgentinaAustraliaOctavos , idJugador(31,10)    , NULL, NULL, 50  , NULL),
+ ( idJugador(31,9) , @idArgentinaAustraliaOctavos , idJugador(31,26)    , NULL, NULL, 71  , NULL),
+
+ ( idJugador(31,14), @idArgentinaAustraliaOctavos , idJugador(31,13)    , 57  , NULL, NULL, NULL),
+ ( idJugador(31,2) , @idArgentinaAustraliaOctavos , idJugador(31,22)    , 72  , NULL, NULL, NULL),
+ ( idJugador(31,5) , @idArgentinaAustraliaOctavos , idJugador(31,7)     , 72  , NULL, NULL, NULL),
+ ( idJugador(31,11), @idArgentinaAustraliaOctavos , idJugador(31,23)    , 50  , NULL, NULL, NULL),
+ ( idJugador(31,10), @idArgentinaAustraliaOctavos , idJugador(31,15)    , 50  , NULL, NULL, NULL),
+ ( idJugador(31,26), @idArgentinaAustraliaOctavos , idJugador(31,9)     , 71  , NULL, NULL, NULL);
+
+ 
+/*
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(12,12) , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(12,19) , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(12,4)  , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(12,22) , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(12,5)  , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(12,6)  , @idJaponCroaciaOctavos , idJugador(12,17)    , NULL, NULL, 64  , NULL),
+ ( idJugador(12,8)  , @idJaponCroaciaOctavos , idJugador(12,15)    , NULL, NULL, 87  , NULL),
+ ( idJugador(12,14) , @idJaponCroaciaOctavos , idJugador(12,9)     , NULL, NULL, 64  , NULL),
+ ( idJugador(12,25) , @idJaponCroaciaOctavos , idJugador(12,10)    , NULL, NULL, 74  , NULL),
+ ( idJugador(12,15) , @idJaponCroaciaOctavos , idJugador(12,18)    , NULL, NULL, 87  , NULL),
+ ( idJugador(12,9)  , @idJaponCroaciaOctavos , idJugador(12,11)    , NULL, NULL, 74  , NULL),
+
+ ( idJugador(12,17) , @idJaponCroaciaOctavos , idJugador(12,6)     , 64  , NULL, NULL, NULL),
+ ( idJugador(12,15) , @idJaponCroaciaOctavos , idJugador(12,8)     , 87  , NULL, NULL, NULL),
+ ( idJugador(12,9)  , @idJaponCroaciaOctavos , idJugador(12,14)    , 64  , NULL, NULL, NULL),
+ ( idJugador(12,10) , @idJaponCroaciaOctavos , idJugador(12,25)    , 74  , NULL, NULL, NULL),
+ ( idJugador(12,18) , @idJaponCroaciaOctavos , idJugador(12,15)    , 87  , NULL, NULL, NULL),
+ ( idJugador(12,11) , @idJaponCroaciaOctavos , idJugador(12,9)     , 74  , NULL, NULL, NULL),
+
+  
+ ( idJugador(18,1)  , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,22) , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,6)  , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,20) , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,19) , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,10) , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,8)  , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,11) , @idJaponCroaciaOctavos , idJugador(18,9)     , NULL, NULL, 99  , NULL),
+ ( idJugador(18,15) , @idJaponCroaciaOctavos , idJugador(18,13)    , NULL, NULL, 98  , NULL),
+ ( idJugador(18,4)  , @idJaponCroaciaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(18,16) , @idJaponCroaciaOctavos , idJugador(18,7)     , NULL, NULL, 72  , NULL),
+
+ ( idJugador(18,9)  , @idJaponCroaciaOctavos , idJugador(18,11)    , 99  , NULL, NULL, NULL),
+ ( idJugador(18,13) , @idJaponCroaciaOctavos , idJugador(18,15)    , 98  , NULL, NULL, NULL),
+ ( idJugador(18,7)  , @idJaponCroaciaOctavos , idJugador(18,16)    , 72  , NULL, NULL, NULL);
+
+*/ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(3,1)  , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,14) , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,4)  , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,3)  , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,2)  , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(3,5)  , @idBrasilCoreaOctavos , idJugador(3,26)     , NULL, NULL, 55  , NULL),
+ ( idJugador(3,7)  , @idBrasilCoreaOctavos , idJugador(3,15)     , NULL, NULL, 80  , NULL),
+ ( idJugador(3,10) , @idBrasilCoreaOctavos , idJugador(3,21)     , NULL, NULL, 80  , NULL),
+ ( idJugador(3,11) , @idBrasilCoreaOctavos , idJugador(3,19)     , NULL, NULL, 54  , NULL),
+ ( idJugador(3,20) , @idBrasilCoreaOctavos , idJugador(3,17)     , NULL, NULL, 63  , NULL),
+ ( idJugador(3,9)  , @idBrasilCoreaOctavos , idJugador(3,25)     , NULL, NULL, 80  , NULL),
+
+ ( idJugador(3,26) , @idBrasilCoreaOctavos , idJugador(3,5)      , 55  , NULL, NULL, NULL),
+ ( idJugador(3,15) , @idBrasilCoreaOctavos , idJugador(3,7)      , 80  , NULL, NULL, NULL),
+ ( idJugador(3,21) , @idBrasilCoreaOctavos , idJugador(3,10)     , 80  , NULL, NULL, NULL),
+ ( idJugador(3,19) , @idBrasilCoreaOctavos , idJugador(3,11)     , 54  , NULL, NULL, NULL),
+ ( idJugador(3,17) , @idBrasilCoreaOctavos , idJugador(3,20)     , 63  , NULL, NULL, NULL),
+ ( idJugador(3,25) , @idBrasilCoreaOctavos , idJugador(3,9)      , 80  , NULL, NULL, NULL),
+
+  
+ ( idJugador(15,1)  , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(15,3)  , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(15,19) , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(15,20) , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(15,15) , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+ ( idJugador(15,5)  , @idBrasilCoreaOctavos , idJugador(15,14)    , NULL, NULL, 46  , NULL),
+ ( idJugador(15,6)  , @idBrasilCoreaOctavos , idJugador(15,22)    , NULL, NULL, 79  , NULL),
+ ( idJugador(15,7)  , @idBrasilCoreaOctavos , idJugador(15,11)    , NULL, NULL, 65  , NULL),
+ ( idJugador(15,10) , @idBrasilCoreaOctavos , idJugador(15,8)     , NULL, NULL, 74  , NULL),
+ ( idJugador(15,13) , @idBrasilCoreaOctavos , idJugador(15,18)    , NULL, NULL, 46  , NULL),
+ ( idJugador(15,9)  , @idBrasilCoreaOctavos , NULL                , NULL, NULL, NULL, NULL),
+
+ ( idJugador(15,14) , @idBrasilCoreaOctavos , idJugador(15,5)     , 46  , NULL, NULL, NULL),
+ ( idJugador(15,22) , @idBrasilCoreaOctavos , idJugador(15,6)     , 79  , NULL, NULL, NULL),
+ ( idJugador(15,11) , @idBrasilCoreaOctavos , idJugador(15,7)     , 65  , NULL, NULL, NULL),
+ ( idJugador(15,8)  , @idBrasilCoreaOctavos , idJugador(15,10)    , 74  , NULL, NULL, NULL),
+ ( idJugador(15,18) , @idBrasilCoreaOctavos , idJugador(15,13)    , 46  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(18,1)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,5)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,3)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,2)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,8)  , @idInglaterraSenegalOctavos , idJugador(18,6)      , NULL, NULL, 87  , NULL),
+ ( idJugador(18,10) , @idInglaterraSenegalOctavos , idJugador(18,9)      , NULL, NULL, 87  , NULL),
+ ( idJugador(18,4)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,7)  , @idInglaterraSenegalOctavos , idJugador(18,11)     , NULL, NULL, 90  , NULL),
+ ( idJugador(18,6)  , @idInglaterraSenegalOctavos , idJugador(18,8)      , 87  , NULL, NULL, NULL),
+ ( idJugador(18,9)  , @idInglaterraSenegalOctavos , idJugador(18,10)     , 87  , NULL, NULL, NULL),
+ ( idJugador(18,11) , @idInglaterraSenegalOctavos , idJugador(18,7)      , 90  , NULL, NULL, NULL),
+
+  
+ ( idJugador(17,1)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(17,3)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(17,5)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(17,8)  , @idInglaterraSenegalOctavos , idJugador(17,10)     , NULL, NULL, 85  , NULL),
+ ( idJugador(17,6)  , @idInglaterraSenegalOctavos , idJugador(17,12)     , NULL, NULL, 82  , NULL),
+ ( idJugador(17,9)  , @idInglaterraSenegalOctavos , idJugador(17,19)     , NULL, NULL, 69  , NULL),
+ ( idJugador(17,10) , @idInglaterraSenegalOctavos , idJugador(17,8)      , 85  , NULL, NULL, NULL),
+ ( idJugador(17,12) , @idInglaterraSenegalOctavos , idJugador(17,6)      , 82  , NULL, NULL, NULL),
+ ( idJugador(17,19) , @idInglaterraSenegalOctavos , idJugador(17,9)      , 69  , NULL, NULL, NULL),
+ ( idJugador(17,13) , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(17,4)  , @idInglaterraSenegalOctavos , NULL                 , NULL, NULL, NULL, NULL);
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+ 
+  
+ ( idJugador(2,1)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,2)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,3)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,4)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,5)  , @idFranciaPoloniaOctavos , idJugador(2,15)     , NULL, NULL, 78  , NULL),
+ ( idJugador(2,6)  , @idFranciaPoloniaOctavos , idJugador(2,11)     , NULL, NULL, 70  , NULL),
+ ( idJugador(2,7)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,8)  , @idFranciaPoloniaOctavos , idJugador(2,17)     , NULL, NULL, 74  , NULL),
+ ( idJugador(2,9)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,10) , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,11) , @idFranciaPoloniaOctavos , idJugador(2,6)      , 70  , NULL, NULL, NULL),
+ ( idJugador(2,15) , @idFranciaPoloniaOctavos , idJugador(2,5)      , 78  , NULL, NULL, NULL),
+ ( idJugador(2,17) , @idFranciaPoloniaOctavos , idJugador(2,8)      , 74  , NULL, NULL, NULL),
+
+  
+ ( idJugador(25,1)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(25,2)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(25,3)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(25,4)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(25,5)  , @idFranciaPoloniaOctavos , idJugador(25,8)      , NULL, NULL, 80  , NULL),
+ ( idJugador(25,6)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(25,7)  , @idFranciaPoloniaOctavos , idJugador(25,17)     , NULL, NULL, 85  , NULL),
+ ( idJugador(25,8)  , @idFranciaPoloniaOctavos , idJugador(25,5)      , 80  , NULL, NULL, NULL),
+ ( idJugador(25,9)  , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(25,10) , @idFranciaPoloniaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(25,11) , @idFranciaPoloniaOctavos , idJugador(25,16)     , NULL, NULL, 88  , NULL),
+ ( idJugador(25,16) , @idFranciaPoloniaOctavos , idJugador(25,11)     , 88  , NULL, NULL, NULL),
+ ( idJugador(25,17) , @idFranciaPoloniaOctavos , idJugador(25,7)      , 85  , NULL, NULL, NULL);
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+ 
+  
+ ( idJugador(22,1)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,2)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,3)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,4)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,5)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,6)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,7)  , @idMarruecosEspanaOctavos , idJugador(22,18)     , NULL, NULL, 60  , NULL),
+ ( idJugador(22,8)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,9)  , @idMarruecosEspanaOctavos , idJugador(22,12)     , NULL, NULL, 72  , NULL),
+ ( idJugador(22,10) , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,11) , @idMarruecosEspanaOctavos , idJugador(22,14)     , NULL, NULL, 78  , NULL),
+ ( idJugador(22,12) , @idMarruecosEspanaOctavos , idJugador(22,9)      , 72  , NULL, NULL, NULL),
+ ( idJugador(22,14) , @idMarruecosEspanaOctavos , idJugador(22,11)     , 78  , NULL, NULL, NULL),
+ ( idJugador(22,18) , @idMarruecosEspanaOctavos , idJugador(22,7)      , 60  , NULL, NULL, NULL),
+
+  
+ ( idJugador(14,1)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,2)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,3)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,4)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,5)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,6)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,7)  , @idMarruecosEspanaOctavos , idJugador(14,17)     , NULL, NULL, 68  , NULL),
+ ( idJugador(14,8)  , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,9)  , @idMarruecosEspanaOctavos , idJugador(14,12)     , NULL, NULL, 76  , NULL),
+ ( idJugador(14,10) , @idMarruecosEspanaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(14,11) , @idMarruecosEspanaOctavos , idJugador(14,15)     , NULL, NULL, 82  , NULL),
+ ( idJugador(14,12) , @idMarruecosEspanaOctavos , idJugador(14,9)      , 76  , NULL, NULL, NULL),
+ ( idJugador(14,15) , @idMarruecosEspanaOctavos , idJugador(14,11)     , 82  , NULL, NULL, NULL),
+ ( idJugador(14,17) , @idMarruecosEspanaOctavos , idJugador(14,7)      , 68  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(26,1)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,2)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,3)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,4)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,5)  , @idPortugalSuizaOctavos , idJugador(26,18)     , NULL, NULL, 70  , NULL),
+ ( idJugador(26,6)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,7)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,8)  , @idPortugalSuizaOctavos , idJugador(26,17)     , NULL, NULL, 65  , NULL),
+ ( idJugador(26,9)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,10) , @idPortugalSuizaOctavos , idJugador(26,19)     , NULL, NULL, 75  , NULL),
+ ( idJugador(26,11) , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,17) , @idPortugalSuizaOctavos , idJugador(26,8)      , 65  , NULL, NULL, NULL),
+ ( idJugador(26,18) , @idPortugalSuizaOctavos , idJugador(26,5)      , 70  , NULL, NULL, NULL),
+ ( idJugador(26,19) , @idPortugalSuizaOctavos , idJugador(26,10)     , 75  , NULL, NULL, NULL),
+
+  
+ ( idJugador(30,1)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,2)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,3)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,4)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,5)  , @idPortugalSuizaOctavos , idJugador(30,12)     , NULL, NULL, 68  , NULL),
+ ( idJugador(30,6)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,7)  , @idPortugalSuizaOctavos , idJugador(30,14)     , NULL, NULL, 80  , NULL),
+ ( idJugador(30,8)  , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,9)  , @idPortugalSuizaOctavos , idJugador(30,16)     , NULL, NULL, 85  , NULL),
+ ( idJugador(30,10) , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,11) , @idPortugalSuizaOctavos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(30,12) , @idPortugalSuizaOctavos , idJugador(30,5)      , 68  , NULL, NULL, NULL),
+ ( idJugador(30,14) , @idPortugalSuizaOctavos , idJugador(30,7)      , 80  , NULL, NULL, NULL),
+ ( idJugador(30,16) , @idPortugalSuizaOctavos , idJugador(30,9)      , 85  , NULL, NULL, NULL);
+
+
+ 
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	
+ 
+ 
+  
+ ( idJugador(24,1)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,2)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,3)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,4)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,5)  , @idPaisesBajosArgentinaCuartos , idJugador(24,18)     , NULL, NULL, 65  , NULL),
+ ( idJugador(24,6)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,7)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,8)  , @idPaisesBajosArgentinaCuartos , idJugador(24,17)     , NULL, NULL, 72  , NULL),
+ ( idJugador(24,9)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,10) , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(24,11) , @idPaisesBajosArgentinaCuartos , idJugador(24,15)     , NULL, NULL, 80  , NULL),
+ ( idJugador(24,15) , @idPaisesBajosArgentinaCuartos , idJugador(24,11)     , 80  , NULL, NULL, NULL),
+ ( idJugador(24,17) , @idPaisesBajosArgentinaCuartos , idJugador(24,8)      , 72  , NULL, NULL, NULL),
+ ( idJugador(24,18) , @idPaisesBajosArgentinaCuartos , idJugador(24,5)      , 65  , NULL, NULL, NULL),
+
+  
+ ( idJugador(1,1)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,2)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,3)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,4)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,5)  , @idPaisesBajosArgentinaCuartos , idJugador(1,23)     , NULL, NULL, 68  , NULL),
+ ( idJugador(1,6)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,7)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,8)  , @idPaisesBajosArgentinaCuartos , idJugador(1,20)     , NULL, NULL, 74  , NULL),
+ ( idJugador(1,9)  , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,10) , @idPaisesBajosArgentinaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,11) , @idPaisesBajosArgentinaCuartos , idJugador(1,21)     , NULL, NULL, 81  , NULL),
+ ( idJugador(1,20) , @idPaisesBajosArgentinaCuartos , idJugador(1,8)      , 74  , NULL, NULL, NULL),
+ ( idJugador(1,21) , @idPaisesBajosArgentinaCuartos , idJugador(1,11)     , 81  , NULL, NULL, NULL),
+ ( idJugador(1,23) , @idPaisesBajosArgentinaCuartos , idJugador(1,5)      , 68  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(11,1)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,2)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,3)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,4)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,5)  , @idCroaciaBrasilCuartos , idJugador(11,18)     , NULL, NULL, 70  , NULL),
+ ( idJugador(11,6)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,7)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,8)  , @idCroaciaBrasilCuartos , idJugador(11,17)     , NULL, NULL, 65  , NULL),
+ ( idJugador(11,9)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,10) , @idCroaciaBrasilCuartos , idJugador(11,19)     , NULL, NULL, 75  , NULL),
+ ( idJugador(11,11) , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,17) , @idCroaciaBrasilCuartos , idJugador(11,8)      , 65  , NULL, NULL, NULL),
+ ( idJugador(11,18) , @idCroaciaBrasilCuartos , idJugador(11,5)      , 70  , NULL, NULL, NULL),
+ ( idJugador(11,19) , @idCroaciaBrasilCuartos , idJugador(11,10)     , 75  , NULL, NULL, NULL),
+
+  
+ ( idJugador(7,1)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,2)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,3)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,4)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,5)  , @idCroaciaBrasilCuartos , idJugador(7,18)      , NULL, NULL, 68  , NULL),
+ ( idJugador(7,6)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,7)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,8)  , @idCroaciaBrasilCuartos , idJugador(7,17)      , NULL, NULL, 72  , NULL),
+ ( idJugador(7,9)  , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,10) , @idCroaciaBrasilCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(7,11) , @idCroaciaBrasilCuartos , idJugador(7,15)      , NULL, NULL, 80  , NULL),
+ ( idJugador(7,15) , @idCroaciaBrasilCuartos , idJugador(7,11)      , 80  , NULL, NULL, NULL),
+ ( idJugador(7,17) , @idCroaciaBrasilCuartos , idJugador(7,8)       , 72  , NULL, NULL, NULL),
+ ( idJugador(7,18) , @idCroaciaBrasilCuartos , idJugador(7,5)       , 68  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(18,1)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,2)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,3)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,4)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,5)  , @idInglaterraFranciaCuartos , idJugador(18,17)     , NULL, NULL, 68  , NULL),
+ ( idJugador(18,6)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,7)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,8)  , @idInglaterraFranciaCuartos , idJugador(18,16)     , NULL, NULL, 75  , NULL),
+ ( idJugador(18,9)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,10) , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(18,11) , @idInglaterraFranciaCuartos , idJugador(18,15)     , NULL, NULL, 82  , NULL),
+ ( idJugador(18,15) , @idInglaterraFranciaCuartos , idJugador(18,11)     , 82  , NULL, NULL, NULL),
+ ( idJugador(18,16) , @idInglaterraFranciaCuartos , idJugador(18,8)      , 75  , NULL, NULL, NULL),
+ ( idJugador(18,17) , @idInglaterraFranciaCuartos , idJugador(18,5)      , 68  , NULL, NULL, NULL),
+
+  
+ ( idJugador(2,1)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,2)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,3)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,4)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,5)  , @idInglaterraFranciaCuartos , idJugador(2,18)      , NULL, NULL, 70  , NULL),
+ ( idJugador(2,6)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,7)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,8)  , @idInglaterraFranciaCuartos , idJugador(2,17)      , NULL, NULL, 77  , NULL),
+ ( idJugador(2,9)  , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,10) , @idInglaterraFranciaCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,11) , @idInglaterraFranciaCuartos , idJugador(2,16)      , NULL, NULL, 83  , NULL),
+ ( idJugador(2,16) , @idInglaterraFranciaCuartos , idJugador(2,11)      , 83  , NULL, NULL, NULL),
+ ( idJugador(2,17) , @idInglaterraFranciaCuartos , idJugador(2,8)       , 77  , NULL, NULL, NULL),
+ ( idJugador(2,18) , @idInglaterraFranciaCuartos , idJugador(2,5)       , 70  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(22,1)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,2)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,3)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,4)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,5)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,6)  , @idMarruecosPortugalCuartos , idJugador(22,18)     , NULL, NULL, 65  , NULL),
+ ( idJugador(22,7)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,8)  , @idMarruecosPortugalCuartos , idJugador(22,17)     , NULL, NULL, 72  , NULL),
+ ( idJugador(22,9)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,10) , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,11) , @idMarruecosPortugalCuartos , idJugador(22,16)     , NULL, NULL, 80  , NULL),
+ ( idJugador(22,16) , @idMarruecosPortugalCuartos , idJugador(22,11)     , 80  , NULL, NULL, NULL),
+ ( idJugador(22,17) , @idMarruecosPortugalCuartos , idJugador(22,8)      , 72  , NULL, NULL, NULL),
+ ( idJugador(22,18) , @idMarruecosPortugalCuartos , idJugador(22,6)      , 65  , NULL, NULL, NULL),
+
+  
+ ( idJugador(26,1)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,2)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,3)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,4)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,5)  , @idMarruecosPortugalCuartos , idJugador(26,17)     , NULL, NULL, 70  , NULL),
+ ( idJugador(26,6)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,7)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,8)  , @idMarruecosPortugalCuartos , idJugador(26,16)     , NULL, NULL, 75  , NULL),
+ ( idJugador(26,9)  , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,10) , @idMarruecosPortugalCuartos , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(26,11) , @idMarruecosPortugalCuartos , idJugador(26,15)     , NULL, NULL, 82  , NULL),
+ ( idJugador(26,15) , @idMarruecosPortugalCuartos , idJugador(26,11)     , 82  , NULL, NULL, NULL),
+ ( idJugador(26,16) , @idMarruecosPortugalCuartos , idJugador(26,8)      , 75  , NULL, NULL, NULL),
+ ( idJugador(26,17) , @idMarruecosPortugalCuartos , idJugador(26,5)      , 70  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(1,1)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,2)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,3)  , @idArgentinaCroaciaSemi , idJugador(1,8)       , NULL, NULL, 71  , NULL),
+ ( idJugador(1,5)  , @idArgentinaCroaciaSemi , idJugador(1,24)      , NULL, NULL, 59  , NULL),
+ ( idJugador(1,7)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,8)  , @idArgentinaCroaciaSemi , idJugador(1,3)       , 71  , NULL, NULL, NULL),
+ ( idJugador(1,9)  , @idArgentinaCroaciaSemi , idJugador(1,17)      , 59  , NULL, NULL, NULL),
+ ( idJugador(1,10) , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,11) , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,13) , @idArgentinaCroaciaSemi , idJugador(1,25)      , NULL, NULL, 59  , NULL),
+ ( idJugador(1,17) , @idArgentinaCroaciaSemi , idJugador(1,9)       , 59  , NULL, NULL, NULL),
+ ( idJugador(1,22) , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,23) , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,24) , @idArgentinaCroaciaSemi , idJugador(1,5)       , 59  , NULL, NULL, NULL),
+ ( idJugador(1,25) , @idArgentinaCroaciaSemi , idJugador(1,13)      , 59  , NULL, NULL, NULL),
+
+  
+ ( idJugador(11,1)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,2)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,3)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,4)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,5)  , @idArgentinaCroaciaSemi , idJugador(11,13)     , NULL, NULL, 77  , NULL),
+ ( idJugador(11,6)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,7)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,8)  , @idArgentinaCroaciaSemi , idJugador(11,16)     , NULL, NULL, 75  , NULL),
+ ( idJugador(11,9)  , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,10) , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,11) , @idArgentinaCroaciaSemi , idJugador(11,15)     , NULL, NULL, 82  , NULL),
+ ( idJugador(11,13) , @idArgentinaCroaciaSemi , idJugador(11,5)      , 77  , NULL, NULL, NULL),
+ ( idJugador(11,15) , @idArgentinaCroaciaSemi , idJugador(11,11)     , 82  , NULL, NULL, NULL),
+ ( idJugador(11,16) , @idArgentinaCroaciaSemi , idJugador(11,8)      , 75  , NULL, NULL, NULL),
+ ( idJugador(11,18) , @idArgentinaCroaciaSemi , NULL                 , NULL, NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(2,1)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,2)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,3)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,4)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,5)  , @idFranciaMarruecosSemi , idJugador(2,15)      , NULL, NULL, 78  , NULL),
+ ( idJugador(2,6)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,7)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,8)  , @idFranciaMarruecosSemi , idJugador(2,16)      , NULL, NULL, 75  , NULL),
+ ( idJugador(2,9)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,10) , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,11) , @idFranciaMarruecosSemi , idJugador(2,17)      , NULL, NULL, 82  , NULL),
+ ( idJugador(2,15) , @idFranciaMarruecosSemi , idJugador(2,5)       , 78  , NULL, NULL, NULL),
+ ( idJugador(2,16) , @idFranciaMarruecosSemi , idJugador(2,8)       , 75  , NULL, NULL, NULL),
+ ( idJugador(2,17) , @idFranciaMarruecosSemi , idJugador(2,11)      , 82  , NULL, NULL, NULL),
+
+  
+ ( idJugador(22,1)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,2)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,3)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,4)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,5)  , @idFranciaMarruecosSemi , idJugador(22,18)     , NULL, NULL, 65  , NULL),
+ ( idJugador(22,6)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,7)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,8)  , @idFranciaMarruecosSemi , idJugador(22,17)     , NULL, NULL, 72  , NULL),
+ ( idJugador(22,9)  , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,10) , @idFranciaMarruecosSemi , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,11) , @idFranciaMarruecosSemi , idJugador(22,16)     , NULL, NULL, 80  , NULL),
+ ( idJugador(22,16) , @idFranciaMarruecosSemi , idJugador(22,11)     , 80  , NULL, NULL, NULL),
+ ( idJugador(22,17) , @idFranciaMarruecosSemi , idJugador(22,8)      , 72  , NULL, NULL, NULL),
+ ( idJugador(22,18) , @idFranciaMarruecosSemi , idJugador(22,5)      , 65  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(1,1)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,2)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,3)  , @idArgentinaFranciaFinal , idJugador(1,8)       , NULL, NULL, 71  , NULL),
+ ( idJugador(1,5)  , @idArgentinaFranciaFinal , idJugador(1,24)      , NULL, NULL, 59  , NULL),
+ ( idJugador(1,7)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,8)  , @idArgentinaFranciaFinal , idJugador(1,3)       , 71  , NULL, NULL, NULL),
+ ( idJugador(1,9)  , @idArgentinaFranciaFinal , idJugador(1,17)      , 59  , NULL, NULL, NULL),
+ ( idJugador(1,10) , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,11) , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,13) , @idArgentinaFranciaFinal , idJugador(1,25)      , NULL, NULL, 59  , NULL),
+ ( idJugador(1,17) , @idArgentinaFranciaFinal , idJugador(1,9)       , 59  , NULL, NULL, NULL),
+ ( idJugador(1,22) , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,23) , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(1,24) , @idArgentinaFranciaFinal , idJugador(1,5)       , 59  , NULL, NULL, NULL),
+ ( idJugador(1,25) , @idArgentinaFranciaFinal , idJugador(1,13)      , 59  , NULL, NULL, NULL),
+
+  
+ ( idJugador(2,1)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,2)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,3)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,4)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,5)  , @idArgentinaFranciaFinal , idJugador(2,15)      , NULL, NULL, 78  , NULL),
+ ( idJugador(2,6)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,7)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,8)  , @idArgentinaFranciaFinal , idJugador(2,16)      , NULL, NULL, 75  , NULL),
+ ( idJugador(2,9)  , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,10) , @idArgentinaFranciaFinal , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(2,11) , @idArgentinaFranciaFinal , idJugador(2,17)      , NULL, NULL, 82  , NULL),
+ ( idJugador(2,15) , @idArgentinaFranciaFinal , idJugador(2,5)       , 78  , NULL, NULL, NULL),
+ ( idJugador(2,16) , @idArgentinaFranciaFinal , idJugador(2,8)       , 75  , NULL, NULL, NULL),
+ ( idJugador(2,17) , @idArgentinaFranciaFinal , idJugador(2,11)      , 82  , NULL, NULL, NULL);
+
+ 
+
+	INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
+		VALUES      	 
+ 
+  
+ ( idJugador(11,1)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,2)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,3)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,4)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,5)  , @idCroaciaMarruecosTercero , idJugador(11,18)     , NULL, NULL, 65  , NULL),
+ ( idJugador(11,6)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,7)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,8)  , @idCroaciaMarruecosTercero , idJugador(11,17)     , NULL, NULL, 72  , NULL),
+ ( idJugador(11,9)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,10) , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(11,11) , @idCroaciaMarruecosTercero , idJugador(11,16)     , NULL, NULL, 80  , NULL),
+ ( idJugador(11,16) , @idCroaciaMarruecosTercero , idJugador(11,11)     , 80  , NULL, NULL, NULL),
+ ( idJugador(11,17) , @idCroaciaMarruecosTercero , idJugador(11,8)      , 72  , NULL, NULL, NULL),
+ ( idJugador(11,18) , @idCroaciaMarruecosTercero , idJugador(11,5)      , 65  , NULL, NULL, NULL),
+
+  
+ ( idJugador(22,1)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,2)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,3)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,4)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,5)  , @idCroaciaMarruecosTercero , idJugador(22,18)     , NULL, NULL, 65  , NULL),
+ ( idJugador(22,6)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,7)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,8)  , @idCroaciaMarruecosTercero , idJugador(22,17)     , NULL, NULL, 72  , NULL),
+ ( idJugador(22,9)  , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,10) , @idCroaciaMarruecosTercero , NULL                 , NULL, NULL, NULL, NULL),
+ ( idJugador(22,11) , @idCroaciaMarruecosTercero , idJugador(22,16)     , NULL, NULL, 80  , NULL),
+ ( idJugador(22,16) , @idCroaciaMarruecosTercero , idJugador(22,11)     , 80  , NULL, NULL, NULL),
+ ( idJugador(22,17) , @idCroaciaMarruecosTercero , idJugador(22,8)      , 72  , NULL, NULL, NULL),
+ ( idJugador(22,18) , @idCroaciaMarruecosTercero , idJugador(22,5)      , 65  , NULL, NULL, NULL);
 	INSERT INTO Gol (idJugador, idPartido, minuto, adicionado, enContra)   	 
 		VALUES  
-			-- Fase de Grupo ---------------------------------------------------------
-				-- Argentina 1 - Arabia Saudita 2
+
 				(idJugador(1, 10),  @idArgentinaArabiaGrupo,  10, NULL, FALSE),
 				(idJugador(4, 11),  @idArgentinaArabiaGrupo,  48, NULL, FALSE),
 				(idJugador(4, 10),  @idArgentinaArabiaGrupo,  53, NULL, FALSE),
-	
-				-- Argentina 2 vs Mexico 0
+
 				(idJugador(1, 10),  @idArgentinaMexicoGrupo,  64, NULL, FALSE),
 				(idJugador(1, 24),  @idArgentinaMexicoGrupo,  87, NULL, FALSE),
 				
-				-- Polonia 0 vs Argentina 2
 				(idJugador(1, 20),  @idPoloniaArgentinaGrupo,  46, NULL, FALSE),
 				(idJugador(1, 9),   @idPoloniaArgentinaGrupo,  67, NULL, FALSE),
 				
-				-- España 7 vs Costa Rica 0
+
+
+
 				(idJugador(14, 21), @idEspanaCostaRicaGrupo, 11, null, false),
 				(idJugador(14, 10), @idEspanaCostaRicaGrupo, 21, null, false),
 				(idJugador(14, 11), @idEspanaCostaRicaGrupo, 31, null, false),
@@ -1361,49 +3648,49 @@ START TRANSACTION ;
 				(idJugador(14, 19), @idEspanaCostaRicaGrupo, 90, null, false),
 				(idJugador(14, 7),  @idEspanaCostaRicaGrupo, 90, 2,    false),
 				
-				-- España 1 vs Alemania
+
 				(idJugador(14, 7),  @idEspanaAlemaniaGrupo, 62, null, false),
 				(idJugador(3, 9),   @idEspanaAlemaniaGrupo, 83, null, false),
 				
-				-- Japon 2 vs España 1
+
+
+				(idJugador(14, 7),  @idEspanaAlemaniaGrupo, 62, null, false),
+				(idJugador(3, 9),   @idEspanaAlemaniaGrupo, 83, null, false),
+				
+
+
 				(idJugador(14, 7),  @idJaponEspanaGrupo, 11, null, false),
 				(idJugador(20, 8),  @idJaponEspanaGrupo, 48, null, false),
 				(idJugador(20, 17), @idJaponEspanaGrupo, 51, null, false),
 				
-				-- Tunez 1 vs Francia 0
+
 				(idJugador(31,10),  @idTunezFranciaGrupo,  58, NULL, FALSE),
 				
-				
-			-- Octavos de final---------------------------------------------------------
-				-- Argentina 2 vs Australia 1
+
 				(idJugador(1, 10),  @idArgentinaAustraliaOctavos,  35, NULL, FALSE),
 				(idJugador(1, 9),   @idArgentinaAustraliaOctavos,  57, NULL, FALSE),
 				(idJugador(1, 24),  @idArgentinaAustraliaOctavos,  77, NULL, TRUE),
 				
-				-- Francia 3 vs Polonia 1
+
 				(idJugador(2, 9),   @idFranciaPoloniaOctavos, 44, NULL,   FALSE),
 				(idJugador(2, 10),  @idFranciaPoloniaOctavos, 74, NULL,   FALSE),
 				(idJugador(2, 10),  @idFranciaPoloniaOctavos, 90, 1,  	FALSE),
 				(idJugador(25, 9),  @idFranciaPoloniaOctavos, 90, 9,  	FALSE),
 				
 
-			-- Cuartos de final----------------------------------------------------------
-				-- Paises bajos 2 vs Argentina 2
+
 				(idJugador(1, 26),  @idPaisesBajosArgentinaCuartos,  35, NULL, FALSE),
 				(idJugador(1, 10),  @idPaisesBajosArgentinaCuartos,  73, NULL, FALSE),
 				(idJugador(24, 19),  @idPaisesBajosArgentinaCuartos,  83, NULL, FALSE),
 				(idJugador(24, 19),  @idPaisesBajosArgentinaCuartos,  90, 11, FALSE),
 				
-				
-			-- Semifinales----------------------------------------------------------------
-				-- Argentina 3 vs Croacia 0
+
 				(idJugador(1, 10),  @idArgentinaCroaciaSemi,  34, NULL, FALSE),
 				(idJugador(1, 9),   @idArgentinaCroaciaSemi,  39, NULL, FALSE),
 				(idJugador(1, 9),   @idArgentinaCroaciaSemi,  69, NULL, FALSE),
 
 				
-			-- Final-----------------------------------------------------------------------
-				-- Argentina 3 vs Francia 3
+
 				(idJugador(1, 10),  @idArgentinaFranciaFinal,  23, NULL, FALSE),
 				(idJugador(1, 11),  @idArgentinaFranciaFinal,  36, NULL, FALSE),
 				(idJugador(1, 10),  @idArgentinaFranciaFinal, 108, NULL, FALSE),
@@ -1414,7 +3701,7 @@ START TRANSACTION ;
 
 	INSERT INTO DefinicionPenal (idPartido, idJugador, turno, acierto)
 			VALUES
-								-- Argentina - Paises Bajos
+								
 								(@idPaisesBajosArgentinaCuartos,  idJugador(24, 4),  1,  FALSE),
 								(@idPaisesBajosArgentinaCuartos,  idJugador(1, 10),  2,  TRUE),
 								(@idPaisesBajosArgentinaCuartos,  idJugador(24, 11), 3,  FALSE),
@@ -1426,7 +3713,7 @@ START TRANSACTION ;
 								(@idPaisesBajosArgentinaCuartos,  idJugador(24, 9),  9,  TRUE),
 								(@idPaisesBajosArgentinaCuartos,  idJugador(1, 22),  10, TRUE),
 								
-								-- Argentina - Francia
+								
 								
 								(@idArgentinaFranciaFinal,  idJugador(2, 10),  1,  TRUE),
 								(@idArgentinaFranciaFinal,  idJugador(1, 10),  2,  TRUE),
@@ -1437,17 +3724,17 @@ START TRANSACTION ;
 								(@idArgentinaFranciaFinal,  idJugador(2, 12),  7,  TRUE),
 								(@idArgentinaFranciaFinal,  idJugador(1, 4),   8,  TRUE),
 								
-								-- Marruecos - España
 								
-								(@idMarruecosEspaniaOctavos, idJugador(22, 11),  1, TRUE),
-								(@idMarruecosEspaniaOctavos, idJugador(14, 22),  2, FALSE),
-								(@idMarruecosEspaniaOctavos, idJugador(22, 7),   3, TRUE),
-								(@idMarruecosEspaniaOctavos, idJugador(14, 19),  4, FALSE),
-								(@idMarruecosEspaniaOctavos, idJugador(22, 24),  5, TRUE),
-								(@idMarruecosEspaniaOctavos, idJugador(14, 5),   6, FALSE),
-								(@idMarruecosEspaniaOctavos, idJugador(22, 2),   7, TRUE),
 								
-								-- Japon - Croacia
+								(@idMarruecosEspanaOctavos, idJugador(22, 11),  1, TRUE),
+								(@idMarruecosEspanaOctavos, idJugador(14, 22),  2, FALSE),
+								(@idMarruecosEspanaOctavos, idJugador(22, 7),   3, TRUE),
+								(@idMarruecosEspanaOctavos, idJugador(14, 19),  4, FALSE),
+								(@idMarruecosEspanaOctavos, idJugador(22, 24),  5, TRUE),
+								(@idMarruecosEspanaOctavos, idJugador(14, 5),   6, FALSE),
+								(@idMarruecosEspanaOctavos, idJugador(22, 2),   7, TRUE),
+								
+							
 								
 								(@idJaponCroaciaOctavos, idJugador(20, 10),   1, FALSE),
 								(@idJaponCroaciaOctavos, idJugador(11, 13),   2, TRUE),
@@ -1458,7 +3745,7 @@ START TRANSACTION ;
 								(@idJaponCroaciaOctavos, idJugador(20, 22),   7, FALSE),
 								(@idJaponCroaciaOctavos, idJugador(11, 15),   8, TRUE),
 								
-								-- Croacia - Brasil
+								
 						
 								(@idCroaciaBrasilCuartos, idJugador(11, 13),   1, TRUE),
 								(@idCroaciaBrasilCuartos, idJugador(7, 21),	2, FALSE),
