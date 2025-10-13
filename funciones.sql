@@ -37,3 +37,19 @@ CREATE VIEW VistaPartido AS
    JOIN     `Partido` P ON  L.`idPais` = P.`idLocal`
    JOIN     Pais V ON  V.`idPais` = P.`idVisitante`
    ORDER BY fecha ASC $$
+
+DROP PROCEDURE IF EXISTS VaciarTablas $$
+CREATE PROCEDURE VaciarTablas ()
+BEGIN
+   SET FOREIGN_KEY_CHECKS = 0;
+   TRUNCATE TABLE DefinicionPenal;
+   TRUNCATE TABLE Gol; 
+   TRUNCATE TABLE JugadorPartido;
+   TRUNCATE TABLE Jugador;  
+   TRUNCATE TABLE Partido;
+   TRUNCATE TABLE Pais;
+   TRUNCATE TABLE Posicion;
+   TRUNCATE TABLE TipoPartido;
+   TRUNCATE TABLE Estadio;
+   SET FOREIGN_KEY_CHECKS = 1;
+END $$
