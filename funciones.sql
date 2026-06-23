@@ -1,6 +1,5 @@
 USE bd_Mundial22 ;
 
-
 DELIMITER $$
 DROP FUNCTION IF EXISTS idJugador $$
 CREATE FUNCTION idJugador (pais TINYINT, camiseta TINYINT UNSIGNED)
@@ -23,7 +22,7 @@ DROP PROCEDURE IF EXISTS altaPartido $$
 CREATE PROCEDURE altaPartido (OUT unIdPartido TINYINT, unIdTipoPartido TINYINT, unIdLocal TINYINT, unIdVisitante TINYINT, unIdEstadio TINYINT, unaFecha TIMESTAMP,   unosGolesLocales TINYINT UNSIGNED, unosGolesVisitantes TINYINT UNSIGNED, unaDuracion TINYINT UNSIGNED)
 BEGIN
    INSERT INTO Partido (idTipoPartido, idLocal, idVisitante, idEstadio, fecha, golesLocales, golesVisitantes, duracion)
-       VALUES      (unIdTipoPartido , unIdLocal , unIdVisitante , unIdEstadio , unaFecha, unosGolesLocales, unosGolesVisitantes, unaDuracion);
+      VALUES      (unIdTipoPartido , unIdLocal , unIdVisitante , unIdEstadio , unaFecha, unosGolesLocales, unosGolesVisitantes, unaDuracion);
    SET unIdPartido = LAST_INSERT_ID();
 END $$
 
@@ -53,3 +52,22 @@ BEGIN
    TRUNCATE TABLE Estadio;
    SET FOREIGN_KEY_CHECKS = 1;
 END $$
+
+DROP PROCEDURE IF EXISTS altaPais $$
+CREATE PROCEDURE altaPais  (OUT unIdPais TINYINT UNSIGNED, nombrePais VARCHAR(20),
+                           nombreDt VARCHAR(30), unGrupo CHAR(1))
+BEGIN
+   INSERT INTO Pais  (nombre, nombreEntrenador, grupo)
+            VALUES   (nombrePais, nombreDt, unGrupo);
+   SET unIdPais = LAST_INSERT_ID();
+END $$
+
+DROP PROCEDURE IF EXISTS altaEstadio $$
+CREATE PROCEDURE altaEstadio  (OUT unIdEstadio TINYINT, nombreEstadio VARCHAR(40),
+                           unaInfo VARCHAR(200))
+BEGIN
+   INSERT INTO Estadio  (nombre, infoEstadio)
+            VALUES   (nombreEstadio, unaInfo);
+   SET unIdEstadio = LAST_INSERT_ID();
+END $$
+
