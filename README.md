@@ -94,7 +94,7 @@ erDiagram
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
 
 ```
-git clone https://github.com/ET12DE1Computacion/BD-PokemonRPG
+git clone https://github.com/ET12DE1Computacion/BD-Mundial22
 ```
 
 ## Pre-requisitos 📋
